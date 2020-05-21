@@ -1,0 +1,97 @@
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url("../fonts/Montserrat-Bold.otf");
+}
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat-Regular.otf");
+}
+p, input, div {
+    font-family: Montserrat,sans-serif;
+}
+h1, h2, h3, h4, h5, strong {
+    font-family: Montserrat-Bold,sans-serif;
+}
+.cnpc{
+    max-width: 80%;
+    height: auto;
+    max-height: 5em;
+    margin-top: 1rem;
+}
+.input-field label {
+    color: black;
+}
+.mapContainer {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.mapContainer #map {
+    height:100%;
+    width:100%
+}
+.mapContainer .logos {
+    bottom:15px;
+    left:10px;
+    position:absolute;
+    text-align:center
+}
+.mapContainer .logos img {
+    height:2em
+}
+
+.corto{
+    display: none;
+}
+
+@media(max-width: 500px) {
+    .niceTitle{
+        font-size: medium;
+    }
+    #headersTable{
+        font-size: 12px;
+        font-weight: bold !important;
+    }
+    .corto{
+        display: block;
+    }
+    .comun{
+        display: none;
+    }
+  }
+
+@media(min-width: 768px) {
+    .mapContainer .logos img {
+        height:3em
+    }
+}
+@media(min-width: 992px) {
+    .mapContainer .logos img {
+        height:3em
+    }
+}
+@media(min-width: 1200px) {
+    .mapContainer .logos img {
+        height:3em
+    }
+}
+.alerted {
+    color: red;
+    -webkit-animation-name: alerted; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: alerted;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes alerted {
+    0%   {color: red;}
+    100% {color: yellow;}
+}
+@keyframes alerted {
+    0%   {color: red;}
+    100% {color: yellow;}
+}
