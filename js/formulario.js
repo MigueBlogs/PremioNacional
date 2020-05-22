@@ -107,8 +107,11 @@ $(document).ready(function() {
     $('#submit-form').on('submit', function (e) {
         if (validateForm()){
             // this.submit();
+            $('#wait-modal').modal('open');
         }
         else{
+            $('#wait-modal').modal('close');
+            $('#modal').modal('close');
             $('#error-modal p').text("Completa y verifica los datos ingresados");
             $('#error-modal').modal('open');
             e.preventDefault();
