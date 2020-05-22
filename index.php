@@ -193,21 +193,33 @@
         <div id="instrucciones">
             <ul class="collapsible popout">
                 <li class="active">
-                <div class="collapsible-header mainIcons"><i class="material-icons">lightbulb_outline</i>Lee las siguientes instrucciones para realizar el registro de tu candidatura</div>
-                <div class="collapsible-body"><span>Bienvenido al portal de registro de Candidaturas para el Premio Nacional de Protección Civil, para iniciar deberás ingresar tus datos de contacto como: Nombre completo (obligatorio), correo electrónico y un Número telefónico de contacto (opcional)</span></div>
+                    <div class="collapsible-header mainIcons"><i class="material-icons">lightbulb_outline</i>Lee las siguientes instrucciones para realizar el registro de tu candidatura</div>
+                    <div class="collapsible-body"><span>Bienvenido al portal de registro de Candidaturas para el Premio Nacional de Protección Civil, para iniciar deberás ingresar tus datos de contacto como: Nombre completo (obligatorio), correo electrónico (obligatorio) y un Número telefónico de contacto (opcional), dicho contacto deberá ser responsable del proyecto. Recuerda escribir correctamente tu correo electrónico.</span></div>
                 </li>
                 <li>
-                <div class="collapsible-header mainIcons"><i class="material-icons">insert_drive_file</i>¿Cómo subir mis archivos?</div>
-                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    <div class="collapsible-header mainIcons"><i class="material-icons">insert_drive_file</i>¿Cómo subir mis archivos?</div>
+                    <div class="collapsible-body"><span>Los archivos mencionados en la convocatoria deben ser subidos a esta plataforma como un archivo .zip o .rar, este debe de pesar menos de 10 MegaBytes y sebe estar conformado por las siguientes carpetas:</span>
+                        <ul style="padding-left:inherit;">
+                        <li style="list-style-type: circle;">Coffee</li>
+                        <li style="list-style-type: circle;">Tea</li>
+                        <li style="list-style-type: circle;">Milk</li>
+                        </ul>
+                </div>
                 </li>
                 <li>
-                <div id="lastOne" class="collapsible-header mainIcons"><i class="material-icons">videocam</i>¿Cómo enviar mi evidencia audiovisual?</div>
-                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    <div class="collapsible-header mainIcons"><i class="material-icons">check</i>¿Cómo sabré que mi candidatura fue recibida?</div>
+                    <div class="collapsible-body"><span>Al completar el siguiente formulario y darle click al botón de "SUBIR DATOS" te mandará a una pantalla de confirmación de que tu información y tus archivos han sido enviados. Espera en tu bandeja de entrada un email de confirmación para verificar que hemos recibido la candidatura. Recuerda revisar tu bandeja de SPAM así como de CORREO NO DESEADO según sea el caso. Si no has recibido respuesta de confirmación intenta nuevamente subir tu candidatura en un lapso de 3 horas. En forma reiterada de pedimos verifiques tu mail de contacto para evitar conflictos de envío de confirmación, ante esto te recomendamos usar correos de dominio Gmail, Hotmail, Yahoo, etc.</span></div>
+                </li>
+                <li>
+                    <div id="lastOne" class="collapsible-header mainIcons"><i class="material-icons">videocam</i>¿Cómo enviar mi evidencia audiovisual?</div>
+                    <div class="collapsible-body"><span>Toda la evidencia audiovisual seberá ser subida a plataformas abiertas como: Youtube, GoogleDrive, WeTransfer, etc. Y compartir en un archivo de texto la liga de esta evidencia. En caso de que tu evidencia pese menos de 10 MB en el archivo ZIP podrá ser aceptada dentro de su carpeta coorespondiente.</span></div>
                 </li>
             </ul>
+            <div class="row center">
             <button class="btn-large disabled guinda" type="button" id="btn-continuar" style="pointer-events:unset;"><i class="material-icons right">arrow_forward</i>
             Iniciar registro
             </button>
+            </div>
         </div>
         <form method="post" id="submit-form" style="display:none;" enctype="multipart/form-data">
         <!-- <form method="post" id="submit-form"> -->
