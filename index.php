@@ -27,7 +27,6 @@
     if (
         isset($_POST["nombre"]) && 
         isset($_POST["correo"]) && 
-        isset($_POST["correo"]) && 
         isset($_FILES["archivo"]) && 
         isset($_POST["estado"]) && 
         isset($_POST["municipio"])) 
@@ -40,7 +39,7 @@
 
         $nombre = substr(trim($_POST['nombre']), 0, 512);
         $correo =  mb_strtolower(substr(trim($_POST['correo']), 0, 128));
-        $telefono = substr(trim($_POST['telefono']), 0, 10);
+        $telefono = isset($_POST["telefono"]) ? substr(trim($_POST['telefono']), 0, 10) : null;
         $estado = intval($_POST['estado']);
         $municipio = intval($_POST['municipio']);
 

@@ -1,3 +1,18 @@
+function readArchivo() {   
+    value = $('#archivo').get(0).files[0]   
+    const allowedExtensions = /(\.zip|\.rar)$/i;
+    if (!allowedExtensions.exec(value.name)){
+        $('#archivo').val('');
+        alert('Solo se aceptan archivos con extensión zip o rar');
+        return;
+    }
+    if (value.size > 10485760){  // 10MB
+        $('#archivo').val('');
+        alert('No puedes subir un archivo mayor a 10MB');
+        return;
+    }
+}
+
 function validateForm(){
     if ($('#nombre').val().trim() === "" ){
         goToId('nombre'); return false; }
@@ -5,6 +20,10 @@ function validateForm(){
         goToId('telefono'); return false; }
     if ($('#correo').val().trim() === "" ){
         goToId('correo'); return false; }
+    let archivos = $('#archivo');
+    if (parseInt(archivos.get(0).files.length) != 1){
+        goToId('archivo'); return false;
+    }
     if ($('#estado-select').val().trim() === "" ){
         goToId('estado-select'); return false; }
     if ($('#estado-select').val().trim() !== ""  && $('#municipio-select').val() == null || $('#municipio-select').val() === "" ){
@@ -22,7 +41,9 @@ function verificaInicio() {
     if ($('#nombre').val().trim() === "" ){ return; }
     if ($('#telefono').val().trim() === "" ){ return; }
     if ($('#correo').val().trim() === "" ){ return; }
-    if ($('#estado-select').val().trim() === "" ){ return; }
+    let archivos = $('#archivo');
+    if (parseInt(archivos.get(0).files.length) != 1){ return; }
+    if ($('#estado-select').val() == null || $('#estado-select').val().trim() === "" ){ return; }
     else {
         if ($('#municipio-select').val() == null || $('#municipio-select').val() === "" ){ return; }
     }
@@ -35,9 +56,19 @@ $(document).ready(function() {
     $('.fixed-action-btn').floatingActionButton();
     $('input[data-length]').characterCounter();
     
-    $('#input').on('input change paste', function(e){
+    $('input[type=text], input[type=number], input[type=email]').on('input change paste', function(e){
         verificaInicio();
     });
+
+    $('#archivo').on('change', function() {
+        let archivos = $('#archivo');
+        if (parseInt(archivos.get(0).files.length) != 1 ){
+            alert("Solo se puede subir un archivo (Zip o RAR).");
+            return;
+        }
+        readArchivo();
+        verificaInicio();
+    })
 
     $('select').on('change', function(){
         if ($(this).val().length > 0){
