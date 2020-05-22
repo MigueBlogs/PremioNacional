@@ -4,7 +4,7 @@
       constantes son case-sensitive
      */
     //SERVER
-    define("user", "macrosimulacro");
-    define("pass", "macrosimulacro");
+    define("user", "premionacional");
+    define("pass", "premionacional");
     define("server", "10.2.233.161:1521/appspdb");
 ?>

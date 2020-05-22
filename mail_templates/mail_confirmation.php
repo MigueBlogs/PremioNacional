@@ -26,20 +26,20 @@
 </head>
 <body>
 <div class="container">
-    <h1 class="dorado center">¡Inmueble registrado!</h1>
+    <h1 class="dorado center">¡Tu candidatura ha sido registrada!</h1>
     <hr>
-    <h5>Macrosimulacro Mayo 2020</h5>
+    <h5>Premio Nacional 2020</h5>
 
     <div class="section">
-        <p>El número de registro del inmueble es: <strong><span>:registrationNumber</span></strong></p>
-        <p>Este registro es para el inmueble ubicado en :registrationAddress</p>
-        <p>Para ver los registros asociados a tu correo, entra <a href="http://www.preparados.gob.mx/macrosimulacro/seguimiento">aquí</a>.</p>
+        <p>Estomado <strong><span>:registrationName</span></strong>: </p>
+        <p>En la Coordinación Nacional de Protección Civil hemos recibido correctamente los documentos de tu candidatura, los cuáles serán revisados conforme a las bases establecidas en el programa.
+        <br>Te pedimos estés al tanto de este correo electrónico, pues será la vía de comunicación para anunciarte los pasos a seguir.
+        <br>De la misma manera sigue nuestras redes sociales de <a href="https://www.facebook.com/CNPCmx/">Facebook</a> y <a href="https://twitter.com/CNPC_mx">Twitter</a> para futuros anuncios del concurso</p>
     </div>
     <div class="divider"></div>
     <div class="section">
-        <p>Tu correo electrónico será usado para futuro seguimiento, mantente pendiente a futuros anuncios.</p>
         <p>Cualquier duda o aclaración contáctanos en el siguiente correo: 
-        <strong><a href="mailto:dudas.macrosimulacro@gmail.com?Subject=Dudas%20y%20Aclaraciones%20Simulacro%20Mayo%202020">dudas.macrosimulacro@gmail.com</a></strong>
+        <strong><a href="mailto:dudas.premio@gmail.com?Subject=Dudas%20y%20Aclaraciones">dudas.premio@gmail.com</a></strong>
     </div>
 </div>
 </body>
