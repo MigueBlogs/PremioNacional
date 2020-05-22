@@ -1,13 +1,13 @@
 <?php
     $today = time();
-    $date_start = strtotime('2020-03-05 06:00:00.0');  // UTC for 5 March, 00:00 GMT-6 (Mexico City)
-    $date_end = strtotime('2020-07-21 06:00:00.0');  // UTC for 20 May, 00:00 GMT-6 (Mexico City)
+    $date_start = strtotime('2020-05-29 05:00:00.0');  // UTC for 29 May, 00:00 GMT-5 (Mexico City)
+    $date_end = strtotime('2020-12-31 05:00:00.0');  // UTC for 31 Dic, 00:00 GMT-5 (Mexico City)
     $available = $today - $date_start >= 0 ? true : false;
     $expired = $today - $date_end >= 0 ? true: false;
-    if ($available == false || $expired) {
-        header("Location: http://www.preparados.gob.mx/macrosimulacro");
-        die();
-    }
+    // if ($available == false || $expired) {
+    //     header("Location: http://www.preparados.gob.mx/");
+    //     die();
+    // }
     // Verifica si el navegador es Internet Explorer y lo bloquea por razones de compatibilidad
     if (preg_match("/MSIE /",getenv("HTTP_USER_AGENT")) || preg_match("/Trident\//",getenv("HTTP_USER_AGENT"))) { ?>
         <div id="div-ie-error" style="background-color: lightcoral; text-align: center;">
@@ -22,238 +22,120 @@
     }
 
 
-    require_once("premio_fns.php");
     $keep = false;
-    session_unset();
+    require_once("premio_fns.php");
     if (
-        isset($_POST['responsable']) && 
-        isset($_POST['niveles']) &&
-        isset($_POST['hipotesis']) &&
-        isset($_POST['tipoInmueble']) &&
-        isset($_POST['otro']) &&
-        isset($_POST['dependencias']) &&
-        isset($_POST['institucion']) &&
-        isset($_POST['propiedad']) &&
-        isset($_POST['pob_flotante']) &&
-        isset($_POST['participantes']) &&
-        isset($_POST['discapacidad']) &&
-        isset($_POST['correo']) &&
-        isset($_POST['Street']) &&
-        isset($_POST['Neighborhood']) &&
-        isset($_POST['Postal']) &&
-        isset($_POST['County']) &&
-        isset($_POST['State']) &&
-        isset($_POST['Latitude']) &&
-        isset($_POST['Longitude'])
-    ) {
-        if(sendForm()) {
-            session_start();
-            $_SESSION['correo'] = $_POST['correo'];
-            header("Location: ./confirmacion");
+        isset($_POST["nombre"]) && 
+        isset($_POST["correo"]) && 
+        isset($_POST["correo"]) && 
+        isset($_FILES["archivo"]) && 
+        isset($_POST["estado"]) && 
+        isset($_POST["municipio"])) 
+    {
+        sendForm();    
+    }
+
+    function SendForm() {
+        global $target_dir, $error_msg, $success_msg, $keep;
+
+        $nombre = substr(trim($_POST['nombre']), 0, 512);
+        $correo =  mb_strtolower(substr(trim($_POST['correo']), 0, 128));
+        $telefono = substr(trim($_POST['telefono']), 0, 10);
+        $estado = intval($_POST['estado']);
+        $municipio = intval($_POST['municipio']);
+
+        if (validateForm($nombre, $correo, $telefono, $estado, $municipio)){
+            
+            $imageFileType = strtolower(pathinfo($target_dir . basename($_FILES['archivo']['name']), PATHINFO_EXTENSION));
+
+            $tmp_uid = uniqid();
+            $target_file = $target_dir . $tmp_uid . "." . $imageFileType;
+            $url_file = "http://www.preparados.gob.mx/uploads/premionacional2020/". $tmp_uid . "." . $imageFileType;
+            if (!move_uploaded_file($_FILES["archivo"]["tmp_name"], $target_file)){
+                $error_msg = 'No se pudo subir tu archivo';
+                $keep = true;
+                return;
+            }
+            
+            $datos = [
+                ":nombre"=>$nombre,
+                ":correo"=>$correo,
+                ":telefono"=>$telefono,
+                ":archivo"=>$url_file,
+                ":estado"=>$estado,
+                ":municipio"=>$municipio
+            ];
+            if (registrar($datos)) {
+                $tmp = getUltimoRegistro($correo);
+                if (enviarCorreoConfirmacion($correo, $nombre)){
+                    $success_msg = 'Registro realizado correctamente. Se ha enviado exitosamente un correo confirmando tu registro';
+                }
+                else {
+                    $success_msg = 'Registro realizado correctamente';
+                    $error_msg = 'No se pudo enviar el correo de confirmación para la dirección que ingresaste.';
+                }
+            }
+            else {
+                $error_msg = 'No se pudo realizar el registro de tu solicitud';
+            }
+
         }
-        else {
-            $keep = true;
+        if ($error_msg) $keep = true;
+    }
+
+    function validateForm($nombre, $correo, $telefono, $estado, $municipio) {
+        global $error_msg, $allowTypes, $max_file_size, $target_dir;
+
+        if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
+            $error_msg = 'El correo electrónico es inválido. Verifíca que esté bien escrito';
+            return false;
         }
+        if ($estado < 1 || $estado > 32){
+            $error_msg = 'El estado seleccionado es inválido.';
+            return false;
+        }
+        
+        if (!file_exists($_FILES['archivo']['tmp_name']) || !is_uploaded_file($_FILES['archivo']['tmp_name'])){
+            $error_msg = 'No se pudo subir tu archivo';
+            return false;
+        }
+        $fileType = strtolower(pathinfo($target_dir . basename($_FILES['archivo']['name']), PATHINFO_EXTENSION));
+        if(!in_array($fileType, $allowTypes)) {
+            // not valid extension
+            $error_msg = "Extensión de archivo inválida. Debe ser de tipo zip o rar";
+            return false;
+        }
+        // Check file size
+        if ($_FILES["archivo"]["size"] > $max_file_size) {
+            // file too large
+            $error_msg = "Tamaño de archivo muy grande";
+            return false;
+        }
+        $fh = @fopen($_FILES["archivo"]["tmp_name"], "r");
+
+        if (!$fh) {
+            fclose($fh);
+            $error_msg = 'No se pudo subir tu archivo';
+            return false;
+        }
+
+        $blob = fgets($fh, 5);  // Reads first 5 bytes
+
+        fclose($fh);
+
+        if (strpos($blob, 'Rar') !== false) {
+            // Is RAR
+        } 
+        else if (strpos($blob, 'PK') !== false) {
+            // Is ZIP
+        } else {
+            $error_msg = 'El archivo subido no es válido';
+            return false;
+        }
+        return true;
     }
     
-    // function sendForm() {
-    //     require_once('sendMail.php');
-    //     $estado = trim($_POST['State']);
-    //     $respon = substr(trim($_POST['responsable']), 0, 500);
-    //     $correo = substr(trim(mb_strtolower($_POST['correo'])), 0, 500);
-
-    //     if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
-    //         $error_msg = 'El correo electrónico es inválido. Verifíca que esté bien escrito';
-    //         return false;
-    //     }
-    //     else if (!isStateValid($estado)) {
-    //         $error_msg = 'El estado es inválido. Selecciona una ubicación válida';
-    //         return false;
-    //     }
-    //     else if (!isCountyValid($_POST['County'], $estado)) {
-    //         $error_msg = 'El municipio es inválido. Selecciona una ubicación válida';
-    //         return false;
-    //     }
-    // }
-    // function isStateValid($Estado) {
-    //     require_once("db_fns.php");
-    //     require_once("db_global.php");
-
-    //     $conn = dbConnect(user, pass, server);
-
-    //     $paramsArray = Array(
-    //         ":estado" => $Estado
-    //     );
-
-    //     $queryStr = "SELECT ESTADO FROM COLONIA2 WHERE ESTADO = :estado group by estado";
-
-    //     $query = oci_parse($conn, $queryStr);
-
-    //     foreach ($paramsArray as $key => $value) {
-    //         oci_bind_by_name($query, $key, $paramsArray[$key]);
-    //     }
-
-    //     if (oci_execute($query)) {
-    //         dbClose($conn, $query);
-    //         return true;
-    //     }
-    //     else {
-    //         dbClose($conn, $query);
-    //         return false;
-    //     }
-    // }
-    // function isCountyValid($county, $Estado) {
-    //     require_once("db_fns.php");
-    //     require_once("db_global.php");
-
-    //     $conn = dbConnect(user, pass, server);
-
-    //     $paramsArray = Array(
-    //         ":nombre" => trim($county),
-    //         ":estado" => $Estado
-    //     );
-
-    //     $queryStr = "SELECT MUNICIPIO FROM COLONIA2 WHERE ESTADO = :estado AND LOWER(MUNICIPIO) = LOWER(:nombre) group by municipio";
-
-    //     $query = oci_parse($conn, $queryStr);
-
-    //     foreach ($paramsArray as $key => $value) {
-    //         oci_bind_by_name($query, $key, $paramsArray[$key]);
-    //     }
-
-    //     if (oci_execute($query)) {
-    //         dbClose($conn, $query);
-    //         return true;
-    //     }
-    //     else {
-    //         dbClose($conn, $query);
-    //         return false;
-    //     }
-    // }
-    // function isCountyValid2($county, $idEstado) {
-    //     require_once("db_fns.php");
-    //     require_once("db_global.php");
-
-    //     $conn = dbConnect(user, pass, server);
-
-    //     $paramsArray = Array(
-    //         ":nombre" => trim($county),
-    //         ":id" => $idEstado
-    //     );
-
-    //     $queryStr = "SELECT ID_MUNICIPIO FROM MUNICIPIO ".
-    //         "WHERE ID_ESTADO = :id AND LOWER(NOMBRE) = LOWER(:nombre) ";
-
-    //     $query = oci_parse($conn, $queryStr);
-
-    //     foreach ($paramsArray as $key => $value) {
-    //         oci_bind_by_name($query, $key, $paramsArray[$key]);
-    //     }
-
-    //     if (oci_execute($query)) {
-    //         dbClose($conn, $query);
-    //         return true;
-    //     }
-    //     else {
-    //         dbClose($conn, $query);
-    //         return false;
-    //     }
-    // }
-    // function getEstados() {
-    //     require_once("db_fns.php");
-    //     require_once("db_global.php");
-
-    //     $conn = dbConnect(user, pass, server);
-
-    //     $queryStr = "select estado id, initcap(estado) estado from colonia2 where estado != 'DISTRITO FEDERAL' group by estado order by estado asc";
-
-    //     $query = oci_parse($conn, $queryStr);
-
-    //     $resultados = Array();
-
-    //     oci_execute($query);
-
-    //     while ( ($row = oci_fetch_assoc($query)) != false) {
-    //         $resultados[] = [
-    //             'estado' => $row['ESTADO'],
-    //             'id' => $row['ID'],
-    //         ];
-    //     }
-    //     dbClose($conn, $query);
-    //     return $resultados;
-    // }
-    // function getEstados2() {
-    //     require_once("db_fns.php");
-    //     require_once("db_global.php");
-
-    //     $conn = dbConnect(user, pass, server);
-
-    //     $queryStr = "SELECT * FROM ESTADO";
-
-    //     $query = oci_parse($conn, $queryStr);
-
-    //     $resultados = Array();
-
-    //     oci_execute($query);
-
-    //     while ( ($row = oci_fetch_assoc($query)) != false) {
-    //         $resultados[] = ['id_estado'=>$row['ID_ESTADO'], 'nombre'=>$row['NOMBRE']];
-    //     }
-    //     dbClose($conn, $query);
-    //     return $resultados;
-    // }
-    // function registrarInmueble2($parametros) {
-    //     require_once("db_fns.php");
-    //     require_once("db_global.php");
-
-    //     $conn = dbConnect(user, pass, server);
-
-    //     $paramsArray = Array(
-    //         ":estado" => $parametros["estado"],
-    //         ":municipio" => $parametros["municipio"],
-    //         ":lugar" => $parametros["lugar"],
-    //         ":hipotesis" => $parametros["hipotesis"],
-    //         ":dependencias" => $parametros["dependencias"],
-    //         ":participantes" => $parametros["participantes"],
-    //         ":hora" => $parametros["hora"],
-    //         ":correo" => trim($parametros["correo"]),
-    //         ":lat" => $parametros["lat"],
-    //         ":lon" => $parametros["lon"],
-    //         ":responsable" => $parametros["responsable"],
-    //         ":niveles" => $parametros["niveles"],
-    //         ":discapacidad" => $parametros["discapacidad"],
-    //         ":tipo" => $parametros["tipo"],
-    //         ":institucion" => $parametros["institucion"],
-    //         ":propiedad" => $parametros["propiedad"],
-    //         ":pob_flotante" => $parametros["pob_flotante"],
-    //     );
-
-    //     if ($parametros["estado"] == 2 || $parametros["estado"] == "2"){
-    //         $paramsArray[":tipo_sim"] = $parametros["tipo_simulacro"];
-    //         $queryStr = "INSERT INTO MAYO2020 (ESTADO, MUNICIPIO, LUGAR, HIPOTESIS, DEPENDENCIAS, PARTICIPANTES, HORA, CORREO, LAT, LON, RESPONSABLE, TIPOINMUEBLE, NIVELES, DISCAPACIDAD, INSTITUCION, PROPIEDAD, POB_FLOT, TIPO_SIMULACRO) ".
-    //         "VALUES (:estado, :municipio, :lugar, :hipotesis, :dependencias, :participantes, :hora, :correo, :lat, :lon, :responsable, :tipo, :niveles, :discapacidad, :institucion, :propiedad, :pob_flotante, :tipo_sim)";
-    //     }
-    //     else {
-    //         $queryStr = "INSERT INTO MAYO2020 (ESTADO, MUNICIPIO, LUGAR, HIPOTESIS, DEPENDENCIAS, PARTICIPANTES, HORA, CORREO, LAT, LON, RESPONSABLE, TIPOINMUEBLE, NIVELES, DISCAPACIDAD, INSTITUCION, PROPIEDAD, POB_FLOT) ".
-    //         "VALUES (:estado, :municipio, :lugar, :hipotesis, :dependencias, :participantes, :hora, :correo, :lat, :lon, :responsable, :tipo, :niveles, :discapacidad, :institucion, :propiedad, :pob_flotante)";
-
-    //     }
-
-
-    //     $query = oci_parse($conn, $queryStr);
-
-    //     foreach ($paramsArray as $key => $value) {
-    //         oci_bind_by_name($query, $key, $paramsArray[$key]);
-    //     }
-
-    //     if(oci_execute($query)) {
-    //         dbClose($conn, $query);
-    //         return true;
-    //     } else {
-    //         dbClose($conn, $query);
-    //         return false;
-    //     }
-    // }
+    
     
 ?>
 <!DOCTYPE html>
@@ -299,16 +181,24 @@
             <a target="_blank" href="http://www.preparados.gob.mx/blog" class="btn-floating btn blue"><i class="material-icons">help</i></a>
         </div>
 
-        <?php if (isset($error_msg)) { ?>
-            <div id="div-error" class="valign-wrapper center" style="background-color: lightcoral;">
+        <?php if (isset($success_msg) && $success_msg) { ?>
+            <div id="div-success" class="valign-wrapper center green lighten-2">
+                <i class="material-icons alerted" style="margin-left: 1em;">error_outline</i>
+                <p style="width: 100%;"><?=$success_msg?></p>
+                <button id="btn-success-close" class="btn" type="button" style="margin: 0.4rem;"><i class="material-icons">close</i></button>
+            </div>
+        <?php } ?>
+
+        <?php if (isset($error_msg) && $error_msg) { ?>
+            <div id="div-error" class="valign-wrapper center red lighten-1">
                 <i class="material-icons alerted" style="margin-left: 1em;">error_outline</i>
                 <p style="width: 100%;"><?=$error_msg?></p>
-                <button id="btn-error-close" class="btn-small" type="button" style="margin-right: 1em;"><i class="material-icons">close</i></button>
+                <button id="btn-error-close" class="btn" type="button" style="margin: 0.4rem;"><i class="material-icons">close</i></button>
             </div>
         <?php } ?>
 
         <form method="post" id="submit-form">
-                <p class="center">Registro de candidaturas para el Premio Nacional de Protección Civil 2020</p>
+                <h5 class="center guinda white-text">Registro de candidaturas para el Premio Nacional de Protección Civil 2020</h5>
                 <div id="primera-parte" class="row">
                     <div class="row">
                         <h6 class="center">Ingresa los siguientes campos</h6>
@@ -316,7 +206,7 @@
                     <div class="row">
                         <div class="input-field">
                             <i class="material-icons prefix">account_circle</i>
-                            <input required placeholder="Nombre Completo" name="responsable" id="responsable" type="text" class="validate" data-length="200" maxlength="200" <?php if ($keep) echo 'value="'.$_POST['responsable'].'"'; ?>>
+                            <input required placeholder="Nombre Completo" name="name" id="responsable" type="text" class="validate" maxlength="512" <?php if ($keep || isset($_POST['name'])) echo 'value="'.$_POST['name'].'"'; ?>>
                             <label for="responsable">Ingresa tu nombre completo</label>
                             <span class="helper-text" data-error="Completa este campo" data-success="Correcto"></span>
                         </div>
@@ -324,8 +214,8 @@
                     <div class="row">
                         <div class="input-field">
                             <i class="material-icons prefix">phone</i>
-                            <input placeholder="Ingresa número telefónico" name="contacto" id="contacto" type="text" class="validate" data-length="200" maxlength="200" <?php if ($keep) echo 'value="'.$_POST['telefono'].'"'; ?>>
-                            <label for="contacto">Ingresa un número de contacto</label>
+                            <input placeholder="Ingresa número telefónico" name="telefono" id="contacto" type="text" class="validate" data-length="10" maxlength="10" <?php if ($keep || isset($_POST['telefono'])) echo 'value="'.$_POST['telefono'].'"'; ?>>
+                            <label for="contacto">Ingresa un número de contacto. (10 dígitos)</label>
                             <span class="helper-text" data-error="Completa este campo" data-success="Correcto"></span>
                     </div>
                     <div class="row">
@@ -395,30 +285,13 @@
                 <div id="error-modal" class="modal">
                     <div class="modal-content">
                         <h4>Error</h4>
-                        <p>Haz seleccionado una ubicación equivocada</p>
+                        <p>Verifica tus datos</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" data-target="modal" class="btn modal-close">Entendido</button>
                     </div>
                 </div>
-                <div id="wait-modal" class="modal">
-                    <div class="modal-content">
-                        <h4>Espera</h4>
-                        <p>Espera a que el mapa cargue, esto puede tardar unos segundos.</p>
-                        <div class="progress" id="mapa-loading">
-                            <div class="indeterminate"></div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        
-                    </div>
-                </div>
-                <div class="mapContainer" id="mapa-container" style="height: 1px;">
-                    <div id="map"></div>
-                    <div class="logos">
-                        <img src="http://atlasnacionalderiesgos.gob.mx/rutasvolcan/images/SSyPC_CNPC_CENACOM_blanco.png" alt="CENACOM">
-                    </div>
-                </div>
+                
             </form>
 
     </div>
