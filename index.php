@@ -306,7 +306,25 @@
                 <button id="btn-error-close" class="btn-small" type="button" style="margin-right: 1em;"><i class="material-icons">close</i></button>
             </div>
         <?php } ?>
-
+        <div id="instrucciones">
+            <ul class="collapsible popout">
+                <li class="active">
+                <div class="collapsible-header"><i class="material-icons">filter_drama</i>Lee las siguientes instrucciones para realizar el registro de tu candidatura</div>
+                <div class="collapsible-body"><span>Bienvenido al portal de registro de Candidaturas para el Premio Nacional de Protección Civil, para iniciar deberás ingresar tus datos de contacto como: Nombre completo (obligatorio), correo electrónico y un Número telefónico de contacto (opcional)</span></div>
+                </li>
+                <li>
+                <div class="collapsible-header"><i class="material-icons">place</i>¿Cómo subir mis archivos?</div>
+                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+                <li>
+                <div id="lastOne" class="collapsible-header"><i class="material-icons">whatshot</i>¿Cómo enviar mi evidencia audiovisual?</div>
+                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+            </ul>
+            <button class="btn-large disabled" type="button" id="btn-continuar"><i class="material-icons right">arrow_forward</i>
+            Continuar
+            </button>
+        </div>
         <form method="post" id="submit-form">
                 <p class="center">Registro de candidaturas para el Premio Nacional de Protección Civil 2020</p>
                 <div id="primera-parte" class="row">
@@ -373,9 +391,6 @@
                         </div>
                     </div>
                     <div class="row center">
-                        <!-- <button class="btn-large disabled" type="button" id="btn-continuar"><i class="material-icons right">arrow_forward</i>
-                            Continuar
-                        </button> -->
                         <button id="btn-submit" class="btn-large modal-trigger disabled" data-target="modal"><i class="material-icons right">send</i>
                             Subir datos
                         </button>

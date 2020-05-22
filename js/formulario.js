@@ -242,16 +242,16 @@ $(document).ready(function() {
         colonia_missing = true;
     });
 
-    $('#btn-continuar').on('click', function(e){
-        if (primeraParteCompleta()) {
-            $('#primera-parte').hide();
-            $('#segunda-parte').removeClass('hide');
-            goToId('estado-div');
-            if ($('#estado-select').val() != ""){
-                $('#estado-select').change();
-            }
-        }
-    });
+    // $('#btn-continuar').on('click', function(e){
+    //     if (primeraParteCompleta()) {
+    //         $('#primera-parte').hide();
+    //         $('#segunda-parte').removeClass('hide');
+    //         goToId('estado-div');
+    //         if ($('#estado-select').val() != ""){
+    //             $('#estado-select').change();
+    //         }
+    //     }
+    // });
 
     $('#btn-add-register').on('click', function(){
         $('#tabla-registros').hide();
@@ -323,3 +323,11 @@ $(document).ready(function() {
         $('#div-error').hide('fast');
     });
 });
+
+//initializing collapsible
+$(document).ready(function(){
+    $('.collapsible').collapsible();
+    $("#lastOne").click(function(){
+        $('#btn-continuar').removeClass('disabled').addClass('pulse');
+    });
+  });
