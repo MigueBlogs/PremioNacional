@@ -37,6 +37,16 @@ h1, h2, h3, h4, h5, strong {
     color: #285C4D !important;
 }
 
+.mainIcons{
+    color: #285C4D !important;
+}
+
+.titleMex {
+    background: linear-gradient(90deg, rgba(105,26,49,1) 0%, rgba(157,36,73,1) 50%, rgba(105,26,49,1) 100%);
+    padding: 10px;
+    color: white;
+}
+
 @media(max-width: 500px) {
     .niceTitle{
         font-size: medium;

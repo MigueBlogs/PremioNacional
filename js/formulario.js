@@ -104,7 +104,15 @@ $(document).ready(function(){
         $('#btn-continuar').removeClass('disabled').addClass('pulse');
     });
     $('#btn-continuar').on('click',function(){
-        $("#instrucciones").hide('fast');
-        $("#submit-form").show('fast');
+        
+        if($('#btn-continuar').hasClass("disabled")){
+            alert("Lee todas las instrucciones para iniciar la incripción.");
+        }else{
+            $("#instrucciones").hide('fast');
+            $("#submit-form").show('fast');
+        }
+    });
+    $("#btn-continuar").click(function(){
+        console.log("Le ando dando click!!!");
     });
   });

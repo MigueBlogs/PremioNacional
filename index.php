@@ -194,25 +194,25 @@
         <div id="instrucciones">
             <ul class="collapsible popout">
                 <li class="active">
-                <div class="collapsible-header"><i class="material-icons">filter_drama</i>Lee las siguientes instrucciones para realizar el registro de tu candidatura</div>
+                <div class="collapsible-header mainIcons"><i class="material-icons">lightbulb_outline</i>Lee las siguientes instrucciones para realizar el registro de tu candidatura</div>
                 <div class="collapsible-body"><span>Bienvenido al portal de registro de Candidaturas para el Premio Nacional de Protección Civil, para iniciar deberás ingresar tus datos de contacto como: Nombre completo (obligatorio), correo electrónico y un Número telefónico de contacto (opcional)</span></div>
                 </li>
                 <li>
-                <div class="collapsible-header"><i class="material-icons">place</i>¿Cómo subir mis archivos?</div>
+                <div class="collapsible-header mainIcons"><i class="material-icons">insert_drive_file</i>¿Cómo subir mis archivos?</div>
                 <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
                 </li>
                 <li>
-                <div id="lastOne" class="collapsible-header"><i class="material-icons">whatshot</i>¿Cómo enviar mi evidencia audiovisual?</div>
+                <div id="lastOne" class="collapsible-header mainIcons"><i class="material-icons">videocam</i>¿Cómo enviar mi evidencia audiovisual?</div>
                 <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
                 </li>
             </ul>
-            <button class="btn-large disabled" type="button" id="btn-continuar"><i class="material-icons right">arrow_forward</i>
-            Continuar
+            <button class="btn-large disabled guinda" type="button" id="btn-continuar" style="pointer-events:unset;"><i class="material-icons right">arrow_forward</i>
+            Iniciar registro
             </button>
         </div>
         <form method="post" id="submit-form" style="display:none;" enctype="multipart/form-data">
         <!-- <form method="post" id="submit-form"> -->
-                <h5 class="center guinda white-text">Registro de candidaturas para el Premio Nacional de Protección Civil 2020</h5>
+                <h5 class="center titleMex">Registro de candidaturas para el Premio Nacional de Protección Civil 2020</h5>
                 <div id="primera-parte" class="row">
                     <div class="row">
                         <h6 class="center">Ingresa los siguientes campos</h6>
@@ -242,18 +242,18 @@
                         </div>
                     </div>
                     <div class="row">
-                        <h6 class="center">Subir documentos de la candidatura</h6>
+                        <h6 class="center">Subir documento de la candidatura</h6>
                     </div>
                     <div class="row">
                         <div class = "file-field input-field">
-                            <div class = "btn">
-                                <span>Seleccionar archivo </span>
+                            <div class = "btn guinda">
+                                <span>Seleccionar archivo</span>
                                 <input id="archivo" type = "file" name="archivo" accept=".zip,.rar"/>
                             </div>
                             
                             <div class = "file-path-wrapper">
                                 <input class = "file-path validate" type="text"
-                                    placeholder = "Subir documentos (.Zip o .RAR)" />
+                                    placeholder = "Subir documento (.zip o .rar)" />
                             </div>
                         </div>
                     </div>
