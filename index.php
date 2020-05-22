@@ -242,6 +242,22 @@
                         </div>
                     </div>
                     <div class="row">
+                        <h6 class="center">Subir documentos de la candidatura</h6>
+                    </div>
+                    <div class="row">
+                        <div class = "file-field input-field">
+                            <div class = "btn">
+                                <span>Seleccionar archivo</span>
+                                <input type = "file" name="archivo" />
+                            </div>
+                            
+                            <div class = "file-path-wrapper">
+                                <input class = "file-path validate" type="text"
+                                    placeholder = "Subir documentos" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
                         <h6 class="center">Datos de ubicación de candidatura</h6>
                     </div>
                     <div class="row" id="location-helper">
