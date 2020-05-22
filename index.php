@@ -22,7 +22,7 @@
     }
 
 
-    //require_once("premio_fns.php");
+    require_once("premio_fns.php");
     $keep = false;
     session_unset();
     if (
@@ -56,204 +56,204 @@
         }
     }
     
-    function sendForm() {
-        require_once('sendMail.php');
-        $estado = trim($_POST['State']);
-        $respon = substr(trim($_POST['responsable']), 0, 500);
-        $correo = substr(trim(mb_strtolower($_POST['correo'])), 0, 500);
+    // function sendForm() {
+    //     require_once('sendMail.php');
+    //     $estado = trim($_POST['State']);
+    //     $respon = substr(trim($_POST['responsable']), 0, 500);
+    //     $correo = substr(trim(mb_strtolower($_POST['correo'])), 0, 500);
 
-        if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
-            $error_msg = 'El correo electrónico es inválido. Verifíca que esté bien escrito';
-            return false;
-        }
-        else if (!isStateValid($estado)) {
-            $error_msg = 'El estado es inválido. Selecciona una ubicación válida';
-            return false;
-        }
-        else if (!isCountyValid($_POST['County'], $estado)) {
-            $error_msg = 'El municipio es inválido. Selecciona una ubicación válida';
-            return false;
-        }
-    }
-    function isStateValid($Estado) {
-        require_once("db_fns.php");
-        require_once("db_global.php");
+    //     if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
+    //         $error_msg = 'El correo electrónico es inválido. Verifíca que esté bien escrito';
+    //         return false;
+    //     }
+    //     else if (!isStateValid($estado)) {
+    //         $error_msg = 'El estado es inválido. Selecciona una ubicación válida';
+    //         return false;
+    //     }
+    //     else if (!isCountyValid($_POST['County'], $estado)) {
+    //         $error_msg = 'El municipio es inválido. Selecciona una ubicación válida';
+    //         return false;
+    //     }
+    // }
+    // function isStateValid($Estado) {
+    //     require_once("db_fns.php");
+    //     require_once("db_global.php");
 
-        $conn = dbConnect(user, pass, server);
+    //     $conn = dbConnect(user, pass, server);
 
-        $paramsArray = Array(
-            ":estado" => $Estado
-        );
+    //     $paramsArray = Array(
+    //         ":estado" => $Estado
+    //     );
 
-        $queryStr = "SELECT ESTADO FROM COLONIA2 WHERE ESTADO = :estado group by estado";
+    //     $queryStr = "SELECT ESTADO FROM COLONIA2 WHERE ESTADO = :estado group by estado";
 
-        $query = oci_parse($conn, $queryStr);
+    //     $query = oci_parse($conn, $queryStr);
 
-        foreach ($paramsArray as $key => $value) {
-            oci_bind_by_name($query, $key, $paramsArray[$key]);
-        }
+    //     foreach ($paramsArray as $key => $value) {
+    //         oci_bind_by_name($query, $key, $paramsArray[$key]);
+    //     }
 
-        if (oci_execute($query)) {
-            dbClose($conn, $query);
-            return true;
-        }
-        else {
-            dbClose($conn, $query);
-            return false;
-        }
-    }
-    function isCountyValid($county, $Estado) {
-        require_once("db_fns.php");
-        require_once("db_global.php");
+    //     if (oci_execute($query)) {
+    //         dbClose($conn, $query);
+    //         return true;
+    //     }
+    //     else {
+    //         dbClose($conn, $query);
+    //         return false;
+    //     }
+    // }
+    // function isCountyValid($county, $Estado) {
+    //     require_once("db_fns.php");
+    //     require_once("db_global.php");
 
-        $conn = dbConnect(user, pass, server);
+    //     $conn = dbConnect(user, pass, server);
 
-        $paramsArray = Array(
-            ":nombre" => trim($county),
-            ":estado" => $Estado
-        );
+    //     $paramsArray = Array(
+    //         ":nombre" => trim($county),
+    //         ":estado" => $Estado
+    //     );
 
-        $queryStr = "SELECT MUNICIPIO FROM COLONIA2 WHERE ESTADO = :estado AND LOWER(MUNICIPIO) = LOWER(:nombre) group by municipio";
+    //     $queryStr = "SELECT MUNICIPIO FROM COLONIA2 WHERE ESTADO = :estado AND LOWER(MUNICIPIO) = LOWER(:nombre) group by municipio";
 
-        $query = oci_parse($conn, $queryStr);
+    //     $query = oci_parse($conn, $queryStr);
 
-        foreach ($paramsArray as $key => $value) {
-            oci_bind_by_name($query, $key, $paramsArray[$key]);
-        }
+    //     foreach ($paramsArray as $key => $value) {
+    //         oci_bind_by_name($query, $key, $paramsArray[$key]);
+    //     }
 
-        if (oci_execute($query)) {
-            dbClose($conn, $query);
-            return true;
-        }
-        else {
-            dbClose($conn, $query);
-            return false;
-        }
-    }
-    function isCountyValid2($county, $idEstado) {
-        require_once("db_fns.php");
-        require_once("db_global.php");
+    //     if (oci_execute($query)) {
+    //         dbClose($conn, $query);
+    //         return true;
+    //     }
+    //     else {
+    //         dbClose($conn, $query);
+    //         return false;
+    //     }
+    // }
+    // function isCountyValid2($county, $idEstado) {
+    //     require_once("db_fns.php");
+    //     require_once("db_global.php");
 
-        $conn = dbConnect(user, pass, server);
+    //     $conn = dbConnect(user, pass, server);
 
-        $paramsArray = Array(
-            ":nombre" => trim($county),
-            ":id" => $idEstado
-        );
+    //     $paramsArray = Array(
+    //         ":nombre" => trim($county),
+    //         ":id" => $idEstado
+    //     );
 
-        $queryStr = "SELECT ID_MUNICIPIO FROM MUNICIPIO ".
-            "WHERE ID_ESTADO = :id AND LOWER(NOMBRE) = LOWER(:nombre) ";
+    //     $queryStr = "SELECT ID_MUNICIPIO FROM MUNICIPIO ".
+    //         "WHERE ID_ESTADO = :id AND LOWER(NOMBRE) = LOWER(:nombre) ";
 
-        $query = oci_parse($conn, $queryStr);
+    //     $query = oci_parse($conn, $queryStr);
 
-        foreach ($paramsArray as $key => $value) {
-            oci_bind_by_name($query, $key, $paramsArray[$key]);
-        }
+    //     foreach ($paramsArray as $key => $value) {
+    //         oci_bind_by_name($query, $key, $paramsArray[$key]);
+    //     }
 
-        if (oci_execute($query)) {
-            dbClose($conn, $query);
-            return true;
-        }
-        else {
-            dbClose($conn, $query);
-            return false;
-        }
-    }
-    function getEstados() {
-        require_once("db_fns.php");
-        require_once("db_global.php");
+    //     if (oci_execute($query)) {
+    //         dbClose($conn, $query);
+    //         return true;
+    //     }
+    //     else {
+    //         dbClose($conn, $query);
+    //         return false;
+    //     }
+    // }
+    // function getEstados() {
+    //     require_once("db_fns.php");
+    //     require_once("db_global.php");
 
-        $conn = dbConnect(user, pass, server);
+    //     $conn = dbConnect(user, pass, server);
 
-        $queryStr = "select estado id, initcap(estado) estado from colonia2 where estado != 'DISTRITO FEDERAL' group by estado order by estado asc";
+    //     $queryStr = "select estado id, initcap(estado) estado from colonia2 where estado != 'DISTRITO FEDERAL' group by estado order by estado asc";
 
-        $query = oci_parse($conn, $queryStr);
+    //     $query = oci_parse($conn, $queryStr);
 
-        $resultados = Array();
+    //     $resultados = Array();
 
-        oci_execute($query);
+    //     oci_execute($query);
 
-        while ( ($row = oci_fetch_assoc($query)) != false) {
-            $resultados[] = [
-                'estado' => $row['ESTADO'],
-                'id' => $row['ID'],
-            ];
-        }
-        dbClose($conn, $query);
-        return $resultados;
-    }
-    function getEstados2() {
-        require_once("db_fns.php");
-        require_once("db_global.php");
+    //     while ( ($row = oci_fetch_assoc($query)) != false) {
+    //         $resultados[] = [
+    //             'estado' => $row['ESTADO'],
+    //             'id' => $row['ID'],
+    //         ];
+    //     }
+    //     dbClose($conn, $query);
+    //     return $resultados;
+    // }
+    // function getEstados2() {
+    //     require_once("db_fns.php");
+    //     require_once("db_global.php");
 
-        $conn = dbConnect(user, pass, server);
+    //     $conn = dbConnect(user, pass, server);
 
-        $queryStr = "SELECT * FROM ESTADO";
+    //     $queryStr = "SELECT * FROM ESTADO";
 
-        $query = oci_parse($conn, $queryStr);
+    //     $query = oci_parse($conn, $queryStr);
 
-        $resultados = Array();
+    //     $resultados = Array();
 
-        oci_execute($query);
+    //     oci_execute($query);
 
-        while ( ($row = oci_fetch_assoc($query)) != false) {
-            $resultados[] = ['id_estado'=>$row['ID_ESTADO'], 'nombre'=>$row['NOMBRE']];
-        }
-        dbClose($conn, $query);
-        return $resultados;
-    }
-    function registrarInmueble2($parametros) {
-        require_once("db_fns.php");
-        require_once("db_global.php");
+    //     while ( ($row = oci_fetch_assoc($query)) != false) {
+    //         $resultados[] = ['id_estado'=>$row['ID_ESTADO'], 'nombre'=>$row['NOMBRE']];
+    //     }
+    //     dbClose($conn, $query);
+    //     return $resultados;
+    // }
+    // function registrarInmueble2($parametros) {
+    //     require_once("db_fns.php");
+    //     require_once("db_global.php");
 
-        $conn = dbConnect(user, pass, server);
+    //     $conn = dbConnect(user, pass, server);
 
-        $paramsArray = Array(
-            ":estado" => $parametros["estado"],
-            ":municipio" => $parametros["municipio"],
-            ":lugar" => $parametros["lugar"],
-            ":hipotesis" => $parametros["hipotesis"],
-            ":dependencias" => $parametros["dependencias"],
-            ":participantes" => $parametros["participantes"],
-            ":hora" => $parametros["hora"],
-            ":correo" => trim($parametros["correo"]),
-            ":lat" => $parametros["lat"],
-            ":lon" => $parametros["lon"],
-            ":responsable" => $parametros["responsable"],
-            ":niveles" => $parametros["niveles"],
-            ":discapacidad" => $parametros["discapacidad"],
-            ":tipo" => $parametros["tipo"],
-            ":institucion" => $parametros["institucion"],
-            ":propiedad" => $parametros["propiedad"],
-            ":pob_flotante" => $parametros["pob_flotante"],
-        );
+    //     $paramsArray = Array(
+    //         ":estado" => $parametros["estado"],
+    //         ":municipio" => $parametros["municipio"],
+    //         ":lugar" => $parametros["lugar"],
+    //         ":hipotesis" => $parametros["hipotesis"],
+    //         ":dependencias" => $parametros["dependencias"],
+    //         ":participantes" => $parametros["participantes"],
+    //         ":hora" => $parametros["hora"],
+    //         ":correo" => trim($parametros["correo"]),
+    //         ":lat" => $parametros["lat"],
+    //         ":lon" => $parametros["lon"],
+    //         ":responsable" => $parametros["responsable"],
+    //         ":niveles" => $parametros["niveles"],
+    //         ":discapacidad" => $parametros["discapacidad"],
+    //         ":tipo" => $parametros["tipo"],
+    //         ":institucion" => $parametros["institucion"],
+    //         ":propiedad" => $parametros["propiedad"],
+    //         ":pob_flotante" => $parametros["pob_flotante"],
+    //     );
 
-        if ($parametros["estado"] == 2 || $parametros["estado"] == "2"){
-            $paramsArray[":tipo_sim"] = $parametros["tipo_simulacro"];
-            $queryStr = "INSERT INTO MAYO2020 (ESTADO, MUNICIPIO, LUGAR, HIPOTESIS, DEPENDENCIAS, PARTICIPANTES, HORA, CORREO, LAT, LON, RESPONSABLE, TIPOINMUEBLE, NIVELES, DISCAPACIDAD, INSTITUCION, PROPIEDAD, POB_FLOT, TIPO_SIMULACRO) ".
-            "VALUES (:estado, :municipio, :lugar, :hipotesis, :dependencias, :participantes, :hora, :correo, :lat, :lon, :responsable, :tipo, :niveles, :discapacidad, :institucion, :propiedad, :pob_flotante, :tipo_sim)";
-        }
-        else {
-            $queryStr = "INSERT INTO MAYO2020 (ESTADO, MUNICIPIO, LUGAR, HIPOTESIS, DEPENDENCIAS, PARTICIPANTES, HORA, CORREO, LAT, LON, RESPONSABLE, TIPOINMUEBLE, NIVELES, DISCAPACIDAD, INSTITUCION, PROPIEDAD, POB_FLOT) ".
-            "VALUES (:estado, :municipio, :lugar, :hipotesis, :dependencias, :participantes, :hora, :correo, :lat, :lon, :responsable, :tipo, :niveles, :discapacidad, :institucion, :propiedad, :pob_flotante)";
+    //     if ($parametros["estado"] == 2 || $parametros["estado"] == "2"){
+    //         $paramsArray[":tipo_sim"] = $parametros["tipo_simulacro"];
+    //         $queryStr = "INSERT INTO MAYO2020 (ESTADO, MUNICIPIO, LUGAR, HIPOTESIS, DEPENDENCIAS, PARTICIPANTES, HORA, CORREO, LAT, LON, RESPONSABLE, TIPOINMUEBLE, NIVELES, DISCAPACIDAD, INSTITUCION, PROPIEDAD, POB_FLOT, TIPO_SIMULACRO) ".
+    //         "VALUES (:estado, :municipio, :lugar, :hipotesis, :dependencias, :participantes, :hora, :correo, :lat, :lon, :responsable, :tipo, :niveles, :discapacidad, :institucion, :propiedad, :pob_flotante, :tipo_sim)";
+    //     }
+    //     else {
+    //         $queryStr = "INSERT INTO MAYO2020 (ESTADO, MUNICIPIO, LUGAR, HIPOTESIS, DEPENDENCIAS, PARTICIPANTES, HORA, CORREO, LAT, LON, RESPONSABLE, TIPOINMUEBLE, NIVELES, DISCAPACIDAD, INSTITUCION, PROPIEDAD, POB_FLOT) ".
+    //         "VALUES (:estado, :municipio, :lugar, :hipotesis, :dependencias, :participantes, :hora, :correo, :lat, :lon, :responsable, :tipo, :niveles, :discapacidad, :institucion, :propiedad, :pob_flotante)";
 
-        }
+    //     }
 
 
-        $query = oci_parse($conn, $queryStr);
+    //     $query = oci_parse($conn, $queryStr);
 
-        foreach ($paramsArray as $key => $value) {
-            oci_bind_by_name($query, $key, $paramsArray[$key]);
-        }
+    //     foreach ($paramsArray as $key => $value) {
+    //         oci_bind_by_name($query, $key, $paramsArray[$key]);
+    //     }
 
-        if(oci_execute($query)) {
-            dbClose($conn, $query);
-            return true;
-        } else {
-            dbClose($conn, $query);
-            return false;
-        }
-    }
+    //     if(oci_execute($query)) {
+    //         dbClose($conn, $query);
+    //         return true;
+    //     } else {
+    //         dbClose($conn, $query);
+    //         return false;
+    //     }
+    // }
     
 ?>
 <!DOCTYPE html>
@@ -338,10 +338,10 @@
                         </div>
                     </div>
                     <div class="row">
-                        <h6 class="center">Dirección del Inmueble</h6>
+                        <h6 class="center">Datos de ubicación de candidatura</h6>
                     </div>
                     <div class="row" id="location-helper">
-                        <p>Selecciona tu estado, municipio y colonia</p>
+                        <p>Selecciona tu estado y municipio</p>
                     </div>
                     <div class="row" id="estado-div">
                         <div class="input-field">
@@ -373,9 +373,9 @@
                         </div>
                     </div>
                     <div class="row center">
-                        <button class="btn-large disabled" type="button" id="btn-continuar"><i class="material-icons right">arrow_forward</i>
+                        <!-- <button class="btn-large disabled" type="button" id="btn-continuar"><i class="material-icons right">arrow_forward</i>
                             Continuar
-                        </button>
+                        </button> -->
                         <button id="btn-submit" class="btn-large modal-trigger disabled" data-target="modal"><i class="material-icons right">send</i>
                             Subir datos
                         </button>

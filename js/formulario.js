@@ -33,7 +33,7 @@ function clearSecondForm() {
     $("#State").val('');
     $("#Latitude").val('');
     $("#Longitude").val('');
-    clearPunto();
+    //clearPunto();
 }
 
 function primeraParteCompleta() {
@@ -89,9 +89,9 @@ function verificaInicio() {
 }
 function verificaFinal() {
     $('#btn-submit').addClass('disabled').removeClass('pulse');
-    if ($('#Latitude').val().trim() === "" ){ return; }
-    if ($('#Longitude').val().trim() === "" ){ return; }
-    goToMap($('#Latitude').val().trim(), $('#Longitude').val().trim());
+    // if ($('#Latitude').val().trim() === "" ){ return; }
+    // if ($('#Longitude').val().trim() === "" ){ return; }
+    // goToMap($('#Latitude').val().trim(), $('#Longitude').val().trim());
     $('#btn-submit').removeClass('disabled').addClass('pulse');
 }
 
@@ -151,12 +151,13 @@ $(document).ready(function() {
 
     $('#estado-select').on('change', function(){
         if ($(this).val() !== ""){
+            debugger
             let data = {idEstado: $(this).val()};
             county = undefined;
             $('#mapa-div').hide('fast');
             $('#municipio-loading').show();
-            $.post( "macro_fns.php", data, function(result) {
-                clearColonia();
+            $.post( "premio_fns.php", data, function(result) {
+                //clearColonia();
                 $('#municipio-div').show('fast');
                 goToId('municipio-div');
                 $('#colonias-div').hide();
@@ -168,18 +169,6 @@ $(document).ready(function() {
                 $('#municipio-loading').hide();
                 colonia_missing = false;
                 $('#municipio-alert').remove();
-                if (data.idEstado == "QUINTANA ROO") {
-                    $('#municipio-div').append('\
-                    <div id="municipio-alert">\
-                        <p class="red-text lighten-1"><i class="material-icons">warning</i>Atención: Si el municipio de su inmueble no aparece, considere lo siguiente.</p>\
-                        <ul>\
-                            <li>Si se encuentra en <strong>Tulum</strong>, selecciona <strong>Solidaridad</strong>.</li>\
-                            <li>Si se encuentra en <strong>Bacalar</strong>, selecciona <strong>Othón P. Blanco</strong>.</li>\
-                            <li>Si se encuentra en <strong>Puerto Morelos</strong>, selecciona <strong>Benito Juárez</strong>.</li>\
-                        </ul>\
-                        <p>Discule las molestias</p>\
-                    </div>');
-                }
             }, 'json');
             clearSecondForm();
             verificaFinal();

@@ -15,8 +15,9 @@
         isset($_POST["municipio"])) 
     {
         
+    }else if(isset($_POST["idEstado"])) {
+        echo json_encode(getMunicipios($_POST["idEstado"]));
     }
-
     function SendForm() {
         global $target_dir, $error_msg;
 
@@ -208,7 +209,10 @@
         oci_execute($query);
 
         while ( ($row = oci_fetch_assoc($query)) != false) {
-            $resultados[] = $row;
+            $resultados[] = [
+                "municipio" => $row["NOMBRE"],
+                "id" => $row["ID_MUNICIPIO"],
+            ];
         }
         dbClose($conn, $query);
         return $resultados;
@@ -227,7 +231,10 @@
         oci_execute($query);
 
         while ( ($row = oci_fetch_assoc($query)) != false) {
-            $resultados[] = $row;
+            $resultados[] = [
+                'estado' => $row['NOMBRE'],
+                'id' => $row['ID_ESTADO'],
+            ];
         }
         dbClose($conn, $query);
         return $resultados;
