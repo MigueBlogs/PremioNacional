@@ -210,7 +210,7 @@
             Continuar
             </button>
         </div>
-        <form method="post" id="submit-form" style="display:none;">
+        <form method="post" id="submit-form" style="display:none;" enctype="multipart/form-data">
         <!-- <form method="post" id="submit-form"> -->
                 <h5 class="center guinda white-text">Registro de candidaturas para el Premio Nacional de Protección Civil 2020</h5>
                 <div id="primera-parte" class="row">
@@ -220,16 +220,16 @@
                     <div class="row">
                         <div class="input-field">
                             <i class="material-icons prefix">account_circle</i>
-                            <input required placeholder="Nombre Completo" name="name" id="responsable" type="text" class="validate" maxlength="512" <?php if ($keep || isset($_POST['name'])) echo 'value="'.$_POST['name'].'"'; ?>>
-                            <label for="responsable">Ingresa tu nombre completo</label>
+                            <input required placeholder="Nombre Completo" name="nombre" id="nombre" type="text" class="validate" maxlength="512" <?php if ($keep || isset($_POST['nombre'])) echo 'value="'.$_POST['nombre'].'"'; ?>>
+                            <label for="nombre">Ingresa tu nombre completo</label>
                             <span class="helper-text" data-error="Completa este campo" data-success="Correcto"></span>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field">
                             <i class="material-icons prefix">phone</i>
-                            <input placeholder="Ingresa número telefónico" name="telefono" id="contacto" type="text" class="validate" data-length="10" maxlength="10" <?php if ($keep || isset($_POST['telefono'])) echo 'value="'.$_POST['telefono'].'"'; ?>>
-                            <label for="contacto">Ingresa un número de contacto. (10 dígitos)</label>
+                            <input placeholder="Ingresa número telefónico" name="telefono" id="telefono" type="text" class="validate" data-length="10" maxlength="10" <?php if ($keep || isset($_POST['telefono'])) echo 'value="'.$_POST['telefono'].'"'; ?>>
+                            <label for="telefono">Ingresa un número de contacto. (10 dígitos)</label>
                             <span class="helper-text" data-error="Completa este campo" data-success="Correcto"></span>
                     </div>
                     <div class="row">
