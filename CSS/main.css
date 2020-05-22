@@ -6,7 +6,7 @@
     font-family: Montserrat;
     src: url("../fonts/Montserrat-Regular.otf");
 }
-p, input, div {
+p, input, div, label, span, button {
     font-family: Montserrat,sans-serif;
 }
 h1, h2, h3, h4, h5, strong {
@@ -21,7 +21,9 @@ h1, h2, h3, h4, h5, strong {
 .input-field label {
     color: black;
 }
-
+input::placeholder {
+    color: #0C231E !important;
+}
 .corto{
     display: none;
 }
