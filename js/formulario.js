@@ -94,3 +94,12 @@ $(document).ready(function() {
         $('#div-success').hide('fast');
     });
 });
+
+
+//initializing collapsible
+$(document).ready(function(){
+    $('.collapsible').collapsible();
+    $("#lastOne").click(function(){
+        $('#btn-continuar').removeClass('disabled').addClass('pulse');
+    });
+  });
