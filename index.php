@@ -277,7 +277,7 @@
                         </div>
                     </div>
                     <div class="row center">
-                        <button id="btn-submit" class="btn-large modal-trigger disabled" data-target="modal"><i class="material-icons right">send</i>
+                        <button id="btn-submit" class="btn-large modal-trigger disabled guinda" data-target="modal"><i class="material-icons right">send</i>
                             Subir datos
                         </button>
                     </div>
@@ -289,8 +289,8 @@
                         <p>Si estás seguro de que la información ingresada es correcta, presiona el botón de Aceptar</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn modal-close">Aceptar</button>
-                        <button type="button" data-target="modal" class="btn-flat modal-close">Cancelar</button>
+                        <button type="submit" class="btn modal-close guinda">Aceptar</button>
+                        <button type="button" data-target="modal" class="btn modal-close verde-oscuro">Cancelar</button>
                     </div>
                 </div>
                 <div id="error-modal" class="modal">
