@@ -21,28 +21,16 @@ h1, h2, h3, h4, h5, strong {
 .input-field label {
     color: black;
 }
-.mapContainer {
-    height: 500px;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-}
-.mapContainer #map {
-    height:100%;
-    width:100%
-}
-.mapContainer .logos {
-    bottom:15px;
-    left:10px;
-    position:absolute;
-    text-align:center
-}
-.mapContainer .logos img {
-    height:2em
-}
 
 .corto{
     display: none;
+}
+
+.guinda {
+    background-color: #9D2449 !important;
+}
+.verde-oscuro {
+    background-color: #0C231E !important;
 }
 
 @media(max-width: 500px) {
@@ -61,21 +49,6 @@ h1, h2, h3, h4, h5, strong {
     }
   }
 
-@media(min-width: 768px) {
-    .mapContainer .logos img {
-        height:3em
-    }
-}
-@media(min-width: 992px) {
-    .mapContainer .logos img {
-        height:3em
-    }
-}
-@media(min-width: 1200px) {
-    .mapContainer .logos img {
-        height:3em
-    }
-}
 .alerted {
     color: red;
     -webkit-animation-name: alerted; /* Safari 4.0 - 8.0 */
