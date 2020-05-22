@@ -333,7 +333,7 @@
                 <div id="wait-modal" class="modal">
                     <div class="modal-content center">
                         <h4>Subiendo registro...</h4>
-                        <p>Esto podría tardar unos segundos, dependiendo del tamaño de tu archivo.</p>
+                        <p>Esto podría tardar unos segundos, dependiendo del tamaño de tu archivo y la velocidad de tu conexión.</p>
                         <div class="preloader-wrapper big active">
                             <div class="spinner-layer spinner-blue-only">
                             <div class="circle-clipper left">
@@ -345,6 +345,7 @@
                             </div>
                             </div>
                         </div>
+                        <p>Por favor no cierres ni actualices la página hasta que se haya completado este proceso.</p>
                     </div>
                 </div>
                 
