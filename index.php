@@ -247,13 +247,13 @@
                     <div class="row">
                         <div class = "file-field input-field">
                             <div class = "btn">
-                                <span>Seleccionar archivo</span>
-                                <input type = "file" name="archivo" />
+                                <span>Seleccionar archivo </span>
+                                <input id="archivo" type = "file" name="archivo" accept=".zip,.rar"/>
                             </div>
                             
                             <div class = "file-path-wrapper">
                                 <input class = "file-path validate" type="text"
-                                    placeholder = "Subir documentos" />
+                                    placeholder = "Subir documentos (.Zip o .RAR)" />
                             </div>
                         </div>
                     </div>
