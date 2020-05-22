@@ -1,5 +1,7 @@
 <?php
     require_once("db_fns.php");
+
+    require_once("sendMail.php");
     $error_msg = "";
     $allowTypes = array('zip','rar');
     $max_file_size = 10485760; // 10MB
@@ -16,10 +18,10 @@
     }
 
     function SendForm() {
-        global $target_dir;
+        global $target_dir, $error_msg;
 
         $nombre = substr(trim($_POST['nombre']), 0, 512);
-        $correo = substr(trim($_POST['correo']), 0, 128);
+        $correo =  substr(trim($_POST['correo']), 0, 128);
         $telefono = substr(trim($_POST['telefono']), 0, 10);
         $estado = intval($_POST['estado']);
         $municipio = intval($_POST['municipio']);
@@ -35,7 +37,8 @@
                 $url_file = "http://www.preparados.gob.mx/uploads/premionacional2020/". $tmp_uid . "." . $imageFileType;
                 array_push($allfiles, $url_file);
                 if (!move_uploaded_file($_FILES["archivo"]["tmp_name"][$key], $target_file)){
-                    return array("status" => false, "message" => "No se pudieron subir todos los archivos");
+                    $error_msg = 'No se pudo subir tu archivo';
+                    return;
                 }
             }
             $datos = [
@@ -45,7 +48,18 @@
                 ":estado"=>$estado,
                 ":municipio"=>$municipio
             ];
-            registrar($datos);
+            if (registrar($datos)) {
+                $tmp = getUltimoRegistro($correo);
+                if (enviarCorreoConfirmacion($correo, $nombre)){
+
+                }
+                else {
+                    $error_msg = 'No se pudo enviar el correo de confirmación para la dirección que ingresaste.';
+                }
+            }
+            else {
+                $error_msg = 'No se pudo realizar el registro de tu solicitud';
+            }
 
         }
         return false;
@@ -77,7 +91,7 @@
         {
             foreach($_FILES['archivo']['name'] as $key=>$val)
             {
-                $fileType = strtolower(pathinfo($target_dir . basename($_FILES['imagen']['name'][$key]), PATHINFO_EXTENSION));
+                $fileType = strtolower(pathinfo($target_dir . basename($_FILES['archivo']['name'][$key]), PATHINFO_EXTENSION));
                 if(!in_array($fileType, $allowTypes)) {
                     // not valid extension
                     $error_msg = "Extensión de archivo inválida. Debe ser de tipo zip o rar";
@@ -86,7 +100,7 @@
                 // Check file size
                 if ($_FILES["archivo"]["size"][$key] > $max_file_size) {
                     // file too large
-                    $error_msg = "Tamaño de imagen muy grande";
+                    $error_msg = "Tamaño de archivo muy grande";
                     return false;
                 }   
             }
@@ -101,7 +115,7 @@
         $conn = dbConnect(user, pass, server);
 
         $queryStr = "INSERT INTO REGISTRO (NOMBRE, CORREO, TELEFONO, ARCHIVO, ESTADO, MUNICIPIO) 
-        VALUES (:nombre,:correo,:telefono,:archivo,:estado,:municipio)";
+        VALUES (:nombre,LOWER(:correo),:telefono,:archivo,:estado,:municipio)";
 
         $paramsArray = $datos;
 
@@ -122,6 +136,33 @@
             return false;
         }
 
+    }
+    function getUltimoRegistro($correo) {
+        require_once("db_global.php");
+
+        $conn = dbConnect(user, pass, server);
+
+        $queryStr = "SELECT ID, NOMBRE, TELEFONO FROM REGISTRO WHERE LOWER(CORREO) = LOWER(:correo) ORDER BY ID DESC";
+
+        $paramsArray = Array(
+            ":correo" => trim($correo),
+        );
+
+        $query = oci_parse($conn, $queryStr);
+
+        foreach ($paramsArray as $key => $value) {
+            oci_bind_by_name($query, $key, $paramsArray[$key]);
+        }
+
+        $resultados = Array();
+
+        oci_execute($query);
+
+        while ( ($row = oci_fetch_assoc($query)) != false) {
+            $resultados = $row;
+            break;
+        }
+        return $resultados;
     }
     
     function getRegistros() {
@@ -177,17 +218,9 @@
 
         $conn = dbConnect(user, pass, server);
 
-        $paramsArray = Array(
-            ":idEstado" => intval(trim($idEstado))
-        );
-
         $queryStr = "SELECT ID_ESTADO, NOMBRE FROM ESTADO";
 
         $query = oci_parse($conn, $queryStr);
-
-        foreach ($paramsArray as $key => $value) {
-            oci_bind_by_name($query, $key, $paramsArray[$key]);
-        }
 
         $resultados = Array();
 

@@ -23,7 +23,7 @@ function enviarCorreoConfirmacion($correo, $nombre) {
         $mail->addAddress($correo);     // Add a recipient
 
         $message = file_get_contents('mail_templates/mail_confirmation.php'); 
-        $message = str_replace(':registrationName', $nombre);
+        $message = str_replace(':registrationName', $nombre, $message);
 
         //Content
         $mail->isHTML(true);                                  // Set email format to HTML
@@ -34,7 +34,7 @@ function enviarCorreoConfirmacion($correo, $nombre) {
         $mail->send();
         return true;
     } catch (Exception $e) {
-        error_log("No se pudo enviar correo de confirmación a: ".$correo." (ID: ".$id_inmueble."). Error en la siguiente línea.");
+        error_log("No se pudo enviar correo de confirmación a: ".$correo." . Error en la siguiente linea.");
         error_log($mail->ErrorInfo);
         return false;
     }
