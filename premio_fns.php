@@ -3,6 +3,7 @@
 
     require_once("sendMail.php");
     $error_msg = "";
+    $success_msg = "";
     $allowTypes = array('zip','rar');
     $max_file_size = 10485760; // 10MB
     $target_dir = "/var/www/html/uploads/premionacional2020/";
@@ -14,47 +15,47 @@
         isset($_POST["estado"]) && 
         isset($_POST["municipio"])) 
     {
-        
+        sendForm();    
     }else if(isset($_POST["idEstado"])) {
         echo json_encode(getMunicipios($_POST["idEstado"]));
+        
     }
     function SendForm() {
-        global $target_dir, $error_msg;
+        global $target_dir, $error_msg, $success_msg;
 
         $nombre = substr(trim($_POST['nombre']), 0, 512);
-        $correo =  substr(trim($_POST['correo']), 0, 128);
+        $correo =  mb_strtolower(substr(trim($_POST['correo']), 0, 128));
         $telefono = substr(trim($_POST['telefono']), 0, 10);
         $estado = intval($_POST['estado']);
         $municipio = intval($_POST['municipio']);
 
         if (validateForm($nombre, $correo, $telefono, $estado, $municipio)){
-            $allfiles = array();
-            foreach($_FILES['archivo']['name'] as $key=>$val)
-            {
-                $imageFileType = strtolower(pathinfo($target_dir . basename($_FILES['imagen']['name'][$key]), PATHINFO_EXTENSION));
+            
+            $imageFileType = strtolower(pathinfo($target_dir . basename($_FILES['archivo']['name']), PATHINFO_EXTENSION));
 
-                $tmp_uid = uniqid();
-                $target_file = $target_dir . $tmp_uid . "." . $imageFileType;
-                $url_file = "http://www.preparados.gob.mx/uploads/premionacional2020/". $tmp_uid . "." . $imageFileType;
-                array_push($allfiles, $url_file);
-                if (!move_uploaded_file($_FILES["archivo"]["tmp_name"][$key], $target_file)){
-                    $error_msg = 'No se pudo subir tu archivo';
-                    return;
-                }
+            $tmp_uid = uniqid();
+            $target_file = $target_dir . $tmp_uid . "." . $imageFileType;
+            $url_file = "http://www.preparados.gob.mx/uploads/premionacional2020/". $tmp_uid . "." . $imageFileType;
+            if (!move_uploaded_file($_FILES["archivo"]["tmp_name"], $target_file)){
+                $error_msg = 'No se pudo subir tu archivo';
+                return;
             }
+            
             $datos = [
                 ":nombre"=>$nombre,
                 ":correo"=>$correo,
                 ":telefono"=>$telefono,
+                ":archivo"=>$url_file,
                 ":estado"=>$estado,
                 ":municipio"=>$municipio
             ];
             if (registrar($datos)) {
                 $tmp = getUltimoRegistro($correo);
                 if (enviarCorreoConfirmacion($correo, $nombre)){
-
+                    $success_msg = 'Registro realizado correctamente. Se ha enviado exitosamente un correo confirmando tu registro';
                 }
                 else {
+                    $success_msg = 'Registro realizado correctamente';
                     $error_msg = 'No se pudo enviar el correo de confirmación para la dirección que ingresaste.';
                 }
             }
@@ -63,7 +64,7 @@
             }
 
         }
-        return false;
+        return;
     }
 
     function validateForm($nombre, $correo, $telefono, $estado, $municipio) {
@@ -77,34 +78,43 @@
             $error_msg = 'El estado seleccionado es inválido.';
             return false;
         }
-        $filesSent = count(array_filter($_FILES['archivo']['name']));
+        
+        if (!file_exists($_FILES['archivo']['tmp_name']) || !is_uploaded_file($_FILES['archivo']['tmp_name'])){
+            $error_msg = 'No se pudo subir tu archivo';
+            return false;
+        }
+        $fileType = strtolower(pathinfo($target_dir . basename($_FILES['archivo']['name']), PATHINFO_EXTENSION));
+        if(!in_array($fileType, $allowTypes)) {
+            // not valid extension
+            $error_msg = "Extensión de archivo inválida. Debe ser de tipo zip o rar";
+            return false;
+        }
+        // Check file size
+        if ($_FILES["archivo"]["size"] > $max_file_size) {
+            // file too large
+            $error_msg = "Tamaño de archivo muy grande";
+            return false;
+        }
+        $fh = @fopen($_FILES["archivo"]["tmp_name"], "r");
 
-        if ($filesSent > 1){
-            $error_msg = 'No se puede subir más de un archivo. Sube tus documentos en un archivo tipo zip o rar';
+        if (!$fh) {
+            fclose($fh);
+            $error_msg = 'No se pudo subir tu archivo';
             return false;
         }
-        else if ($filesSent == 0)
-        {
-            $error_msg = 'Sube tus documentos en un archivo tipo zip o rar';
+
+        $blob = fgets($fh, 5);  // Reads first 5 bytes
+
+        fclose($fh);
+
+        if (strpos($blob, 'Rar') !== false) {
+            // Is RAR
+        } 
+        else if (strpos($blob, 'PK') !== false) {
+            // Is ZIP
+        } else {
+            $error_msg = 'El archivo subido no es válido';
             return false;
-        }
-        else
-        {
-            foreach($_FILES['archivo']['name'] as $key=>$val)
-            {
-                $fileType = strtolower(pathinfo($target_dir . basename($_FILES['archivo']['name'][$key]), PATHINFO_EXTENSION));
-                if(!in_array($fileType, $allowTypes)) {
-                    // not valid extension
-                    $error_msg = "Extensión de archivo inválida. Debe ser de tipo zip o rar";
-                    return false;
-                }
-                // Check file size
-                if ($_FILES["archivo"]["size"][$key] > $max_file_size) {
-                    // file too large
-                    $error_msg = "Tamaño de archivo muy grande";
-                    return false;
-                }   
-            }
         }
         return true;
     }
@@ -222,7 +232,7 @@
 
         $conn = dbConnect(user, pass, server);
 
-        $queryStr = "SELECT ID_ESTADO, NOMBRE FROM ESTADO";
+        $queryStr = "SELECT ID_ESTADO, NOMBRE FROM ESTADO ORDER BY ID_ESTADO";
 
         $query = oci_parse($conn, $queryStr);
 
