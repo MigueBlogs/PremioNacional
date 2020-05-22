@@ -172,11 +172,6 @@
         </div>
         <h1 class="flow-text center">Premio Nacional de Protección Civil 2020</h1>
         <hr>
-
-        <!-- <div class="row">
-            <a class="btn-small" href="http://www.preparados.gob.mx/macrosimulacro">Página inicial</a>
-        </div> -->
-
         <div class="fixed-action-btn" style="position: fixed; bottom: 5em;">
             <a target="_blank" href="http://www.preparados.gob.mx/blog" class="btn-floating btn blue"><i class="material-icons">help</i></a>
         </div>
@@ -215,7 +210,8 @@
             Continuar
             </button>
         </div>
-        <form method="post" id="submit-form">
+        <form method="post" id="submit-form" style="display:none;">
+        <!-- <form method="post" id="submit-form"> -->
                 <h5 class="center guinda white-text">Registro de candidaturas para el Premio Nacional de Protección Civil 2020</h5>
                 <div id="primera-parte" class="row">
                     <div class="row">

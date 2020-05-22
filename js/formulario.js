@@ -330,4 +330,8 @@ $(document).ready(function(){
     $("#lastOne").click(function(){
         $('#btn-continuar').removeClass('disabled').addClass('pulse');
     });
+    $('#btn-continuar').on('click',function(){
+        $("#instrucciones").hide('fast');
+        $("#submit-form").show('fast');
+    });
   });

@@ -121,6 +121,7 @@
         dbClose($conn, $query);
         return $resultados;
     }
+    
     function getEstados() {
         require_once("db_global.php");
 

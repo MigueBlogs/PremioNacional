@@ -33,6 +33,10 @@ h1, h2, h3, h4, h5, strong {
     background-color: #0C231E !important;
 }
 
+.input-field .prefix.active{
+    color: #285C4D !important;
+}
+
 @media(max-width: 500px) {
     .niceTitle{
         font-size: medium;
