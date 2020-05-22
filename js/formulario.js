@@ -7,7 +7,7 @@ function validateForm(){
         goToId('correo'); return false; }
     if ($('#estado-select').val().trim() === "" ){
         goToId('estado-select'); return false; }
-    if ($('#municipio-select').val().trim() === "" ){
+    if ($('#estado-select').val().trim() !== ""  && $('#municipio-select').val() == null || $('#municipio-select').val() === "" ){
         goToId('municipio-select'); return false; }
     return true;
 }
@@ -23,7 +23,9 @@ function verificaInicio() {
     if ($('#telefono').val().trim() === "" ){ return; }
     if ($('#correo').val().trim() === "" ){ return; }
     if ($('#estado-select').val().trim() === "" ){ return; }
-    if ($('#municipio-select').val().trim() === "" ){ return; }
+    else {
+        if ($('#municipio-select').val() == null || $('#municipio-select').val() === "" ){ return; }
+    }
     
     $('#btn-submit').removeClass('disabled').addClass('pulse');
 }
@@ -48,7 +50,6 @@ $(document).ready(function() {
 
     $('#estado-select').on('change', function(){
         if ($(this).val() !== ""){
-            debugger
             let data = {idEstado: $(this).val()};
             $('#municipio-loading').show();
             $.post("premio_fns.php", data, function(result) {
@@ -61,8 +62,8 @@ $(document).ready(function() {
                 $('#municipio-select').formSelect();
                 $('#municipio-loading').hide();
                 $('#municipio-alert').remove();
+                verificaInicio();
             }, 'json');
-            verificaInicio();
         }
     });
 
