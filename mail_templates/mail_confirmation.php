@@ -22,6 +22,9 @@
             color: #B38E5D;
             text-decoration: underline;
         }
+        .center {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -31,7 +34,7 @@
     <h5>Premio Nacional 2020</h5>
 
     <div class="section">
-        <p>Estomado <strong><span>:registrationName</span></strong>: </p>
+        <p>Estimado <strong><span>:registrationName</span></strong>: </p>
         <p>En la Coordinación Nacional de Protección Civil hemos recibido correctamente los documentos de tu candidatura, los cuáles serán revisados conforme a las bases establecidas en el programa.
         <br>Te pedimos estés al tanto de este correo electrónico, pues será la vía de comunicación para anunciarte los pasos a seguir.
         <br>De la misma manera sigue nuestras redes sociales de <a href="https://www.facebook.com/CNPCmx/">Facebook</a> y <a href="https://twitter.com/CNPC_mx">Twitter</a> para futuros anuncios del concurso</p>
