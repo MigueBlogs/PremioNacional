@@ -125,6 +125,7 @@ $(document).ready(function() {
     $('#btn-success-close').on('click', function(e){
         $('#div-success').hide('fast');
     });
+    if ($('#estado-select').val() != null && $('#estado-select').val() !== "" ){ $('#estado-select').change(); }
 });
 
 
@@ -142,8 +143,5 @@ $(document).ready(function(){
             $("#instrucciones").hide('fast');
             $("#submit-form").show('fast');
         }
-    });
-    $("#btn-continuar").click(function(){
-        console.log("Le ando dando click!!!");
     });
   });
