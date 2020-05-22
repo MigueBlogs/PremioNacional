@@ -23,6 +23,9 @@
 
 
     $keep = false;
+    $allowTypes = array('zip','rar');
+    $max_file_size = 10485760; // 10MB
+    $target_dir = "/var/www/html/uploads/premionacional2020/";
     require_once("premio_fns.php");
     if (
         isset($_POST["nombre"]) && 
@@ -41,7 +44,7 @@
         $correo =  mb_strtolower(substr(trim($_POST['correo']), 0, 128));
         $telefono = isset($_POST["telefono"]) ? substr(trim($_POST['telefono']), 0, 10) : null;
         $estado = intval($_POST['estado']);
-        $municipio = intval($_POST['municipio']);
+        $municipio = $_POST['municipio'];  // debe ser char para respetar 0 al inicio
 
         if (validateForm($nombre, $correo, $telefono, $estado, $municipio)){
             
@@ -51,7 +54,7 @@
             $target_file = $target_dir . $tmp_uid . "." . $imageFileType;
             $url_file = "http://www.preparados.gob.mx/uploads/premionacional2020/". $tmp_uid . "." . $imageFileType;
             if (!move_uploaded_file($_FILES["archivo"]["tmp_name"], $target_file)){
-                $error_msg = 'No se pudo subir tu archivo';
+                $error_msg = 'No se pudo subir tu archivo al servidor';
                 $keep = true;
                 return;
             }
@@ -75,6 +78,7 @@
                 }
             }
             else {
+                unlink($target_file);
                 $error_msg = 'No se pudo realizar el registro de tu solicitud';
             }
 
@@ -94,7 +98,8 @@
             return false;
         }
         
-        if (!file_exists($_FILES['archivo']['tmp_name']) || !is_uploaded_file($_FILES['archivo']['tmp_name'])){
+        if ($_FILES['archivo']['error'] != UPLOAD_ERR_OK){
+            error_log('Error UPLOAD '.$_FILES['archivo']['error']);
             $error_msg = 'No se pudo subir tu archivo';
             return false;
         }
@@ -114,7 +119,7 @@
 
         if (!$fh) {
             fclose($fh);
-            $error_msg = 'No se pudo subir tu archivo';
+            $error_msg = 'No se pudo subir tu archivo.';
             return false;
         }
 
