@@ -133,9 +133,6 @@
         }
         return true;
     }
-    
-    
-    
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -210,7 +207,6 @@
             </button>
         </div>
         <form method="post" id="submit-form" style="display:none;" enctype="multipart/form-data">
-        <!-- <form method="post" id="submit-form"> -->
                 <h5 class="center titleMex">Registro de candidaturas para el Premio Nacional de Protección Civil 2020</h5>
                 <div id="primera-parte" class="row">
                     <div class="row">
