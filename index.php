@@ -1,7 +1,7 @@
 <?php
     $today = time();
     $date_start = strtotime('2020-05-29 05:00:00.0');  // UTC for 29 May, 00:00 GMT-5 (Mexico City)
-    $date_end = strtotime('2020-12-31 05:00:00.0');  // UTC for 31 Dic, 00:00 GMT-5 (Mexico City)
+    $date_end = strtotime('2020-07-03 23:00:00.0');  // UTC for 03 Jul, 18:00 GMT-5 (Mexico City)
     $available = $today - $date_start >= 0 ? true : false;
     $expired = $today - $date_end >= 0 ? true: false;
     // if ($available == false || $expired) {
@@ -200,13 +200,13 @@
                 </li>
                 <li>
                     <div class="collapsible-header mainIcons"><i class="material-icons">insert_drive_file</i>¿Cómo subir mis archivos?</div>
-                    <div class="collapsible-body"><span>Los archivos mencionados en la convocatoria deben ser subidos a esta plataforma como un archivo .zip o .rar, este debe de pesar menos de 10 MegaBytes y sebe estar conformado por las siguientes carpetas:</span>
+                    <div class="collapsible-body"><span>Los archivos mencionados en la convocatoria deben ser subidos a esta plataforma como un archivo .zip o .rar, este debe de pesar menos de 10 MegaBytes y debe estar conformado por las siguientes carpetas:</span>
                         <ul style="padding-left:inherit;">
                         <li style="list-style-type: circle;">Coffee</li>
                         <li style="list-style-type: circle;">Tea</li>
                         <li style="list-style-type: circle;">Milk</li>
                         </ul>
-                </div>
+                    </div>
                 </li>
                 <li>
                     <div class="collapsible-header mainIcons"><i class="material-icons">check</i>¿Cómo sabré que mi candidatura fue recibida?</div>
@@ -214,13 +214,13 @@
                 </li>
                 <li>
                     <div id="lastOne" class="collapsible-header mainIcons"><i class="material-icons">videocam</i>¿Cómo enviar mi evidencia audiovisual?</div>
-                    <div class="collapsible-body"><span>Toda la evidencia audiovisual seberá ser subida a plataformas abiertas como: Youtube, GoogleDrive, WeTransfer, etc. Y compartir en un archivo de texto la liga de esta evidencia. En caso de que tu evidencia pese menos de 10 MB en el archivo ZIP podrá ser aceptada dentro de su carpeta coorespondiente.</span></div>
+                    <div class="collapsible-body"><span>Toda la evidencia audiovisual deberá ser subida a plataformas abiertas como: Youtube, GoogleDrive, WeTransfer, etc. Y compartir en un archivo de texto la liga de esta evidencia. En caso de que tu evidencia pese menos de 10 MB en el archivo ZIP podrá ser aceptada dentro de su carpeta correspondiente.</span></div>
                 </li>
             </ul>
             <div class="row center">
-            <button class="btn-large disabled guinda" type="button" id="btn-continuar" style="pointer-events:unset;"><i class="material-icons right">arrow_forward</i>
-            Iniciar registro
-            </button>
+                <button class="btn-large disabled guinda" type="button" id="btn-continuar" style="pointer-events:unset;"><i class="material-icons right">arrow_forward</i>
+                Iniciar registro
+                </button>
             </div>
         </div>
         <form method="post" id="submit-form" style="display:none;" enctype="multipart/form-data">
