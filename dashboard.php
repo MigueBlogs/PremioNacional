@@ -62,7 +62,7 @@
         <!--Contenido principal-->
               
         <div id="main-container">
-            <div id="VistaGeneral">
+            <div id="VistaGeneral"  class="vista">
                 <h3 class="titleMex center"> Vista General de Inscripciones </h3>
                 <h6 class="right"> Ciudad de México, a <span class="fecha"></span></h6>
                 <br>
