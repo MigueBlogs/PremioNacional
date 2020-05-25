@@ -1,7 +1,7 @@
 <?php
     $today = time();
     $date_start = strtotime('2020-05-29 05:00:00.0');  // UTC for 29 May, 00:00 GMT-5 (Mexico City)
-    $date_end = strtotime('2020-12-31 05:00:00.0');  // UTC for 31 Dic, 00:00 GMT-5 (Mexico City)
+    $date_end = strtotime('2020-07-03 23:00:00.0');  // UTC for 03 Jul, 18:00 GMT-5 (Mexico City)
     $available = $today - $date_start >= 0 ? true : false;
     $expired = $today - $date_end >= 0 ? true: false;
     // if ($available == false || $expired) {
@@ -797,7 +797,7 @@
                                     <i style="">Para mas detalles de este apartado consulta la sección de "¿Cómo enviar mi evidencia audiovisual?".</i>
                                 </ul>
                         </ul>
-                </div>
+                    </div>
                 </li>
                 <li>
                     <div class="collapsible-header mainIcons"><i class="material-icons">check</i>¿Cómo sabré que mi candidatura fue recibida?</div>
@@ -809,9 +809,9 @@
                 </li>
             </ul>
             <div class="row center">
-            <button class="btn-large disabled guinda" type="button" id="btn-continuar" style="pointer-events:unset;"><i class="material-icons right">arrow_forward</i>
-            Iniciar registro
-            </button>
+                <button class="btn-large disabled guinda" type="button" id="btn-continuar" style="pointer-events:unset;"><i class="material-icons right">arrow_forward</i>
+                Iniciar registro
+                </button>
             </div>
         </div>
         <form method="post" id="submit-form" style="display:none;" enctype="multipart/form-data">
