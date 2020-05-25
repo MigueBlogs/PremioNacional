@@ -165,6 +165,25 @@
             <button id="btn-error-close" class="btn-small" type="button" style="margin-right: 1em;"><i class="material-icons">close</i></button>
         </div>
     </noscript>
+    <style>
+        p.MsoNormal, li.MsoNormal, div.MsoNormal
+        {mso-style-unhide:no;
+        mso-style-parent:"";
+        margin-top:0cm;
+        margin-right:0cm;
+        margin-bottom:10.0pt;
+        margin-left:0cm;
+        line-height:115%;
+        mso-pagination:widow-orphan;
+        font-size:11.0pt;
+        font-family:"Calibri",sans-serif;
+        mso-fareast-font-family:Calibri;
+        mso-bidi-font-family:Calibri;}
+
+        tr {
+            border-bottom: unset;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -196,25 +215,597 @@
             <ul class="collapsible popout">
                 <li class="active">
                     <div class="collapsible-header mainIcons"><i class="material-icons">lightbulb_outline</i>Lee las siguientes instrucciones para realizar el registro de tu candidatura</div>
-                    <div class="collapsible-body"><span>Bienvenido al portal de registro de Candidaturas para el Premio Nacional de Protección Civil, para iniciar deberás ingresar tus datos de contacto como: Nombre completo (obligatorio), correo electrónico (obligatorio) y un Número telefónico de contacto (opcional), dicho contacto deberá ser responsable del proyecto. Recuerda escribir correctamente tu correo electrónico.</span></div>
+                    <div class="collapsible-body"><span>Bienvenido al portal de registro de Candidaturas para el Premio Nacional de Protección Civil, para iniciar deberás leer completamente las instrucciones siguientes y a continuación hacer clic sobre el botón de “INICIAR REGISTRO”, a continuación deberás ingresar tus datos de contacto como: Nombre completo (<b>obligatorio</b>), correo electrónico (<b>obligatorio</b>) y un Número telefónico de contacto (opcional), dicho contacto deberá ser responsable del proyecto en caso de persona física. Si el registro es por parte de un Grupo Voluntario se deberá de colocar el nombre de un solo representante, esto con el fin de mantener contacto y tener referencia de la persona que ha postulado la candidatura.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header mainIcons"><i class="material-icons">subject</i>Bases del concurso</div>
+                    <div class="collapsible-body">
+                        <span>
+                            <p class=MsoNormal align=center style='margin-right:-4.65pt;text-align:center;
+                            text-indent:.2pt'><b style='mso-bidi-font-weight:normal'><span
+                            style='font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>BASES<o:p></o:p></span></b></p>
+                            <p class=MsoNormal align=center style='margin-right:-4.65pt;text-align:center;
+                            text-indent:.2pt'><b style='mso-bidi-font-weight:normal'><span
+                            style='font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'><o:p>&nbsp;</o:p></span></b></p>
+
+                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
+                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>Primera.</span></b><span style='font-size:10.0pt;line-height:115%;
+                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'> El Premio Nacional de Protección Civil 2020, será conferido y
+                            entregado a aquellas personas físicas o grupos voluntarios, mexicanos o
+                            mexicanas que representen un ejemplo para la comunidad, por su esfuerzo en
+                            acciones o medidas de autoprotección y autopreparación para enfrentar los
+                            fenómenos naturales o de origen humano que pongan a la población en situación
+                            de riesgo o de peligro, así como cuando se destaquen por su labor ejemplar en
+                            la ayuda a la población ante la eventualidad de un desastre.</span><span
+                            style='font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'><o:p></o:p></span></p>
+                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
+                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>Segunda.</span></b><span style='font-size:10.0pt;line-height:115%;
+                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'> En los términos del artículo 103 de la Ley de Premios, Estímulos y
+                            Recompensas Civiles, los dos campos de este premio, en los que se puede
+                            participar individual o colectivamente, son los siguientes:<o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='margin-left:.2pt;text-align:justify'><span
+                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
+                            Montserrat;mso-bidi-font-family:Montserrat'>I.- La Prevención, por las medidas
+                            que se consideren de relevancia en materia de gestión integral de riesgos de
+                            desastres, y<o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='text-align:justify;tab-stops:288.0pt'><span
+                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
+                            Montserrat;mso-bidi-font-family:Montserrat'>II.- La Ayuda, por las acciones que
+                            se hayan llevado a cabo en las tareas de auxilio a la población en caso de
+                            desastre.<o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
+                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>Tercera.</span></b><span style='font-size:10.0pt;line-height:115%;
+                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'> Podrán ser beneficiarias del Premio Nacional de Protección Civil
+                            2020, personas físicas o grupos voluntarios, mexicanos o mexicanas, que se
+                            hayan significado en los campos mencionados en la base segunda de esta
+                            Convocatoria. <o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
+                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>Cuarta. </span></b><span style='font-size:10.0pt;line-height:115%;
+                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>Conforme a los artículos 4° y 92 de la Ley de Premios, Estímulos y
+                            Recompensas Civiles, no podrán participar las personas que tengan la calidad de
+                            servidores públicos seleccionados de entre aquéllos que prestan sus servicios
+                            en las dependencias y entidades cuyas relaciones laborales se rigen por el
+                            apartado &quot;B&quot; del artículo 123 de la Constitución Política de los
+                            Estados Unidos Mexicanos.<o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
+                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>Quinta.</span></b><span style='font-size:10.0pt;line-height:115%;
+                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'> Las producciones, estudios, programas o acciones para salvaguardar
+                            la vida, integridad y salud de la población, así como sus bienes; la
+                            infraestructura, la planta productiva y el medio ambiente que fortalezca el
+                            Sistema Nacional de Protección Civil y que acrediten el merecimiento del Premio
+                            Nacional de Protección Civil 2020, deberán ser expresión de acciones realizadas
+                            durante el período comprendido del 01 de enero de 2019 hasta la fecha en que se
+                            publique la presente Convocatoria y que hayan significado un impacto a la
+                            Protección Civil Nacional, así mismo, las personas o grupos voluntarios hayan
+                            sido premiados en pasadas ediciones del Premio Nacional de Protección Civil, no
+                            podrán ser postulados nuevamente.<o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='text-align:justify'><b style='mso-bidi-font-weight:
+                            normal'><span style='font-size:10.0pt;line-height:115%;font-family:Montserrat;
+                            mso-fareast-font-family:Montserrat;mso-bidi-font-family:Montserrat'>Sexta.</span></b><span
+                            style='font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'> </span><span style='font-size:10.0pt;line-height:115%;font-family:
+                            Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:Montserrat'>Conforme
+                            lo establecido en los artículos 7, fracción IV, 8, 11, y 104 de la Ley de
+                            Premios, Estímulos y Recompensas Civiles, el premio para cada uno de los dos
+                            campos consistirá en un diploma firmado por el Presidente de los Estados Unidos
+                            Mexicanos, por las y los miembros del Consejo de Premiación del Premio Nacional
+                            de Protección Civil 2020 y por las y los integrantes del Jurado.<o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><span
+                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
+                            Montserrat;mso-bidi-font-family:Montserrat'>El Premio Nacional de Protección
+                            Civil 2020 podrá otorgarse en un mismo campo a dos o más personas físicas o
+                            grupos voluntarios, mexicanos o mexicanas, en el caso de las personas físicas
+                            en grupo, solo se entregará un diploma.<o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
+                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>Séptima</span></b><b style='mso-bidi-font-weight:normal'><span
+                            style='font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>.</span></b><span style='font-family:Montserrat;mso-fareast-font-family:
+                            Montserrat;mso-bidi-font-family:Montserrat'> </span><span style='font-size:
+                            10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
+                            mso-bidi-font-family:Montserrat'>Para la entrega del Premio, en caso de que la
+                            candidatura ganadora incluya a un grupo de personas físicas, que cuente con más
+                            de cuatro integrantes, se deberá nombrar un o una representante común para
+                            recibir el premio. Para el caso de los grupos voluntarios, el premio se otorgará
+                            por medio de su representante legal.<o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+                            justify;text-indent:.2pt'><b style='mso-bidi-font-weight:normal'><span
+                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
+                            Montserrat;mso-bidi-font-family:Montserrat'>Octava.</span></b><span
+                            style='font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'> </span><span style='font-size:10.0pt;line-height:115%;font-family:
+                            Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:Montserrat'>La
+                            presentación de candidaturas, se efectuará ante el Consejo de Premiación del
+                            Premio Nacional de Protección Civil 2020, por conducto de la Coordinación
+                            Nacional de Protección Civil de la Secretaría de Seguridad y Protección
+                            Ciudadana, en su carácter de Secretaría Técnica del referido Órgano Colegiado,
+                            de forma física en el domicilio ubicado en Avenida José Vasconcelos número 221,
+                            Piso 7, Colonia San Miguel Chapultepec, Alcaldía Miguel Hidalgo, Ciudad de
+                            México, Código Postal 11850, en un horario de 09:00 a 18:00 horas, de lunes a
+                            viernes, o bien en línea en la página: </span><span class=MsoHyperlink>preparados.gob.mx/PremioNacional2020</span>,
+                            <span style='font-size:10.0pt;line-height:115%;font-family:Montserrat;
+                            mso-fareast-font-family:Montserrat;mso-bidi-font-family:Montserrat'>a partir de
+                            la publicación de la presente convocatoria<span style='mso-spacerun:yes'> 
+                            </span>y hasta las 18:00 horas del día 03 de julio de 2020.<o:p></o:p></span></p>
+                            <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+                            justify;text-indent:.2pt'><span style='font-size:10.0pt;line-height:115%;
+                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'><o:p>&nbsp;</o:p></span></p>
+
+                            <p class=MsoNormal style='text-align:justify'><span style='font-size:10.0pt;
+                            line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
+                            mso-bidi-font-family:Montserrat'>La presentación de las candidaturas, para ser
+                            puesta a consideración del Consejo de Premiación, deberá estar acompañada de
+                            los documentos que lo avalen. Consulta la sección de <b>documentación necesaria</b> para más detalles.<o:p></o:p></span></p>
+                            
+                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
+                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>Novena.</span></b><span style='font-size:10.0pt;line-height:115%;
+                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'> La Coordinación Nacional de Protección Civil de la Secretaría de
+                            Seguridad y Protección Ciudadana, en su carácter de Secretaría Técnica del
+                            Consejo de Premiación del Premio Nacional de Protección Civil 2020, verificará
+                            que las candidaturas satisfagan los términos de la presente convocatoria y sus
+                            bases para poder notificar al o la participante vía correo electrónico su
+                            aceptación o rechazo, dentro de los quince días hábiles posteriores a la fecha
+                            establecida como límite para la recepción de candidaturas.<o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
+                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>Décima.</span></b><span style='font-size:10.0pt;line-height:115%;
+                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'> La información que sea presentada con motivo de las candidaturas
+                            propuestas para el otorgamiento del Premio Nacional de Protección Civil 2020,
+                            estará sujeta a lo dispuesto por la Ley General de Protección de Datos
+                            Personales en Posesión de Sujetos Obligados; así mismo si desea conocer el
+                            aviso de privacidad, se encuentra disponible en la página de la Secretaría de
+                            Seguridad y Protección Ciudadana.<o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
+                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>Décima Primera.</span></b><span style='font-size:10.0pt;line-height:
+                            115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'> El Consejo de Premiación del Premio Nacional de Protección Civil
+                            2020, integrará, a propuesta de las personas que tengan la calidad de miembros,
+                            un Jurado compuesto por el número de integrantes que determinen en su primera
+                            sesión, el cual no deberá ser menor a diez integrantes, quienes se sujetarán a
+                            lo dispuesto por los artículos 16 a 18 y 20 a 23 de la Ley de Premios,
+                            Estímulos y Recompensas Civiles. <o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
+                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>Décima Segunda.</span></b><span style='font-size:10.0pt;line-height:
+                            115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'> El Jurado dictaminará sobre los expedientes de las candidaturas,
+                            que le turne el Consejo de Premiación, dictámenes que serán entregados a la
+                            Secretaría Técnica del Consejo de Premiación del Premio Nacional de Protección
+                            Civil 2020, a más tardar el 14<b style='mso-bidi-font-weight:normal'> </b>de
+                            agosto 2020<b style='mso-bidi-font-weight:normal'>, </b>los cuales deberán
+                            contar con la mayoría de votos de los integrantes del jurado respectivo,<span
+                            style='mso-spacerun:yes'>  </span>a fin de someterlos a consideración del
+                            Presidente de los Estados Unidos Mexicanos. <o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
+                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>Décima Tercera.</span></b><span style='font-size:10.0pt;line-height:
+                            115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'> El Consejo de Premiación podrá declarar, la vacancia del premio,
+                            en cualquiera de sus dos campos, si no sobreviene el reconocimiento que se
+                            estatuye, con base en el dictamen del Jurado debidamente fundado y motivado. <o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
+                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>Décima Cuarta.</span></b><span style='font-size:10.0pt;line-height:
+                            115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'> Los casos no previstos en la presente convocatoria, serán
+                            resueltos en definitiva por el Consejo de Premiación del Premio Nacional de
+                            Protección Civil 2020, de acuerdo a las disposiciones de la Ley de Premios,
+                            Estímulos y Recompensas Civiles.<o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='margin-right:-2.05pt;text-align:justify;text-indent:
+                            .2pt'><b style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;
+                            line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
+                            mso-bidi-font-family:Montserrat'>Décima Quinta.</span></b><span
+                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
+                            Montserrat;mso-bidi-font-family:Montserrat'> Los y las participantes que no
+                            resultaron ganadores del Premio Nacional de Protección Civil 2020, podrán
+                            solicitar mediante escrito, ante la Secretaría Técnica del Consejo de
+                            Premiación, la devolución de la documentación con la cual fueron postulados y/o
+                            postuladas como candidatos y/o candidatas a dicho Premio, en un periodo no
+                            mayor a dos meses a partir de la publicación del acuerdo presidencial en el que
+                            se señalan a los ganadores. En caso de no requerir la devolución en el plazo
+                            señalado, se entiende por autorizada su destrucción.<o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='margin-right:-2.05pt;text-align:justify;text-indent:
+                            .2pt'><b style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;
+                            line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
+                            mso-bidi-font-family:Montserrat'>Décima Sexta.</span></b><span
+                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
+                            Montserrat;mso-bidi-font-family:Montserrat'> Solo serán consideradas las
+                            candidaturas que se entreguen directamente en la Secretaría Técnica del Consejo
+                            de Premiación del Premio Nacional de Protección Civil 2020, o a través de la
+                            página del premio señalada en la Base Octava de la presente convocatoria, y que
+                            cumplan con los términos de la presente convocatoria y sus bases. <o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='margin-right:-2.05pt;text-align:justify;text-indent:
+                            .2pt'><span style='font-size:10.0pt;line-height:115%;font-family:Montserrat;
+                            mso-fareast-font-family:Montserrat;mso-bidi-font-family:Montserrat'>No se
+                            recibirán postulaciones por correo electrónico, de ser el caso serán
+                            rechazadas.<o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='margin-right:-4.65pt;text-align:justify;text-indent:
+                            .2pt'><b style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;
+                            line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
+                            mso-bidi-font-family:Montserrat'>Décima Séptima</span></b><span
+                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
+                            Montserrat;mso-bidi-font-family:Montserrat'>. De acuerdo a lo establecido en el
+                            artículo 105 de la Ley de Premios, Estímulos y Recompensas Civiles el Premio
+                            será entregado el 19 de septiembre del año 2020.<span
+                            style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><span
+                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
+                            Montserrat;mso-bidi-font-family:Montserrat'>El Consejo de Premiación:<o:p></o:p></span></p>
+
+                            <table class=a border=0 cellspacing=0 cellpadding=0 width=0 style='border-collapse:
+                            collapse;mso-table-layout-alt:fixed;mso-yfti-tbllook:1024;mso-padding-alt:
+                            0cm .5pt 0cm .5pt'>
+                                <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+                                <td width=518 valign=top style='width:388.15pt;padding:0cm .5pt 0cm .5pt'>
+                                <p class=MsoNormal style='margin-right:-5.4pt;text-align:justify'><b
+                                style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                                115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                                Montserrat'>Titular de la Secretaría de Seguridad y Protección Ciudadana
+                                (Presidente)<o:p></o:p></span></b></p>
+                                </td>
+                                </tr>
+                                <tr style='mso-yfti-irow:1'>
+                                <td width=518 valign=top style='width:388.15pt;padding:0cm .5pt 0cm .5pt'>
+                                <p class=MsoNormal style='text-align:justify'><b style='mso-bidi-font-weight:
+                                normal'><span style='font-size:10.0pt;line-height:115%;font-family:Montserrat;
+                                mso-fareast-font-family:Montserrat;mso-bidi-font-family:Montserrat'>Titular
+                                de la Secretaría de la Defensa Nacional<o:p></o:p></span></b></p>
+                                </td>
+                                </tr>
+                                <tr style='mso-yfti-irow:2'>
+                                <td width=518 valign=top style='width:388.15pt;padding:0cm .5pt 0cm .5pt'>
+                                <p class=MsoNormal style='margin-right:-4.65pt;text-align:justify'><b
+                                style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                                115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                                Montserrat'>Titular de la Secretaría de Marina<o:p></o:p></span></b></p>
+                                </td>
+                                </tr>
+                                <tr style='mso-yfti-irow:3'>
+                                <td width=518 valign=top style='width:388.15pt;padding:0cm .5pt 0cm .5pt'>
+                                <p class=MsoNormal style='text-align:justify'><b style='mso-bidi-font-weight:
+                                normal'><span style='font-size:10.0pt;line-height:115%;font-family:Montserrat;
+                                mso-fareast-font-family:Montserrat;mso-bidi-font-family:Montserrat'>Presidenta
+                                de la Mesa Directiva de la H. Cámara de Diputados<o:p></o:p></span></b></p>
+                                </td>
+                                </tr>
+                                <tr style='mso-yfti-irow:4'>
+                                <td width=518 valign=top style='width:388.15pt;padding:0cm .5pt 0cm .5pt'>
+                                <p class=MsoNormal style='text-align:justify'><b style='mso-bidi-font-weight:
+                                normal'><span style='font-size:10.0pt;line-height:115%;font-family:Montserrat;
+                                mso-fareast-font-family:Montserrat;mso-bidi-font-family:Montserrat'>Presidenta
+                                de la Mesa Directiva de la H. Cámara de Senadores<o:p></o:p></span></b></p>
+                                </td>
+                                </tr>
+                                <tr style='mso-yfti-irow:5'>
+                                <td width=518 valign=top style='width:388.15pt;padding:0cm .5pt 0cm .5pt'>
+                                <p class=MsoNormal style='margin-right:1.65pt;text-align:justify'><b
+                                style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                                115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                                Montserrat'>Titular de la Coordinación Nacional de Protección Civil
+                                (Secretario Técnico)<o:p></o:p></span></b></p>
+                                </td>
+                                </tr>
+                                <tr style='mso-yfti-irow:6'>
+                                <td width=518 valign=top style='width:388.15pt;padding:0cm .5pt 0cm .5pt'>
+                                <p class=MsoNormal style='margin-right:1.65pt;text-align:justify'><b
+                                style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                                115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                                Montserrat'>Titular de la Dirección General del Centro Nacional de Prevención
+                                de Desastres<o:p></o:p></span></b></p>
+                                </td>
+                                </tr>
+                                <tr style='mso-yfti-irow:7'>
+                                <td width=518 valign=top style='width:388.15pt;padding:0cm .5pt 0cm .5pt'>
+                                <p class=MsoNormal style='margin-right:1.65pt;text-align:justify'><b
+                                style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                                115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                                Montserrat'>Rector de la Universidad Nacional Autónoma de México<o:p></o:p></span></b></p>
+                                </td>
+                                </tr>
+                                <tr style='mso-yfti-irow:8;height:15.6pt'>
+                                <td width=518 valign=top style='width:388.15pt;padding:0cm .5pt 0cm .5pt;
+                                height:15.6pt'>
+                                <p class=MsoNormal style='margin-right:1.65pt;text-align:justify'><b
+                                style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                                115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                                Montserrat'>Titular de la Dirección General del Instituto Politécnico
+                                Nacional<o:p></o:p></span></b></p>
+                                </td>
+                                </tr>
+                                <tr style='mso-yfti-irow:9;mso-yfti-lastrow:yes'>
+                                <td width=518 valign=top style='width:388.15pt;padding:0cm .5pt 0cm .5pt'>
+                                <p class=MsoNormal style='text-align:justify'><b style='mso-bidi-font-weight:
+                                normal'><span style='font-size:10.0pt;line-height:115%;font-family:Montserrat;
+                                mso-fareast-font-family:Montserrat;mso-bidi-font-family:Montserrat'>Presidente
+                                Nacional de la Cruz Roja Mexicana<o:p></o:p></span></b></p>
+                                <p class=MsoNormal style='text-align:justify'><b style='mso-bidi-font-weight:
+                                normal'><span style='font-size:10.0pt;line-height:115%;font-family:Montserrat;
+                                mso-fareast-font-family:Montserrat;mso-bidi-font-family:Montserrat'><o:p>&nbsp;</o:p></span></b></p>
+                                <p class=MsoNormal style='text-align:justify'><b style='mso-bidi-font-weight:
+                                normal'><span style='font-size:10.0pt;line-height:115%;font-family:Montserrat;
+                                mso-fareast-font-family:Montserrat;mso-bidi-font-family:Montserrat'><o:p>&nbsp;</o:p></span></b></p>
+                                </td>
+                                </tr>
+                            </table>
+
+                            <p class=MsoNormal align=right style='text-align:right'><b style='mso-bidi-font-weight:
+                            normal'><span style='font-size:10.0pt;line-height:115%;font-family:Montserrat;
+                            mso-fareast-font-family:Montserrat;mso-bidi-font-family:Montserrat'>Ciudad de
+                            México, a 29 de mayo de 2020.</span></b><b style='mso-bidi-font-weight:normal'><span
+                            style='font-size:12.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
+                            Montserrat;mso-bidi-font-family:Montserrat'><o:p></o:p></span></b></p>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header mainIcons"><i class="material-icons">attach_file</i>Documentación necesaria</div>
+                    <div class="collapsible-body">
+                        <span>
+                            <p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+                            -36.0pt;mso-list:l1 level1 lfo1'><![if !supportLists]><span style='font-size:
+                            10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
+                            mso-bidi-font-family:Montserrat'><span style='mso-list:Ignore'>1.<span
+                            style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span></span></span><![endif]><span style='font-size:10.0pt;line-height:115%;
+                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>Carta de propuesta, la cual deberá ser emitida por un tercero,
+                            debidamente firmada en original dirigida al Consejo de Premiación, la cual
+                            deberá contener el nombre completo del candidato o la candidata, señalar el
+                            campo en que participa y señalar domicilio para recibir notificaciones y datos
+                            de contacto, tanto del o la proponente como del candidato o la candidata, en la
+                            que argumente y exponga los motivos por los cuales se considera que la
+                            candidatura es<span style='mso-spacerun:yes'>  </span>merecedora del premio,
+                            presentado con las siguientes características: Letra Arial 12, doble espacio,
+                            tamaño carta, sin sangría y margen justificado, márgenes laterales de 3 centímetros,
+                            y superior e inferior de 2.5 centímetros. Además el documento deberá contener
+                            los siguientes apartados: 1) Antecedentes; 2) Descripción de acciones y medidas
+                            a premiar; 3) Justificación y relevancia; 4) Alineación de las acciones con el
+                            Sistema Nacional de Protección Civil.<o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+                            -36.0pt;mso-list:l1 level1 lfo1'><![if !supportLists]><span style='font-size:
+                            10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
+                            mso-bidi-font-family:Montserrat'><span style='mso-list:Ignore'>2.<span
+                            style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span></span></span><![endif]><span style='font-size:10.0pt;line-height:115%;
+                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>Carta de auto propuesta, firmada en original dirigida al Consejo de
+                            Premiación, la cual deberá contener el nombre completo, señalar el campo en que
+                            participa y señalar domicilio para recibir notificaciones y datos de contacto,
+                            en la que argumente y exponga los motivos por los cuales se considera que la
+                            candidatura es<span style='mso-spacerun:yes'>  </span>merecedora del premio,
+                            presentado con las siguientes características: : Letra Arial 12, doble espacio,
+                            tamaño carta, sin sangría y margen justificado, márgenes laterales de 3
+                            centímetros, y superior e inferior de 2.5 centímetros. Además el documento
+                            deberá contener los siguientes apartados: 1) Antecedentes; 2) Descripción de
+                            acciones y medidas a premiar; 3) Justificación y relevancia; 4) Alineación de
+                            las acciones con el Sistema Nacional de Protección Civil.<o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+                            -36.0pt;mso-list:l1 level1 lfo1'><![if !supportLists]><span style='font-size:
+                            10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
+                            mso-bidi-font-family:Montserrat'><span style='mso-list:Ignore'>3.<span
+                            style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span></span></span><![endif]><span style='font-size:10.0pt;line-height:115%;
+                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>Escrito de protesta de aceptación por parte del candidato o la
+                            candidata para participar y, en su caso, recibir el Premio Nacional de
+                            Protección Civil 2020, firmada en original. <o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='margin-left:36.0pt;text-align:justify'><span
+                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
+                            Montserrat;mso-bidi-font-family:Montserrat'>En caso de un grupo de personas
+                            físicas, anexar relación de sus integrantes y documento en el que se haya
+                            designado a su representante.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+                            -36.0pt;mso-list:l1 level1 lfo1'><![if !supportLists]><span style='font-size:
+                            10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
+                            mso-bidi-font-family:Montserrat'><span style='mso-list:Ignore'>4.<span
+                            style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span></span></span><![endif]><span style='font-size:10.0pt;line-height:115%;
+                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>Currículum Vitae actualizado del o de los candidato(s) propuesto(s)
+                            y/o de la o de las candidata(s) propuesta(s), incluyendo nombre, dirección
+                            completa, teléfono(s) y correo electrónico.<o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+                            margin-left:36.0pt;margin-bottom:.0001pt;text-align:justify;text-indent:-36.0pt;
+                            mso-list:l1 level1 lfo1'><![if !supportLists]><span style='font-size:10.0pt;
+                            line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
+                            mso-bidi-font-family:Montserrat'><span style='mso-list:Ignore'>5.<span
+                            style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span></span></span><![endif]><span style='font-size:10.0pt;line-height:115%;
+                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>Copia del documento oficial con el que demuestre su nacionalidad
+                            mexicana:<o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+                            justify;text-indent:.2pt'><span style='font-size:10.0pt;line-height:115%;
+                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'><o:p>&nbsp;</o:p></span></p>
+
+                            <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+                            margin-left:36.0pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+                            mso-list:l0 level1 lfo2;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+                            mso-border-shadow:yes'><![if !supportLists]><span style='font-size:10.0pt;
+                            line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
+                            mso-bidi-font-family:Montserrat;color:black'><span style='mso-list:Ignore'>a)<span
+                            style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
+                            Montserrat;mso-bidi-font-family:Montserrat;color:black'>Para personas físicas
+                            mexicanas, individualmente o en grupo, copia del acta de nacimiento de cada
+                            participante. <o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+                            margin-left:54.2pt;margin-bottom:.0001pt;text-align:justify'><span
+                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
+                            Montserrat;mso-bidi-font-family:Montserrat'><o:p>&nbsp;</o:p></span></p>
+
+                            <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+                            margin-left:36.0pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+                            mso-list:l0 level1 lfo2;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
+                            mso-border-shadow:yes'><![if !supportLists]><span style='font-size:10.0pt;
+                            line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
+                            mso-bidi-font-family:Montserrat;color:black'><span style='mso-list:Ignore'>b)<span
+                            style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
+                            Montserrat;mso-bidi-font-family:Montserrat;color:black'>Para personas morales,
+                            copia del acta constitutiva, debidamente protocolizada ante Notario Público y
+                            en caso de modificación, deberá presentar la protocolización del acta de
+                            Asamblea General, a fin de acreditar su legal existencia. <o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+                            margin-left:54.2pt;margin-bottom:.0001pt;text-align:justify'><span
+                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
+                            Montserrat;mso-bidi-font-family:Montserrat'><o:p>&nbsp;</o:p></span></p>
+
+                            <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+                            margin-left:36.0pt;margin-bottom:.0001pt;text-align:justify;text-indent:-36.0pt;
+                            mso-list:l1 level1 lfo1'><![if !supportLists]><span style='font-size:10.0pt;
+                            line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
+                            mso-bidi-font-family:Montserrat'><span style='mso-list:Ignore'>6.<span
+                            style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span></span></span><![endif]><span style='font-size:10.0pt;line-height:115%;
+                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>Copia o duplicado de materiales bibliográficos, audiovisuales,
+                            gráficos u otros que demuestren los motivos por los cuales se considera que el
+                            candidato o la candidata puede merecer el Premio Nacional de Protección Civil
+                            2020. Para más detalles consulta la sección siguiente denominada "¿Cómo subir mis archivos?".<o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='margin-top:0cm;margin-right:-4.65pt;margin-bottom:
+                            0cm;margin-left:36.2pt;margin-bottom:.0001pt;text-align:justify'><span
+                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
+                            Montserrat;mso-bidi-font-family:Montserrat'><o:p>&nbsp;</o:p></span></p>
+
+                            <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+                            margin-left:36.0pt;margin-bottom:.0001pt;text-align:justify;text-indent:-36.0pt;
+                            mso-list:l1 level1 lfo1'><![if !supportLists]><span style='font-size:10.0pt;
+                            line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
+                            mso-bidi-font-family:Montserrat'><span style='mso-list:Ignore'>7.<span
+                            style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span></span></span><![endif]><span style='font-size:10.0pt;line-height:115%;
+                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>Los trabajos relacionados con herramientas tecnológicas e
+                            innovación deberán presentar resultados que sustenten su viabilidad y un
+                            análisis costo beneficio.<o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt'><span
+                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
+                            Montserrat;mso-bidi-font-family:Montserrat'><o:p>&nbsp;</o:p></span></p>
+
+                            <p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+                            -36.0pt;mso-list:l1 level1 lfo1'><![if !supportLists]><span style='font-size:
+                            10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
+                            mso-bidi-font-family:Montserrat'><span style='mso-list:Ignore'>8.<span
+                            style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span></span></span><![endif]><span style='font-size:10.0pt;line-height:115%;
+                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                            Montserrat'>Escrito donde acepta conocer el Aviso de Privacidad del Premio
+                            Nacional de Protección Civil 2020 y estar conforme con el tratamiento que se le
+                            dará a sus datos.<o:p></o:p></span></p>
+
+                            <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+                            justify'><span style='font-size:10.0pt;line-height:115%;font-family:Montserrat;
+                            mso-fareast-font-family:Montserrat;mso-bidi-font-family:Montserrat'>En caso de
+                            faltar cualquier documento anteriormente enlistado, se hará del conocimiento
+                            del candidato, a fin de que complemente la documentación faltante y sea
+                            entregada antes del término señalado el párrafo primero de esta Base.<o:p></o:p></span></p>
+                        </span>
+                    </div>
                 </li>
                 <li>
                     <div class="collapsible-header mainIcons"><i class="material-icons">insert_drive_file</i>¿Cómo subir mis archivos?</div>
-                    <div class="collapsible-body"><span>Los archivos mencionados en la convocatoria deben ser subidos a esta plataforma como un archivo .zip o .rar, este debe de pesar menos de 10 MegaBytes y debe estar conformado por las siguientes carpetas:</span>
+                    <div class="collapsible-body">
+                        <span>
+                        Los archivos mencionados en la convocatoria deben ser subidos a esta plataforma como un archivo .zip o .rar, 
+                        este debe de pesar menos de 10 MegaBytes y debe estar conformado por las siguientes carpetas con su respectiva nomenclatura en cada nombre del documento que se muestra en rojo:
+                        </span>
                         <ul style="padding-left:inherit;">
-                        <li style="list-style-type: circle;">Coffee</li>
-                        <li style="list-style-type: circle;">Tea</li>
-                        <li style="list-style-type: circle;">Milk</li>
+                            <li style="list-style-type: circle;">Cartas.</li>
+                                <ul style="padding-left:inherit;">
+                                    <li style="list-style-type: square;">Carta de propuesta. <span class="nomenclatura">carta_propuesta_TUSINICIALES.pdf</span></li>
+                                    <li style="list-style-type: square;">Carta de auto propuesta. <span class="nomenclatura">carta_autopropuesta_TUSINICIALES.pdf</span></li>
+                                    <li style="list-style-type: square;">Carta de designación de representante (en caso de un grupo de personas físicas). <span class="nomenclatura">representante_oficial.pdf</span></li>
+                                </ul>
+                            <li style="list-style-type: circle;">Escritos.</li>
+                                <ul style="padding-left:inherit;">
+                                    <li style="list-style-type: square;">Escrito de protesta de aceptación.</li>
+                                    <li style="list-style-type: square;">Escrito de Aviso de Privacidad.</li>
+                                </ul>
+                            <li style="list-style-type: circle;">Documentos oficiales.</li>
+                                <ul style="padding-left:inherit;">
+                                    <li style="list-style-type: square;">Currículum Vitae.</li>
+                                    <li style="list-style-type: square;">Lista de participantes (en caso de grupo de persons físicas).</li>
+                                    <li style="list-style-type: square;">Acta de nacimiento de cada participante (en caso de grupo de persons físicas).</li>
+                                    <li style="list-style-type: square;">Copia del acta constitutiva (en caso de personas morales).</li>
+                                </ul>
+                            <li style="list-style-type: circle;">Materiales extras.</li>
+                                <ul style="padding-left:inherit;">
+                                    <li style="list-style-type: square;">Materiales bibliográficos, audiovisuales, gráficos u otros (en caso de que quepan dentro de los límites permitidos del ZIP o RAR).</li>
+                                    <li style="list-style-type: square;">Anaísis costo beneficio (solo para trabajos relacionados con herramientas tecnológicas).</li>
+                                    <li style="list-style-type: square;">Archivo de texto (Word o PDF) con el listado de direcciónes electrónicas URL hacia los documentos multimedia.</li>
+                                    <i style="">Para mas detalles de este apartado consulta la sección de "¿Cómo enviar mi evidencia audiovisual?".</i>
+                                </ul>
                         </ul>
                     </div>
                 </li>
                 <li>
                     <div class="collapsible-header mainIcons"><i class="material-icons">check</i>¿Cómo sabré que mi candidatura fue recibida?</div>
-                    <div class="collapsible-body"><span>Al completar el siguiente formulario y darle click al botón de "SUBIR DATOS" te mandará a una pantalla de confirmación de que tu información y tus archivos han sido enviados. Espera en tu bandeja de entrada un email de confirmación para verificar que hemos recibido la candidatura. Recuerda revisar tu bandeja de SPAM así como de CORREO NO DESEADO según sea el caso. Si no has recibido respuesta de confirmación intenta nuevamente subir tu candidatura en un lapso de 3 horas. En forma reiterada de pedimos verifiques tu mail de contacto para evitar conflictos de envío de confirmación, ante esto te recomendamos usar correos de dominio Gmail, Hotmail, Yahoo, etc.</span></div>
+                    <div class="collapsible-body"><span>Al completar el siguiente formulario y darle clic al botón de "SUBIR DATOS" te mandará a una pantalla de confirmación de que tu información y tus archivos han sido enviados. Espera en tu bandeja de entrada un email de confirmación para verificar que hemos recibido la candidatura. Recuerda revisar tu bandeja de SPAM así como de CORREO NO DESEADO según sea el caso. Si no has recibido respuesta de confirmación intenta nuevamente subir tu candidatura en un lapso de 3 horas. En forma reiterada de pedimos verifiques tu mail de contacto para evitar conflictos de envío de confirmación, ante esto te recomendamos usar correos de dominio Gmail, Hotmail, Yahoo!, etc.</span></div>
                 </li>
                 <li>
                     <div id="lastOne" class="collapsible-header mainIcons"><i class="material-icons">videocam</i>¿Cómo enviar mi evidencia audiovisual?</div>
-                    <div class="collapsible-body"><span>Toda la evidencia audiovisual deberá ser subida a plataformas abiertas como: Youtube, GoogleDrive, WeTransfer, etc. Y compartir en un archivo de texto la liga de esta evidencia. En caso de que tu evidencia pese menos de 10 MB en el archivo ZIP podrá ser aceptada dentro de su carpeta correspondiente.</span></div>
+                    <div class="collapsible-body"><span>Toda la evidencia audiovisual deberá ser subida a plataformas abiertas como: Youtube, GoogleDrive, WeTransfer, etc. Y compartir en un archivo de texto (Word o PDF) la liga de esta evidencia. En caso de que tu evidencia pese menos de 10 MB en el archivo ZIP podrá ser aceptada dentro de su carpeta correspondiente.</span></div>
                 </li>
             </ul>
             <div class="row center">
