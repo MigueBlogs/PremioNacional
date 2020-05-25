@@ -1,16 +1,16 @@
 <?php
     session_start();
     require_once("dash_fns.php");
-    // #Validando sesión...
-    // //echo(json_encode($_SESSION));
-    // if(!isset($_SESSION["username"])) {
-	// 	$_SESSION['username'] = $ar["username"];
-	// 	$host  = $_SERVER['HTTP_HOST'];
-	// 	$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-	// 	$extra = 'login.php';
-    //     header("Location: http://$host$uri/$extra");
-    //     die(); // detiene la ejecución de código subsecuente
-    // }
+    #Validando sesión...
+    //echo(json_encode($_SESSION));
+    if(!isset($_SESSION["username"])) {
+		$_SESSION['username'] = $ar["username"];
+		$host  = $_SERVER['HTTP_HOST'];
+		$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+		$extra = 'login.php';
+        header("Location: http://$host$uri/$extra");
+        die(); // detiene la ejecución de código subsecuente
+    }
 
 ?>
 <!DOCTYPE html>
@@ -80,34 +80,31 @@
                     // echo $total;
                 ?> -->
                 </strong></p>
-                <p> Concentrado de candidaturas:</p>
-                    <div class="container">
-                        <table id="vistageneral-tabla">
-                            <tr id="headersTable">
-                                <th>Nombre</th>
-                                <th style="text-align: center !important;">Correo</th>
-                                <th style="text-align: center !important;">Teléfono</th>
-                                <th style="text-align: center !important;">Archivo</th>
-                                <th style="text-align: center !important;">Municipio</th>
-                                <th style="text-align: center !important;">Estado</th>
-                                <th style="text-align: center !important;">Fecha reg.</th>
-                            </tr>
-                            <?php
-                            $Arr_Candidaturas = getCandidaturas();
-                            foreach( $Arr_Candidaturas as $Arr_Candidatura){
-                                echo '<tr><td style="text-align: left !important;">'.
-                                $Arr_Candidatura["nombre"].'</td><td  style="text-align: center !important;">'.
-                                $Arr_Candidatura["correo"].'</td><td  style="text-align: center !important;">'.
-                                $Arr_Candidatura["telefono"].'</td><td  style="text-align: center !important;">
-                                <a style="color:#9D2449;" href='.$Arr_Candidatura["archivo"]->load().'><i class="material-icons">insert_drive_file</i></a>
-                                </td><td  style="text-align: center !important;">'.
-                                $Arr_Candidatura["municipio"].'</td><td class="dato " style="text-align: center !important;">'.
-                                $Arr_Candidatura["estado"].'</td><td class="dato " style="text-align: center !important;">'.
-                                $Arr_Candidatura["fecha"].'</tr>';
-                            };
-                            ?>
-                        </table>
-                    </div>
+                <p> Tabla de candidaturas:</p>
+                    <table id="vistageneral-tabla" class="responsive-table">
+                        <tr id="headersTable">
+                            <th>Nombre</th>
+                            <th style="text-align: center !important;">Correo</th>
+                            <th style="text-align: center !important;">Teléfono</th>
+                            <th style="text-align: center !important;">Archivo</th>
+                            <th style="text-align: center !important;">Municipio</th>
+                            <th style="text-align: center !important;">Estado</th>
+                            <th style="text-align: center !important;">Fecha reg.</th>
+                        </tr>
+                        <?php
+                        $Arr_Candidaturas = getCandidaturas();
+                        foreach( $Arr_Candidaturas as $Arr_Candidatura){
+                            echo '<tr><td style="text-align: left !important;">'.
+                            $Arr_Candidatura["nombre"].'</td><td  style="text-align: center !important;">'.
+                            $Arr_Candidatura["correo"].'</td><td  style="text-align: center !important;">'.
+                            $Arr_Candidatura["telefono"].'</td><td  style="text-align: center !important;">
+                            <a style="color:#9D2449;" href='.$Arr_Candidatura["archivo"]->load().'><i class="material-icons">insert_drive_file</i></a></td><td  style="text-align: center !important;">'.
+                            $Arr_Candidatura["municipio"].'</td><td class="dato " style="text-align: center !important;">'.
+                            $Arr_Candidatura["estado"].'</td><td class="dato " style="text-align: center !important;">'.
+                            $Arr_Candidatura["fecha"].'</tr>';
+                        };
+                        ?>
+                    </table>
                 <br>
                 <p> Lista de estados participantes: <strong class="dato">
                 <?php
