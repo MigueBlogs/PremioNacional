@@ -39,7 +39,7 @@ function getUsuarios() {
 
         $paramsArray = Array();
 
-        $queryStr = "SELECT R.NOMBRE, R.CORREO, R.TELEFONO, R.ARCHIVO, M.NOMBRE as MUNICIPIO, E.NOMBRE as ESTADO, R.FECHA FROM MUNICIPIO M, REGISTRO R, ESTADO E where M.ID_MUNICIPIO = R.MUNICIPIO and E.ID_ESTADO = R.ESTADO order by R.NOMBRE asc";
+        $queryStr = "SELECT R.NOMBRE, R.CORREO, R.TELEFONO, R.ARCHIVO, M.NOMBRE as MUNICIPIO, E.NOMBRE as ESTADO, R.FECHA FROM MUNICIPIO M, REGISTRO R, ESTADO E where M.ID_MUNICIPIO = R.MUNICIPIO and E.ID_ESTADO =R.ESTADO order by R.FECHA desc";
         //entre I2 y group tenía: WHERE INSTITUCION='F'
         $query = oci_parse($conn, $queryStr);
 
