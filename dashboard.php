@@ -56,14 +56,14 @@
         <br>
         <br>
         <div class="center">
-            <img style="max-width: 80%; height: auto;" src="http://www.atlasnacionalderiesgos.gob.mx/Imagenes/Logos/SSyPC_CNPC_h.png" alt="gob">
+            <img class="cnpc" src="http://www.atlasnacionalderiesgos.gob.mx/Imagenes/Logos/SSyPC_CNPC_h.png" alt="gob">
         </div>
     
         <!--Contenido principal-->
               
-        <div id="main-container" class="container" >
-            <div id="VistaGeneral" class="vista">
-                <h3 class="titleMex"> Vista General de Inscripciones </h3>
+        <div id="main-container">
+            <div id="VistaGeneral">
+                <h3 class="titleMex center"> Vista General de Inscripciones </h3>
                 <h6 class="right"> Ciudad de México, a <span class="fecha"></span></h6>
                 <br>
                 <div class="center">
@@ -96,8 +96,8 @@
                             $Arr_Candidaturas = getCandidaturas();
                             foreach( $Arr_Candidaturas as $Arr_Candidatura){
                                 echo '<tr><td style="text-align: left !important;">'.
-                                $Arr_Candidatura["nombre"].'</td><td  style="text-align: center !important;">'.
-                                $Arr_Candidatura["correo"].'</td><td  style="text-align: center !important;">'.
+                                $Arr_Candidatura["nombre"].'</td><td  style="text-align: center !important;">
+                                <a href="mailto:'.$Arr_Candidatura["correo"].'">'.$Arr_Candidatura["correo"].'</a></td><td  style="text-align: center !important;">'.
                                 $Arr_Candidatura["telefono"].'</td><td  style="text-align: center !important;">
                                 <a style="color:#9D2449;" href='.$Arr_Candidatura["archivo"]->load().'><i class="material-icons">insert_drive_file</i></a>
                                 </td><td  style="text-align: center !important;">'.
