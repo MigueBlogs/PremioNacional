@@ -39,7 +39,7 @@ function getUsuarios() {
 
         $paramsArray = Array();
 
-        $queryStr = "SELECT R.NOMBRE, R.CORREO, R.TELEFONO, R.ARCHIVO, M.NOMBRE as MUNICIPIO, E.NOMBRE as ESTADO, R.FECHA FROM MUNICIPIO M, REGISTRO R, ESTADO E where M.ID_MUNICIPIO = R.MUNICIPIO and E.ID_ESTADO =R.ESTADO order by R.FECHA desc";
+        $queryStr = "SELECT R.NOMBRE, R.CORREO, R.TELEFONO, R.ARCHIVO, M.NOMBRE as MUNICIPIO, E.CORTO as ESTADO, R.FECHA FROM MUNICIPIO M, REGISTRO R, ESTADO E where M.ID_MUNICIPIO = R.MUNICIPIO and E.ID_ESTADO =R.ESTADO order by R.FECHA desc";
         //entre I2 y group tenía: WHERE INSTITUCION='F'
         $query = oci_parse($conn, $queryStr);
 
@@ -64,6 +64,34 @@ function getUsuarios() {
 
         dbClose($conn, $query);
         echo json_encode($ar);
+        return $ar;
+    }
+
+    function getEstadosCandidaturas(){
+        require_once("db_global.php");
+
+        $conn = dbConnect(user, pass, server);
+
+        $paramsArray = Array();
+
+        $queryStr = "SELECT E.CORTO as ESTADO, COUNT(*) as TOTAL FROM REGISTRO R, ESTADO E where E.ID_ESTADO =R.ESTADO group by R.ESTADO, E.CORTO order by TOTAL desc, E.CORTO asc";
+        $query = oci_parse($conn, $queryStr);
+
+        foreach ($paramsArray as $key => $value) {
+            oci_bind_by_name($query, $key, $paramsArray[$key]);
+        }
+
+        oci_execute($query);
+        $ar = Array();
+
+        while ( ($row = oci_fetch_assoc($query)) != false) {
+            $result = Array();
+            $result["estado"] = $row["ESTADO"];
+            $result["total"] = $row["TOTAL"];
+            $ar[] = $result;
+        }
+
+        dbClose($conn, $query);
         return $ar;
     }
 

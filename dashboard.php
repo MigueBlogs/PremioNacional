@@ -35,6 +35,7 @@
     <!-- Iconos -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--CSS -->
+    <link type="text/css" rel="stylesheet" href="./CSS/graphics.css">
     <link type="text/css" rel="stylesheet" href="./CSS/main.css">
     
 </head>
@@ -99,21 +100,11 @@
                         ?>
                     </table>
                 <br>
-                <p> Lista de estados participantes: <strong class="dato">
-                <?php
-                    // $Edos = getParticipantesEstado($tableQuery);//4
-                    // $len = count($Edos);
-                    // $i=0;
-                    // foreach( $Edos as $edo){
-                    //     if ($i >= 0 && $i < $len-1) {
-                    //         echo $edo["estadoComun"].', ';
-                    //     } else {
-                    //         echo $edo["estadoComun"].'.';
-                    //     }
-                    //     $i++;
-                    // };
-                ?>
-                </strong></p>
+                <p> Estados participantes: </p>
+                    <div id="barrasConstancia" style="height: 400px;" class="slideAnimation">
+                        <div id="barsvg" class="adjustSize"> </div>
+                        <div id="barSvgTop" class="adjustSize"> </div>
+                    </div>
             </div>
             <div id="VistaAccesos" class="vista">
                 <h3 class="titleMex"> Vista de último acceso a la sesión </h3>
@@ -144,7 +135,10 @@
         </div>
     </div>
     <script src="./js/dashboard.js"></script>
-    
+    <script>
+        var porcentajeEstados = <?php echo json_encode(getEstadosCandidaturas()); ?>
+    </script>
+    <script src="./js/grafica.js"></script>
     
 </body>
 </html>
