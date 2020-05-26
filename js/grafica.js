@@ -105,10 +105,10 @@ $(function() {
                     .delay((d, i) => { return i * 150; })
             .text( d => { return d.total; })
             .attr("y",  d => { return y(d.total) + .1; })
-            .attr("dy", ".7em")
-            .attr("dx", ".7em")
+            .attr("dy", "-.7em")
+            .attr("dx", ".3em")
             .attr("transform-origin",  d => { return ((x(d.estado) + (x.rangeBand() / 2) - 8))+"px "+(y(d.total)+ .1)+"px"} )
-            .attr("transform", "rotate(-65)" );
+            .attr("transform", "rotate(0)" );
     }
 
     function redraw(){
@@ -146,7 +146,7 @@ $(function() {
                 .attr("y",  d => { return height; })
                 .attr("y",  d => { return y(d.total) + .1; })
                 .attr("transform-origin",  d => { return ((x(d.estado) + (x.rangeBand() / 2) - 8))+"px "+(y(d.total)+ .1)+"px"} )
-                .attr("transform", "rotate(-65)" );
+                .attr("transform", "rotate(0)" );
         };
     constanciasGraphicAll();
     window.addEventListener("resize", redraw);
