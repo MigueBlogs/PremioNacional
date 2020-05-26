@@ -35,6 +35,7 @@
     <!-- Iconos -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--CSS -->
+    <link type="text/css" rel="stylesheet" href="./CSS/graphics.css">
     <link type="text/css" rel="stylesheet" href="./CSS/main.css">
     
 </head>
@@ -72,14 +73,8 @@
                 </div>
                 <h6></h6>
                 <br>
-                <p> Candidaturas registradas: <strong class="dato">
-                <!-- <?php
-                    // $total = getTotal($tableQuery);//1
-                    // $totalRegistrados = $total;
-                    // $total += getPortalCDMX($tableQuery);
-                    // echo $total;
-                ?> -->
-                </strong></p>
+                <?php $Arr_Candidaturas = getCandidaturas(); ?>
+                <p> Candidaturas registradas: <strong class="dato"><?=count($Arr_Candidaturas)?></strong></p>
                 <p> Tabla de candidaturas:</p>
                     <table id="vistageneral-tabla" class="responsive-table">
                         <tr id="headersTable">
@@ -92,7 +87,6 @@
                             <th style="text-align: center !important;">Fecha reg.</th>
                         </tr>
                         <?php
-                        $Arr_Candidaturas = getCandidaturas();
                         foreach( $Arr_Candidaturas as $Arr_Candidatura){
                             echo '<tr><td style="text-align: left !important;">'.
                             $Arr_Candidatura["nombre"].'</td><td  style="text-align: center !important;">
@@ -106,21 +100,11 @@
                         ?>
                     </table>
                 <br>
-                <p> Lista de estados participantes: <strong class="dato">
-                <?php
-                    // $Edos = getParticipantesEstado($tableQuery);//4
-                    // $len = count($Edos);
-                    // $i=0;
-                    // foreach( $Edos as $edo){
-                    //     if ($i >= 0 && $i < $len-1) {
-                    //         echo $edo["estadoComun"].', ';
-                    //     } else {
-                    //         echo $edo["estadoComun"].'.';
-                    //     }
-                    //     $i++;
-                    // };
-                ?>
-                </strong></p>
+                <p> Estados participantes: </p>
+                    <div id="barrasConstancia" style="height: 400px;" class="slideAnimation">
+                        <div id="barsvg" class="adjustSize"> </div>
+                        <div id="barSvgTop" class="adjustSize"> </div>
+                    </div>
             </div>
             <div id="VistaAccesos" class="vista">
                 <h3 class="titleMex"> Vista de último acceso a la sesión </h3>
@@ -151,7 +135,10 @@
         </div>
     </div>
     <script src="./js/dashboard.js"></script>
-    
+    <script>
+        var porcentajeEstados = <?php echo json_encode(getEstadosCandidaturas()); ?>
+    </script>
+    <script src="./js/grafica.js"></script>
     
 </body>
 </html>
