@@ -76,7 +76,7 @@
                 <?php $Arr_Candidaturas = getCandidaturas(); ?>
                 <p> Candidaturas registradas: <strong class="dato"><?=count($Arr_Candidaturas)?></strong></p>
                 <p> Tabla de candidaturas:</p>
-                    <table id="vistageneral-tabla" class="responsive-table">
+                    <table id="vistageneral-tabla" class="responsive-table striped highlight">
                         <tr id="headersTable">
                             <th>Nombre</th>
                             <th style="text-align: center !important;">Correo</th>

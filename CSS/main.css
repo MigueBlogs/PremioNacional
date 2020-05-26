@@ -27,6 +27,9 @@ input::placeholder {
 .corto{
     display: none;
 }
+table.highlight > tbody > tr:hover {
+    background-color: rgb(175, 175, 175);
+}
 
 .guinda {
     background-color: #9D2449 !important;

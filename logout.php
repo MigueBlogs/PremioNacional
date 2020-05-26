@@ -31,7 +31,7 @@
         <div class="center">
             <img style="max-width: 80%; height: auto;" src="http://www.atlasnacionalderiesgos.gob.mx/Imagenes/Logos/SSyPC_CNPC_h.png" alt="gob">
         </div>
-        <h3 class="center">>Sistema de candidaturas para el Premio Nacional de Protección Civil 2020</h3>
+        <h3 class="center">Sistema de candidaturas para el Premio Nacional de Protección Civil 2020</h3>
         <div class="container">
             <form method="POST">
                 <div class="center">
