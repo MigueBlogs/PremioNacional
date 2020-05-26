@@ -48,8 +48,9 @@ input::placeholder {
     color: red;
     font-weight: bold;
 }
-
-
+ol li{
+    padding-left:20px;
+}
 .titleMex {
     background: linear-gradient(90deg, rgba(105,26,49,1) 0%, rgba(157,36,73,1) 50%, rgba(105,26,49,1) 100%);
     padding: 10px;

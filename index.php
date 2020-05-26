@@ -176,7 +176,7 @@
         line-height:115%;
         mso-pagination:widow-orphan;
         font-size:11.0pt;
-        font-family:"Calibri",sans-serif;
+        /* font-family:"Calibri",sans-serif; */
         mso-fareast-font-family:Calibri;
         mso-bidi-font-family:Calibri;}
 
@@ -231,7 +231,7 @@
                             Montserrat'><o:p>&nbsp;</o:p></span></b></p>
 
                             <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            style='mso-bidi-font-weight:normal'><span style='text-transform: uppercase;font-size:10.0pt;line-height:
                             115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
                             Montserrat'>Primera.</span></b><span style='font-size:10.0pt;line-height:115%;
                             font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
@@ -245,7 +245,7 @@
                             style='font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
                             Montserrat'><o:p></o:p></span></p>
                             <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            style='mso-bidi-font-weight:normal'><span style='text-transform: uppercase;font-size:10.0pt;line-height:
                             115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
                             Montserrat'>Segunda.</span></b><span style='font-size:10.0pt;line-height:115%;
                             font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
@@ -266,7 +266,7 @@
                             desastre.<o:p></o:p></span></p>
 
                             <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            style='mso-bidi-font-weight:normal'><span style='text-transform: uppercase;font-size:10.0pt;line-height:
                             115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
                             Montserrat'>Tercera.</span></b><span style='font-size:10.0pt;line-height:115%;
                             font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
@@ -276,7 +276,7 @@
                             Convocatoria. <o:p></o:p></span></p>
 
                             <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            style='mso-bidi-font-weight:normal'><span style='text-transform: uppercase;font-size:10.0pt;line-height:
                             115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
                             Montserrat'>Cuarta. </span></b><span style='font-size:10.0pt;line-height:115%;
                             font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
@@ -288,7 +288,7 @@
                             Estados Unidos Mexicanos.<o:p></o:p></span></p>
 
                             <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            style='mso-bidi-font-weight:normal'><span style='text-transform: uppercase;font-size:10.0pt;line-height:
                             115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
                             Montserrat'>Quinta.</span></b><span style='font-size:10.0pt;line-height:115%;
                             font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
@@ -304,7 +304,7 @@
                             podrán ser postulados nuevamente.<o:p></o:p></span></p>
 
                             <p class=MsoNormal style='text-align:justify'><b style='mso-bidi-font-weight:
-                            normal'><span style='font-size:10.0pt;line-height:115%;font-family:Montserrat;
+                            normal'><span style='text-transform: uppercase;font-size:10.0pt;line-height:115%;font-family:Montserrat;
                             mso-fareast-font-family:Montserrat;mso-bidi-font-family:Montserrat'>Sexta.</span></b><span
                             style='font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
                             Montserrat'> </span><span style='font-size:10.0pt;line-height:115%;font-family:
@@ -323,7 +323,7 @@
                             en grupo, solo se entregará un diploma.<o:p></o:p></span></p>
 
                             <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            style='mso-bidi-font-weight:normal'><span style='text-transform: uppercase;font-size:10.0pt;line-height:
                             115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
                             Montserrat'>Séptima</span></b><b style='mso-bidi-font-weight:normal'><span
                             style='font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
@@ -338,7 +338,7 @@
 
                             <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
                             justify;text-indent:.2pt'><b style='mso-bidi-font-weight:normal'><span
-                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
+                            style='text-transform: uppercase;font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
                             Montserrat;mso-bidi-font-family:Montserrat'>Octava.</span></b><span
                             style='font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
                             Montserrat'> </span><span style='font-size:10.0pt;line-height:115%;font-family:
@@ -350,7 +350,7 @@
                             de forma física en el domicilio ubicado en Avenida José Vasconcelos número 221,
                             Piso 7, Colonia San Miguel Chapultepec, Alcaldía Miguel Hidalgo, Ciudad de
                             México, Código Postal 11850, en un horario de 09:00 a 18:00 horas, de lunes a
-                            viernes, o bien en línea en la página: </span><span class=MsoHyperlink>preparados.gob.mx/PremioNacional2020</span>,
+                            viernes, o bien en línea en la página: </span><a href="www.preparados.gob.mx/PremioNacional2020">preparados.gob.mx/PremioNacional2020</a>,
                             <span style='font-size:10.0pt;line-height:115%;font-family:Montserrat;
                             mso-fareast-font-family:Montserrat;mso-bidi-font-family:Montserrat'>a partir de
                             la publicación de la presente convocatoria<span style='mso-spacerun:yes'> 
@@ -360,14 +360,14 @@
                             font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
                             Montserrat'><o:p>&nbsp;</o:p></span></p>
 
-                            <p class=MsoNormal style='text-align:justify'><span style='font-size:10.0pt;
+                            <p class=MsoNormal style='text-align:justify'><span style='color:#c09c65;font-size:10.0pt;
                             line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
                             mso-bidi-font-family:Montserrat'>La presentación de las candidaturas, para ser
                             puesta a consideración del Consejo de Premiación, deberá estar acompañada de
                             los documentos que lo avalen. Consulta la sección de <b>documentación necesaria</b> para más detalles.<o:p></o:p></span></p>
                             
                             <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            style='mso-bidi-font-weight:normal'><span style='text-transform: uppercase;font-size:10.0pt;line-height:
                             115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
                             Montserrat'>Novena.</span></b><span style='font-size:10.0pt;line-height:115%;
                             font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
@@ -380,7 +380,7 @@
                             establecida como límite para la recepción de candidaturas.<o:p></o:p></span></p>
 
                             <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            style='mso-bidi-font-weight:normal'><span style='text-transform: uppercase;font-size:10.0pt;line-height:
                             115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
                             Montserrat'>Décima.</span></b><span style='font-size:10.0pt;line-height:115%;
                             font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
@@ -392,7 +392,7 @@
                             Seguridad y Protección Ciudadana.<o:p></o:p></span></p>
 
                             <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            style='mso-bidi-font-weight:normal'><span style='text-transform: uppercase;font-size:10.0pt;line-height:
                             115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
                             Montserrat'>Décima Primera.</span></b><span style='font-size:10.0pt;line-height:
                             115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
@@ -404,7 +404,7 @@
                             Estímulos y Recompensas Civiles. <o:p></o:p></span></p>
 
                             <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            style='mso-bidi-font-weight:normal'><span style='text-transform: uppercase;font-size:10.0pt;line-height:
                             115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
                             Montserrat'>Décima Segunda.</span></b><span style='font-size:10.0pt;line-height:
                             115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
@@ -418,7 +418,7 @@
                             Presidente de los Estados Unidos Mexicanos. <o:p></o:p></span></p>
 
                             <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            style='mso-bidi-font-weight:normal'><span style='text-transform: uppercase;font-size:10.0pt;line-height:
                             115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
                             Montserrat'>Décima Tercera.</span></b><span style='font-size:10.0pt;line-height:
                             115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
@@ -427,7 +427,7 @@
                             estatuye, con base en el dictamen del Jurado debidamente fundado y motivado. <o:p></o:p></span></p>
 
                             <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;line-height:
+                            style='mso-bidi-font-weight:normal'><span style='text-transform: uppercase;font-size:10.0pt;line-height:
                             115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
                             Montserrat'>Décima Cuarta.</span></b><span style='font-size:10.0pt;line-height:
                             115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
@@ -437,7 +437,7 @@
                             Estímulos y Recompensas Civiles.<o:p></o:p></span></p>
 
                             <p class=MsoNormal style='margin-right:-2.05pt;text-align:justify;text-indent:
-                            .2pt'><b style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;
+                            .2pt'><b style='mso-bidi-font-weight:normal'><span style='text-transform: uppercase;font-size:10.0pt;
                             line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
                             mso-bidi-font-family:Montserrat'>Décima Quinta.</span></b><span
                             style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
@@ -451,7 +451,7 @@
                             señalado, se entiende por autorizada su destrucción.<o:p></o:p></span></p>
 
                             <p class=MsoNormal style='margin-right:-2.05pt;text-align:justify;text-indent:
-                            .2pt'><b style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;
+                            .2pt'><b style='mso-bidi-font-weight:normal'><span style='text-transform: uppercase;font-size:10.0pt;
                             line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
                             mso-bidi-font-family:Montserrat'>Décima Sexta.</span></b><span
                             style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
@@ -468,7 +468,7 @@
                             rechazadas.<o:p></o:p></span></p>
 
                             <p class=MsoNormal style='margin-right:-4.65pt;text-align:justify;text-indent:
-                            .2pt'><b style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;
+                            .2pt'><b style='mso-bidi-font-weight:normal'><span style='text-transform: uppercase;font-size:10.0pt;
                             line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
                             mso-bidi-font-family:Montserrat'>Décima Séptima</span></b><span
                             style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
@@ -590,176 +590,89 @@
                     <div class="collapsible-header mainIcons"><i class="material-icons">attach_file</i>Documentación necesaria</div>
                     <div class="collapsible-body">
                         <span>
-                            <p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
-                            -36.0pt;mso-list:l1 level1 lfo1'><![if !supportLists]><span style='font-size:
-                            10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
-                            mso-bidi-font-family:Montserrat'><span style='mso-list:Ignore'>1.<span
-                            style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            </span></span></span><![endif]><span style='font-size:10.0pt;line-height:115%;
-                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
-                            Montserrat'>Carta de propuesta, la cual deberá ser emitida por un tercero,
-                            debidamente firmada en original dirigida al Consejo de Premiación, la cual
-                            deberá contener el nombre completo del candidato o la candidata, señalar el
-                            campo en que participa y señalar domicilio para recibir notificaciones y datos
-                            de contacto, tanto del o la proponente como del candidato o la candidata, en la
-                            que argumente y exponga los motivos por los cuales se considera que la
-                            candidatura es<span style='mso-spacerun:yes'>  </span>merecedora del premio,
-                            presentado con las siguientes características: Letra Arial 12, doble espacio,
-                            tamaño carta, sin sangría y margen justificado, márgenes laterales de 3 centímetros,
-                            y superior e inferior de 2.5 centímetros. Además el documento deberá contener
-                            los siguientes apartados: 1) Antecedentes; 2) Descripción de acciones y medidas
-                            a premiar; 3) Justificación y relevancia; 4) Alineación de las acciones con el
-                            Sistema Nacional de Protección Civil.<o:p></o:p></span></p>
-
-                            <p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
-                            -36.0pt;mso-list:l1 level1 lfo1'><![if !supportLists]><span style='font-size:
-                            10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
-                            mso-bidi-font-family:Montserrat'><span style='mso-list:Ignore'>2.<span
-                            style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            </span></span></span><![endif]><span style='font-size:10.0pt;line-height:115%;
-                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
-                            Montserrat'>Carta de auto propuesta, firmada en original dirigida al Consejo de
-                            Premiación, la cual deberá contener el nombre completo, señalar el campo en que
-                            participa y señalar domicilio para recibir notificaciones y datos de contacto,
-                            en la que argumente y exponga los motivos por los cuales se considera que la
-                            candidatura es<span style='mso-spacerun:yes'>  </span>merecedora del premio,
-                            presentado con las siguientes características: : Letra Arial 12, doble espacio,
-                            tamaño carta, sin sangría y margen justificado, márgenes laterales de 3
-                            centímetros, y superior e inferior de 2.5 centímetros. Además el documento
-                            deberá contener los siguientes apartados: 1) Antecedentes; 2) Descripción de
-                            acciones y medidas a premiar; 3) Justificación y relevancia; 4) Alineación de
-                            las acciones con el Sistema Nacional de Protección Civil.<o:p></o:p></span></p>
-
-                            <p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
-                            -36.0pt;mso-list:l1 level1 lfo1'><![if !supportLists]><span style='font-size:
-                            10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
-                            mso-bidi-font-family:Montserrat'><span style='mso-list:Ignore'>3.<span
-                            style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            </span></span></span><![endif]><span style='font-size:10.0pt;line-height:115%;
-                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
-                            Montserrat'>Escrito de protesta de aceptación por parte del candidato o la
-                            candidata para participar y, en su caso, recibir el Premio Nacional de
-                            Protección Civil 2020, firmada en original. <o:p></o:p></span></p>
-
-                            <p class=MsoNormal style='margin-left:36.0pt;text-align:justify'><span
-                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
-                            Montserrat;mso-bidi-font-family:Montserrat'>En caso de un grupo de personas
-                            físicas, anexar relación de sus integrantes y documento en el que se haya
-                            designado a su representante.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
-
-                            <p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
-                            -36.0pt;mso-list:l1 level1 lfo1'><![if !supportLists]><span style='font-size:
-                            10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
-                            mso-bidi-font-family:Montserrat'><span style='mso-list:Ignore'>4.<span
-                            style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            </span></span></span><![endif]><span style='font-size:10.0pt;line-height:115%;
-                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
-                            Montserrat'>Currículum Vitae actualizado del o de los candidato(s) propuesto(s)
-                            y/o de la o de las candidata(s) propuesta(s), incluyendo nombre, dirección
-                            completa, teléfono(s) y correo electrónico.<o:p></o:p></span></p>
-
-                            <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
-                            margin-left:36.0pt;margin-bottom:.0001pt;text-align:justify;text-indent:-36.0pt;
-                            mso-list:l1 level1 lfo1'><![if !supportLists]><span style='font-size:10.0pt;
-                            line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
-                            mso-bidi-font-family:Montserrat'><span style='mso-list:Ignore'>5.<span
-                            style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            </span></span></span><![endif]><span style='font-size:10.0pt;line-height:115%;
-                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
-                            Montserrat'>Copia del documento oficial con el que demuestre su nacionalidad
-                            mexicana:<o:p></o:p></span></p>
-
+                            <ol>
+                                <li><span style='font-size:10.0pt;line-height:115%;
+                                    font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                                    Montserrat'>Carta de propuesta, la cual deberá ser emitida por un tercero,
+                                    debidamente firmada en original dirigida al Consejo de Premiación, la cual
+                                    deberá contener el nombre completo del candidato o la candidata, señalar el
+                                    campo en que participa y señalar domicilio para recibir notificaciones y datos
+                                    de contacto, tanto del o la proponente como del candidato o la candidata, en la
+                                    que argumente y exponga los motivos por los cuales se considera que la
+                                    candidatura es merecedora del premio,
+                                    presentado con las siguientes características: Letra Arial 12, doble espacio,
+                                    tamaño carta, sin sangría y margen justificado, márgenes laterales de 3 centímetros,
+                                    y superior e inferior de 2.5 centímetros. Además el documento deberá contener
+                                    los siguientes apartados: 1) Antecedentes; 2) Descripción de acciones y medidas
+                                    a premiar; 3) Justificación y relevancia; 4) Alineación de las acciones con el
+                                    Sistema Nacional de Protección Civil.<o:p></o:p></span></li>
+                                <li><span style='font-size:10.0pt;line-height:115%;
+                                    font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                                    Montserrat'>Carta de auto propuesta, firmada en original dirigida al Consejo de
+                                    Premiación, la cual deberá contener el nombre completo, señalar el campo en que
+                                    participa y señalar domicilio para recibir notificaciones y datos de contacto,
+                                    en la que argumente y exponga los motivos por los cuales se considera que la
+                                    candidatura es<span style='mso-spacerun:yes'>  </span>merecedora del premio,
+                                    presentado con las siguientes características: : Letra Arial 12, doble espacio,
+                                    tamaño carta, sin sangría y margen justificado, márgenes laterales de 3
+                                    centímetros, y superior e inferior de 2.5 centímetros. Además el documento
+                                    deberá contener los siguientes apartados: 1) Antecedentes; 2) Descripción de
+                                    acciones y medidas a premiar; 3) Justificación y relevancia; 4) Alineación de
+                                    las acciones con el Sistema Nacional de Protección Civil.<o:p></o:p></span></li>
+                                <li><span style='font-size:10.0pt;line-height:115%;
+                                    font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                                    Montserrat'>Escrito de protesta de aceptación por parte del candidato o la
+                                    candidata para participar y, en su caso, recibir el Premio Nacional de
+                                    Protección Civil 2020, firmada en original.
+                                    <br>
+                                    En caso de un grupo de personas físicas, anexar relación de sus integrantes y documento en el que se haya
+                                    designado a su representante. <o:p></o:p></span></li>
+                                <li><span style='font-size:10.0pt;line-height:115%;
+                                    font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                                    Montserrat'>Currículum Vitae actualizado del o de los candidato(s) propuesto(s)
+                                    y/o de la o de las candidata(s) propuesta(s), incluyendo nombre, dirección
+                                    completa, teléfono(s) y correo electrónico.<o:p></o:p></span></li>
+                                <li><span style='font-size:10.0pt;line-height:115%;
+                                    font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                                    Montserrat'>Copia del documento oficial con el que demuestre su nacionalidad
+                                    mexicana:<o:p></o:p></span>
+                                    <ul style="padding-left: 40px;">
+                                        <li style="list-style: upper-latin;"><span style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
+                                            Montserrat;mso-bidi-font-family:Montserrat;color:black'>Para personas físicas
+                                            mexicanas, individualmente o en grupo, copia del acta de nacimiento de cada
+                                            participante. <o:p></o:p></span></li>
+                                        <li style="list-style: upper-latin;"><span
+                                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
+                                            Montserrat;mso-bidi-font-family:Montserrat;color:black'>Para personas morales,
+                                            copia del acta constitutiva, debidamente protocolizada ante Notario Público y
+                                            en caso de modificación, deberá presentar la protocolización del acta de
+                                            Asamblea General, a fin de acreditar su legal existencia. <o:p></o:p></span></li>
+                                    </ul>
+                                </li>
+                                <li><span style='font-size:10.0pt;line-height:115%;
+                                    font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                                    Montserrat'>Copia o duplicado de materiales bibliográficos, audiovisuales,
+                                    gráficos u otros que demuestren los motivos por los cuales se considera que el
+                                    candidato o la candidata puede merecer el Premio Nacional de Protección Civil
+                                    2020. <o:p></o:p></span></li>
+                                <li><span style='font-size:10.0pt;line-height:115%;
+                                    font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                                    Montserrat'>Los trabajos relacionados con herramientas tecnológicas e
+                                    innovación deberán presentar resultados que sustenten su viabilidad y un
+                                    análisis costo beneficio.<o:p></o:p></span></li>
+                                <li><span style='font-size:10.0pt;line-height:115%;
+                                    font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
+                                    Montserrat'>Escrito donde acepta conocer el Aviso de Privacidad del Premio
+                                    Nacional de Protección Civil 2020 y estar conforme con el tratamiento que se le
+                                    dará a sus datos.<o:p></o:p></span></li>
+                            </ol>
+                            <br>
                             <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-                            justify;text-indent:.2pt'><span style='font-size:10.0pt;line-height:115%;
-                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
-                            Montserrat'><o:p>&nbsp;</o:p></span></p>
-
-                            <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
-                            margin-left:36.0pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
-                            mso-list:l0 level1 lfo2;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
-                            mso-border-shadow:yes'><![if !supportLists]><span style='font-size:10.0pt;
-                            line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
-                            mso-bidi-font-family:Montserrat;color:black'><span style='mso-list:Ignore'>a)<span
-                            style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
-                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
-                            Montserrat;mso-bidi-font-family:Montserrat;color:black'>Para personas físicas
-                            mexicanas, individualmente o en grupo, copia del acta de nacimiento de cada
-                            participante. <o:p></o:p></span></p>
-
-                            <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
-                            margin-left:54.2pt;margin-bottom:.0001pt;text-align:justify'><span
-                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
-                            Montserrat;mso-bidi-font-family:Montserrat'><o:p>&nbsp;</o:p></span></p>
-
-                            <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
-                            margin-left:36.0pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
-                            mso-list:l0 level1 lfo2;border:none;mso-padding-alt:31.0pt 31.0pt 31.0pt 31.0pt;
-                            mso-border-shadow:yes'><![if !supportLists]><span style='font-size:10.0pt;
-                            line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
-                            mso-bidi-font-family:Montserrat;color:black'><span style='mso-list:Ignore'>b)<span
-                            style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
-                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
-                            Montserrat;mso-bidi-font-family:Montserrat;color:black'>Para personas morales,
-                            copia del acta constitutiva, debidamente protocolizada ante Notario Público y
-                            en caso de modificación, deberá presentar la protocolización del acta de
-                            Asamblea General, a fin de acreditar su legal existencia. <o:p></o:p></span></p>
-
-                            <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
-                            margin-left:54.2pt;margin-bottom:.0001pt;text-align:justify'><span
-                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
-                            Montserrat;mso-bidi-font-family:Montserrat'><o:p>&nbsp;</o:p></span></p>
-
-                            <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
-                            margin-left:36.0pt;margin-bottom:.0001pt;text-align:justify;text-indent:-36.0pt;
-                            mso-list:l1 level1 lfo1'><![if !supportLists]><span style='font-size:10.0pt;
-                            line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
-                            mso-bidi-font-family:Montserrat'><span style='mso-list:Ignore'>6.<span
-                            style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            </span></span></span><![endif]><span style='font-size:10.0pt;line-height:115%;
-                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
-                            Montserrat'>Copia o duplicado de materiales bibliográficos, audiovisuales,
-                            gráficos u otros que demuestren los motivos por los cuales se considera que el
-                            candidato o la candidata puede merecer el Premio Nacional de Protección Civil
-                            2020. Para más detalles consulta la sección siguiente denominada "¿Cómo subir mis archivos?".<o:p></o:p></span></p>
-
-                            <p class=MsoNormal style='margin-top:0cm;margin-right:-4.65pt;margin-bottom:
-                            0cm;margin-left:36.2pt;margin-bottom:.0001pt;text-align:justify'><span
-                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
-                            Montserrat;mso-bidi-font-family:Montserrat'><o:p>&nbsp;</o:p></span></p>
-
-                            <p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
-                            margin-left:36.0pt;margin-bottom:.0001pt;text-align:justify;text-indent:-36.0pt;
-                            mso-list:l1 level1 lfo1'><![if !supportLists]><span style='font-size:10.0pt;
-                            line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
-                            mso-bidi-font-family:Montserrat'><span style='mso-list:Ignore'>7.<span
-                            style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            </span></span></span><![endif]><span style='font-size:10.0pt;line-height:115%;
-                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
-                            Montserrat'>Los trabajos relacionados con herramientas tecnológicas e
-                            innovación deberán presentar resultados que sustenten su viabilidad y un
-                            análisis costo beneficio.<o:p></o:p></span></p>
-
-                            <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt'><span
-                            style='font-size:10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:
-                            Montserrat;mso-bidi-font-family:Montserrat'><o:p>&nbsp;</o:p></span></p>
-
-                            <p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
-                            -36.0pt;mso-list:l1 level1 lfo1'><![if !supportLists]><span style='font-size:
-                            10.0pt;line-height:115%;font-family:Montserrat;mso-fareast-font-family:Montserrat;
-                            mso-bidi-font-family:Montserrat'><span style='mso-list:Ignore'>8.<span
-                            style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            </span></span></span><![endif]><span style='font-size:10.0pt;line-height:115%;
-                            font-family:Montserrat;mso-fareast-font-family:Montserrat;mso-bidi-font-family:
-                            Montserrat'>Escrito donde acepta conocer el Aviso de Privacidad del Premio
-                            Nacional de Protección Civil 2020 y estar conforme con el tratamiento que se le
-                            dará a sus datos.<o:p></o:p></span></p>
-
-                            <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-                            justify'><span style='font-size:10.0pt;line-height:115%;font-family:Montserrat;
-                            mso-fareast-font-family:Montserrat;mso-bidi-font-family:Montserrat'>En caso de
-                            faltar cualquier documento anteriormente enlistado, se hará del conocimiento
-                            del candidato, a fin de que complemente la documentación faltante y sea
-                            entregada antes del término señalado el párrafo primero de esta Base.<o:p></o:p></span></p>
+                                    justify'><span style='font-size:10.0pt;line-height:115%;font-family:Montserrat;
+                                    mso-fareast-font-family:Montserrat;mso-bidi-font-family:Montserrat'>En caso de
+                                    faltar cualquier documento anteriormente enlistado, se hará del conocimiento
+                                    del candidato, a fin de que complemente la documentación faltante y sea
+                                    entregada antes del término señalado el párrafo primero de esta Base.<o:p></o:p></span></p>
                         </span>
                     </div>
                 </li>
@@ -773,28 +686,30 @@
                         <ul style="padding-left:inherit;">
                             <li style="list-style-type: circle;">Cartas.</li>
                                 <ul style="padding-left:inherit;">
-                                    <li style="list-style-type: square;">Carta de propuesta. <span class="nomenclatura">carta_propuesta_TUSINICIALES.pdf</span></li>
-                                    <li style="list-style-type: square;">Carta de auto propuesta. <span class="nomenclatura">carta_autopropuesta_TUSINICIALES.pdf</span></li>
-                                    <li style="list-style-type: square;">Carta de designación de representante (en caso de un grupo de personas físicas). <span class="nomenclatura">representante_oficial.pdf</span></li>
+                                    <li style="list-style-type: square;">Carta de propuesta. <span class="nomenclatura">carta_propuesta_INICIALES.pdf</span></li>
+                                    <li style="list-style-type: square;">Carta de auto propuesta. <span class="nomenclatura">carta_autopropuesta_INICIALES.pdf</span></li>
+                                    <li style="list-style-type: square;">Carta de designación de representante (en caso de un grupo de personas físicas). <span class="nomenclatura">representante_oficial_INICIALES.pdf</span></li>
                                 </ul>
                             <li style="list-style-type: circle;">Escritos.</li>
                                 <ul style="padding-left:inherit;">
-                                    <li style="list-style-type: square;">Escrito de protesta de aceptación.</li>
-                                    <li style="list-style-type: square;">Escrito de Aviso de Privacidad.</li>
+                                    <li style="list-style-type: square;">Escrito de protesta de aceptación. <span class="nomenclatura">escrito_propuesta_INICIALES.pdf</span></li>
+                                    <li style="list-style-type: square;">Escrito de Aviso de Privacidad. <span class="nomenclatura">escrito_aviso_privacidad_INICIALES.pdf</span></li>
                                 </ul>
                             <li style="list-style-type: circle;">Documentos oficiales.</li>
                                 <ul style="padding-left:inherit;">
-                                    <li style="list-style-type: square;">Currículum Vitae.</li>
-                                    <li style="list-style-type: square;">Lista de participantes (en caso de grupo de persons físicas).</li>
-                                    <li style="list-style-type: square;">Acta de nacimiento de cada participante (en caso de grupo de persons físicas).</li>
-                                    <li style="list-style-type: square;">Copia del acta constitutiva (en caso de personas morales).</li>
+                                    <li style="list-style-type: square;">Currículum Vitae. <span class="nomenclatura">CV_INICIALES.pdf</span></li>
+                                    <li style="list-style-type: square;">Lista de participantes (en caso de grupo de persons físicas). <span class="nomenclatura">lista_participantes_INICIALES.pdf</span></li>
+                                    <li style="list-style-type: square;">Acta de nacimiento de cada participante (en caso de grupo de persons físicas). <span class="nomenclatura">acta_nacimiento_INICIALES.pdf</span></li>
+                                    <li style="list-style-type: square;">Copia del acta constitutiva (en caso de personas morales). <span class="nomenclatura">acta_constitutiva_INICIALES.pdf</span></li>
                                 </ul>
                             <li style="list-style-type: circle;">Materiales extras.</li>
                                 <ul style="padding-left:inherit;">
-                                    <li style="list-style-type: square;">Materiales bibliográficos, audiovisuales, gráficos u otros (en caso de que quepan dentro de los límites permitidos del ZIP o RAR).</li>
-                                    <li style="list-style-type: square;">Anaísis costo beneficio (solo para trabajos relacionados con herramientas tecnológicas).</li>
-                                    <li style="list-style-type: square;">Archivo de texto (Word o PDF) con el listado de direcciónes electrónicas URL hacia los documentos multimedia.</li>
+                                    <li style="list-style-type: square;">Materiales bibliográficos, audiovisuales, gráficos u otros (en caso de que quepan dentro de los límites permitidos del ZIP o RAR). <span class="nomenclatura">ejemplo: video_de_muestra_INICIALES.wmv</span></li>
+                                    <li style="list-style-type: square;">Anaísis costo beneficio (solo para trabajos relacionados con herramientas tecnológicas). <span class="nomenclatura">costo_beneficio_INICIALES.pdf</span></li>
+                                    <li style="list-style-type: square;">Archivo de texto (Word o PDF) con el listado de direcciónes electrónicas URL hacia los documentos multimedia. <span class="nomenclatura">enlaces_multimedia_INICIALES.pdf</span></li>
                                     <i style="">Para mas detalles de este apartado consulta la sección de "¿Cómo enviar mi evidencia audiovisual?".</i>
+                                    <br>
+                                    <span class="nomenclatura">* Las INICIALES cooresponden al nombre completo del representante ya sea persona física o moral que postula para este concurso.</span>
                                 </ul>
                         </ul>
                     </div>
