@@ -323,7 +323,7 @@
                             de forma física en el domicilio ubicado en Avenida José Vasconcelos número 221,
                             Piso 7, Colonia San Miguel Chapultepec, Alcaldía Miguel Hidalgo, Ciudad de
                             México, Código Postal 11850, en un horario de 09:00 a 18:00 horas, de lunes a
-                            viernes, o bien en línea en la página: </span><a href="www.preparados.gob.mx/PremioNacional2020">preparados.gob.mx/PremioNacional2020</a>,
+                            viernes, o bien en línea en la página: </span><a href="http://www.preparados.gob.mx/PremioNacional2020">preparados.gob.mx/PremioNacional2020</a>,
                             <span style='font-size:10.0pt;line-height:115%;
                             '>a partir de
                             la publicación de la presente convocatoria<span > 
