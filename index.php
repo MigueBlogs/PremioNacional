@@ -161,7 +161,7 @@
     <noscript>
         <div id="div-js-error" class="valign-wrapper center" style="background-color: lightcoral;">
             <i class="material-icons alerted" style="margin-left: 1em;">error_outline</i>
-            <p style="width: 100%;">JavaScript está deshabilitado, esta página necestia tener activado JavaScript para que funcione correctamente.</p>
+            <p style="width: 100%;">JavaScript está deshabilitado, esta página necesita tener activado JavaScript para que funcione correctamente.</p>
             <button id="btn-error-close" class="btn-small" type="button" style="margin-right: 1em;"><i class="material-icons">close</i></button>
         </div>
     </noscript>
@@ -614,7 +614,7 @@
                             <li style="list-style-type: circle;">Escritos.</li>
                                 <ul style="padding-left:inherit;">
                                     <li style="list-style-type: square;">Escrito de protesta de aceptación. <span class="nomenclatura">escrito_propuesta_INICIALES.pdf</span></li>
-                                    <li style="list-style-type: square;">Escrito de Aviso de Privacidad. <span class="nomenclatura">escrito_aviso_privacidad_INICIALES.pdf</span></li>
+                                    <li style="list-style-type: square;">Escrito de Aviso de Privacidad. <span class="nomenclatura">escrito_aviso_INICIALES.pdf</span></li>
                                 </ul>
                             <li style="list-style-type: circle;">Documentos oficiales.</li>
                                 <ul style="padding-left:inherit;">
