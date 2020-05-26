@@ -736,10 +736,32 @@
                         <h6 class="center">Ingresa los siguientes campos</h6>
                     </div>
                     <div class="row">
+                        
+                        <p> Selecciona tu tipo de registro:
+                        <br>
+                            <label>
+                                <input name="group1" type="radio" />
+                                <span>Una persona física.</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="group1" type="radio" />
+                                <span>Un grupo de personas físicas.</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="group1" type="radio" />
+                                <span>Grupo voluntario</span>
+                            </label>
+                        </p>
+                    </div>
+                    <div class="row">
                         <div class="input-field">
                             <i class="material-icons prefix">account_circle</i>
                             <input required placeholder="Nombre Completo" name="nombre" id="nombre" type="text" class="validate" maxlength="512" <?php if ($keep || isset($_POST['nombre'])) echo 'value="'.$_POST['nombre'].'"'; ?>>
-                            <label for="nombre">Ingresa tu nombre completo</label>
+                            <label for="nombre">Ingresa el nombre completo del representante</label>
                             <span class="helper-text" data-error="Completa este campo" data-success="Correcto"></span>
                         </div>
                     </div>

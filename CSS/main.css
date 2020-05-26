@@ -39,6 +39,16 @@ input::placeholder {
     color: #285C4D !important;
 }
 
+[type="radio"]:checked+span:after {
+    background-color: #9D2449 !important;
+    border: #9D2449 !important;
+}
+
+[type="radio"]:checked+span {
+    color: #9D2449 !important;
+    border: #9D2449 !important;
+}
+
 .mainIcons{
     color: #285C4D !important;
 }
