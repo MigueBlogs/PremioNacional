@@ -72,14 +72,8 @@
                 </div>
                 <h6></h6>
                 <br>
-                <p> Candidaturas registradas: <strong class="dato">
-                <!-- <?php
-                    // $total = getTotal($tableQuery);//1
-                    // $totalRegistrados = $total;
-                    // $total += getPortalCDMX($tableQuery);
-                    // echo $total;
-                ?> -->
-                </strong></p>
+                <?php $Arr_Candidaturas = getCandidaturas(); ?>
+                <p> Candidaturas registradas: <strong class="dato"><?=count($Arr_Candidaturas)?></strong></p>
                 <p> Tabla de candidaturas:</p>
                     <table id="vistageneral-tabla" class="responsive-table">
                         <tr id="headersTable">
@@ -92,7 +86,6 @@
                             <th style="text-align: center !important;">Fecha reg.</th>
                         </tr>
                         <?php
-                        $Arr_Candidaturas = getCandidaturas();
                         foreach( $Arr_Candidaturas as $Arr_Candidatura){
                             echo '<tr><td style="text-align: left !important;">'.
                             $Arr_Candidatura["nombre"].'</td><td  style="text-align: center !important;">
