@@ -86,7 +86,7 @@ $(document).ready(function() {
             $.post("premio_fns.php", data, function(result) {
                 $('#municipio-div').show('fast');
                 goToId('municipio-div');
-                $('#municipio-select').empty().append('<option value="" disabled selected="">Elije el municipio</option>');
+                $('#municipio-select').empty().append('<option value="" disabled selected="">Elige el municipio</option>');
                 $.each(result, function( index, value ) {
                     $('#municipio-select').append('<option value="'+value["id"]+'">'+value["municipio"]+'</option>');;
                 });
