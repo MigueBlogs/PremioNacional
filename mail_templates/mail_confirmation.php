@@ -35,14 +35,18 @@
 
     <div class="section">
         <p>Estimado <strong><span>:registrationName</span></strong>: </p>
-        <p>En la Coordinación Nacional de Protección Civil hemos recibido correctamente los documentos de tu candidatura, los cuáles serán revisados conforme a las bases establecidas en el programa.
-        <br>Te pedimos estés al tanto de este correo electrónico, pues será la vía de comunicación para anunciarte los pasos a seguir.
+        <p>En la Coordinación Nacional de Protección Civil hemos registrado tu candidatura, la cuál será revisada conforme a las bases establecidas en la convocatoria.
+        <br>Por lo que te pedimos estés al tanto de tu correo electrónico, pues será la vía de comunicación para cualquier aclaración.
         <br>De la misma manera sigue nuestras redes sociales de <a href="https://www.facebook.com/CNPCmx/">Facebook</a> y <a href="https://twitter.com/CNPC_mx">Twitter</a> para futuros anuncios del concurso</p>
     </div>
     <div class="divider"></div>
     <div class="section">
-        <p>Cualquier duda o aclaración contáctanos en el siguiente correo: 
-        <strong><a href="mailto:dudas.premio@gmail.com?Subject=Dudas%20y%20Aclaraciones">dudas.premio@gmail.com</a></strong>
+        <p>DATOS DEL REGISTRO:</p>
+        <ul>
+            <li><strong><h4>Tu número de candidatura es: <span>:registrationID</span></h4></strong></li>
+            <li><strong><h4>Tu típo de registro es: <span>:registrationType</span></h4></strong></li>
+            <li><strong><h4>La categoría de tu registro es: <span>:registrationCat</span></h4></strong></li>
+        </ul>
     </div>
 </div>
 </body>

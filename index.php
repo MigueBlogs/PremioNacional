@@ -213,10 +213,20 @@
             <ul class="collapsible popout">
                 <li class="active">
                     <div class="collapsible-header mainIcons"><i class="material-icons">lightbulb_outline</i>Lee las siguientes instrucciones para realizar el registro de tu candidatura</div>
-                    <div class="collapsible-body"><span>Bienvenido al portal de registro de Candidaturas para el Premio Nacional de Protección Civil, para iniciar deberás leer completamente las instrucciones siguientes y a continuación hacer clic sobre el botón de “INICIAR REGISTRO”, a continuación deberás ingresar tus datos de contacto como: Nombre completo (<b>obligatorio</b>), correo electrónico (<b>obligatorio</b>) y un número telefónico de contacto (opcional), dicho contacto deberá ser responsable del proyecto en caso de persona física. Si el registro es por parte de un Grupo Voluntario se deberá de colocar el nombre de un solo representante, esto con el fin de mantener contacto y tener referencia de la persona que ha postulado la candidatura.</span></div>
+                    <div class="collapsible-body"><span>Bienvenido al portal de registro de Candidaturas para el Premio Nacional de Protección Civil,
+                     para iniciar deberás leer completamente las instrucciones siguientes y a continuación hacer clic sobre el botón de 
+                     “INICIAR REGISTRO”, a continuación deberás seleccionar el tipo de registro (<b>obligatorio</b>) el cuál debe ser 
+                     <b>una</b> de tres opciones distintas: Persona física, un grupo de personas físicas o Grupo voluntario. A continuación 
+                     debes seleccionar la categoría de tu postulación, esta puede ser “Prevención” o “Ayuda”, en caso de que sean ambas opciones
+                      deberás de registrar tus datos dos veces, es decir: un registro con el rubro seleccionado de “Prevención” y otro registro nuevo 
+                      con el rubro seleccionado en “Ayuda”, todo esto con los mismos datos y mismos archivos. Posteriormente podrás ingresar tus datos
+                       de contacto como: Nombre completo (<b>obligatorio</b>), correo electrónico (<b>obligatorio</b>) y un número telefónico de contacto
+                        (opcional), dicho contacto deberá ser responsable del proyecto en caso de persona física. Si el registro es por parte de un Grupo 
+                        Voluntario se deberá de colocar el nombre de un solo representante, esto con el fin de mantener contacto y tener referencia de la 
+                        persona que ha postulado la candidatura.</span></div>
                 </li>
                 <li>
-                    <div class="collapsible-header mainIcons"><i class="material-icons">subject</i>Bases del concurso</div>
+                    <div class="collapsible-header mainIcons"><i class="material-icons">subject</i>Bases para participar</div>
                     <div class="collapsible-body">
                         <span>
                             <p class=MsoNormal align=center style='margin-right:-4.65pt;text-align:center;
@@ -630,7 +640,7 @@
                                     <li style="list-style-type: square;">Análisis costo beneficio (solo para trabajos relacionados con herramientas tecnológicas). <span class="nomenclatura">costo_beneficio_INICIALES.pdf</span></li>
                                     <li style="list-style-type: square;">Archivo de texto (Word o PDF) con el listado de direcciónes electrónicas URL hacia los documentos multimedia. <span class="nomenclatura">enlaces_multimedia_INICIALES.pdf</span></li>
                                     <br>
-                                    <span class="nomenclatura">Nota: Las INICIALES corresponden al nombre completo comenzando por APELLIDO PATERNO, MATERNO Y NOMBRE(S) de quién se postula, ya sea persona física, el o la representante de un grupo de personas físicas o el representante del Grupo voluntario para este concurso.</span>
+                                    <span class="nomenclatura">Nota: Las INICIALES corresponden al nombre completo comenzando por APELLIDO PATERNO, MATERNO Y NOMBRE(S) de quién se postula, ya sea persona física, el o la representante de un grupo de personas físicas o el representante del Grupo voluntario. En cuanto a las iniciales en los documentos personales como CV y Áctas de nacimiento deben ir las iniciales de la persona a la que pertenece el documento.</span>
                                     <br><i>*En caso de que los archivos sean demasiado grándes y ya comprimidos ocupen más de 10 MB en el RAR o ZIP se deben enviar unicamente las ligas hacia estos documentos, para más detalles consulta la sección de "¿Cómo enviar mi evidencia audiovisual?".</i> 
                                 </ul>
                         </ul>
@@ -638,7 +648,14 @@
                 </li>
                 <li>
                     <div class="collapsible-header mainIcons"><i class="material-icons">check</i>¿Cómo sabré que mi candidatura fue recibida?</div>
-                    <div class="collapsible-body"><span>Al completar el siguiente formulario y darle clic al botón de "SUBIR DATOS" te mandará a una pantalla de confirmación de que tu información y tus archivos han sido enviados. Espera en tu bandeja de entrada un email de confirmación para verificar que hemos recibido la candidatura. Recuerda revisar tu bandeja de SPAM así como de CORREO NO DESEADO según sea el caso. Si no has recibido respuesta de confirmación intenta nuevamente subir tu candidatura en un lapso de 3 horas. En forma reiterada te pedimos verifiques tu mail de contacto para evitar conflictos de envío de confirmación, ante esto te recomendamos usar correos de dominio Gmail, Hotmail, Yahoo!, etc.</span></div>
+                    <div class="collapsible-body"><span>Al completar el siguiente formulario y darle clic al botón de "SUBIR DATOS" te mandará a una pantalla de confirmación de que tu información y tus archivos
+                     han sido enviados. Espera en tu bandeja de entrada un email de confirmación para verificar que hemos recibido la candidatura. Recuerda revisar tu 
+                     bandeja de SPAM así como de CORREO NO DESEADO según sea el caso. Si no has recibido respuesta de confirmación intenta nuevamente subir tu 
+                     candidatura en un lapso de 3 horas. En forma reiterada te pedimos verifiques tu mail de contacto para evitar conflictos de envío de confirmación,
+                      ante esto te recomendamos usar correos de dominio Gmail, Hotmail, Yahoo!, etc. Los archivos serán subidos al sistema en el momento de tu registro,
+                       sin embargo deben ser revisados minuciosamente por el personal de la Coordinación Nacional de Protección Civil en un plazo no mayor a 15 días
+                        hábiles, en caso de existir algún error en tu documentación o si falta algún archivo en tu registro recibirás un correo electrónico con las 
+                        respectivas instrucciones para enviarlo nuevamente vía mail.</span></div>
                 </li>
                 <li>
                     <div id="lastOne" class="collapsible-header mainIcons"><i class="material-icons">videocam</i>¿Cómo enviar mi evidencia audiovisual?</div>
@@ -658,7 +675,6 @@
                         <h6 class="center">Ingresa los siguientes campos</h6>
                     </div>
                     <div class="row">
-                        
                         <p> Selecciona tu tipo de registro:
                         <br>
                             <label>
