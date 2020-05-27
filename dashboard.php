@@ -68,19 +68,19 @@
                 <h6 class="right"> Ciudad de México, a <span class="fecha"></span></h6>
                 <br>
                 <div class="center">
-                <h4 class="niceTitle"> Premio Nacional de Protección Civil 2020<h4>
-                <h5 class="niceTitle"> Tabla de Candidaturas:<h5>
+                <h4 class="niceTitle">Premio Nacional de Protección Civil 2020<h4>
+                <h5 class="niceTitle">Tablas de Candidaturas:<h5>
                 </div>
                 <h6></h6>
                 <br>
                 <?php $Arr_Candidaturas = getCandidaturas(); ?>
-                <p> Candidaturas registradas: <strong class="dato"><?=count($Arr_Candidaturas)?></strong></p>
+                <p> Candidaturas registradas en total: <strong class="dato"><?=count($Arr_Candidaturas)?></strong></p>
                 <p> Tabla de candidaturas en la categoría de <strong>Prevención</strong>:</p>
                     <table id="vistageneral-tabla" class="responsive-table striped highlight">
                         <thead>
                             <tr id="headersTable">
                                 <th># candidatura</th>
-                                <th>Nombre</th>
+                                <th class="center">Nombre</th>
                                 <th class="center">Correo</th>
                                 <th class="center">Teléfono</th>
                                 <th class="center">Archivo</th>
@@ -95,8 +95,8 @@
                         foreach( $Arr_Candidaturas as $candidatura){
                             if ($candidatura["categoria"] == "Prevención") { ?>
                             <tr>
-                                <td><?=$candidatura["id"]?></td>
-                                <td class="left-align"><?=$candidatura["nombre"]?></td>
+                                <td class="center"><?=$candidatura["id"]?></td>
+                                <td class="center"><?=$candidatura["nombre"]?></td>
                                 <td class="center"><a href="mailto:<?=$candidatura["correo"]?>"><?=$candidatura["correo"]?></a></td>
                                 <td class="center"><?=$candidatura["telefono"]?></td>
                                 <td class="center"><a style="color:#9D2449;" href=<?=$candidatura["archivo"]->load()?>><i class="material-icons">insert_drive_file</i></a></td>
@@ -116,7 +116,7 @@
                         <thead>
                             <tr id="headersTable2">
                                 <th class="center"># candidatura</th>
-                                <th>Nombre</th>
+                                <th class="center">Nombre</th>
                                 <th class="center">Correo</th>
                                 <th class="center">Teléfono</th>
                                 <th class="center">Archivo</th>
@@ -131,8 +131,8 @@
                         foreach( $Arr_Candidaturas as $Arr_Candidatura){
                             if ($Arr_Candidatura["categoria"] == "Ayuda") { ?>
                                 <tr>
-                                <td><?=$Arr_Candidatura["id"]?></td>
-                                <td class="left-align"><?=$Arr_Candidatura["nombre"]?></td>
+                                <td class="center"><?=$Arr_Candidatura["id"]?></td>
+                                <td class="center"><?=$Arr_Candidatura["nombre"]?></td>
                                 <td class="center"><a href="mailto:<?=$Arr_Candidatura["correo"]?>"><?=$Arr_Candidatura["correo"]?></a></td>
                                 <td class="center"><?=$Arr_Candidatura["telefono"]?></td>
                                 <td class="center"><a style="color:#9D2449;" href=<?=$Arr_Candidatura["archivo"]->load()?>><i class="material-icons">insert_drive_file</i></a></td>
