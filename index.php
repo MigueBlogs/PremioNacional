@@ -213,7 +213,7 @@
             <ul class="collapsible popout">
                 <li class="active">
                     <div class="collapsible-header mainIcons"><i class="material-icons">lightbulb_outline</i>Lee las siguientes instrucciones para realizar el registro de tu candidatura</div>
-                    <div class="collapsible-body"><span>Bienvenido al portal de registro de Candidaturas para el Premio Nacional de Protección Civil, para iniciar deberás leer completamente las instrucciones siguientes y a continuación hacer clic sobre el botón de “INICIAR REGISTRO”, a continuación deberás ingresar tus datos de contacto como: Nombre completo (<b>obligatorio</b>), correo electrónico (<b>obligatorio</b>) y un Número telefónico de contacto (opcional), dicho contacto deberá ser responsable del proyecto en caso de persona física. Si el registro es por parte de un Grupo Voluntario se deberá de colocar el nombre de un solo representante, esto con el fin de mantener contacto y tener referencia de la persona que ha postulado la candidatura.</span></div>
+                    <div class="collapsible-body"><span>Bienvenido al portal de registro de Candidaturas para el Premio Nacional de Protección Civil, para iniciar deberás leer completamente las instrucciones siguientes y a continuación hacer clic sobre el botón de “INICIAR REGISTRO”, a continuación deberás ingresar tus datos de contacto como: Nombre completo (<b>obligatorio</b>), correo electrónico (<b>obligatorio</b>) y un número telefónico de contacto (opcional), dicho contacto deberá ser responsable del proyecto en caso de persona física. Si el registro es por parte de un Grupo Voluntario se deberá de colocar el nombre de un solo representante, esto con el fin de mantener contacto y tener referencia de la persona que ha postulado la candidatura.</span></div>
                 </li>
                 <li>
                     <div class="collapsible-header mainIcons"><i class="material-icons">subject</i>Bases del concurso</div>
@@ -727,7 +727,7 @@
                     <div class="row" id="estado-div">
                         <div class="input-field">
                             <select name="estado" id="estado-select" class="validate">
-                                <option value="" disabled selected>Elije el estado</option>
+                                <option value="" disabled selected>Elige el estado</option>
                                 <?php $estados = getEstados();
                                     foreach($estados as $i => $estado) { ?>
                                     <?php if ($keep && $estado['id'] == $_POST['estado'] || (isset($_GET['estado']) && $estado['estado'] == $_GET['estado'])) { ?>
@@ -747,7 +747,7 @@
                     <div class="row" id="municipio-div" style="display: none;">
                         <div class="input-field">
                             <select name="municipio" id="municipio-select" class="validate">
-                                <option value="" disabled>Elije el municipio</option>
+                                <option value="" disabled>Elige el municipio</option>
                             </select>
                             <label for="estado-select">Municipio</label>
                             <span class="helper-text" data-error="Completa este campo" data-success="Correcto"></span>
