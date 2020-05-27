@@ -32,7 +32,9 @@
         isset($_POST["correo"]) && 
         isset($_FILES["archivo"]) && 
         isset($_POST["estado"]) && 
-        isset($_POST["municipio"])) 
+        isset($_POST["municipio"]) &&
+        isset($_POST["tipo"]) &&
+        isset($_POST["categoria"]))
     {
         sendForm();    
     }
@@ -45,8 +47,10 @@
         $telefono = isset($_POST["telefono"]) ? substr(trim($_POST['telefono']), 0, 10) : null;
         $estado = intval($_POST['estado']);
         $municipio = $_POST['municipio'];  // debe ser char para respetar 0 al inicio
+        $tipo = trim($_POST['tipo']);
+        $categoria = trim($_POST['categoria']);
 
-        if (validateForm($nombre, $correo, $telefono, $estado, $municipio)){
+        if (validateForm($nombre, $correo, $telefono, $estado, $municipio, $tipo, $categoria)){
             
             $imageFileType = strtolower(pathinfo($target_dir . basename($_FILES['archivo']['name']), PATHINFO_EXTENSION));
 
@@ -65,7 +69,9 @@
                 ":telefono"=>$telefono,
                 ":archivo"=>$url_file,
                 ":estado"=>$estado,
-                ":municipio"=>$municipio
+                ":municipio"=>$municipio,
+                ":tipo"=>$tipo,
+                ":categoria"=>$categoria
             ];
             if (registrar($datos)) {
                 $tmp = getUltimoRegistro($correo);
@@ -74,20 +80,23 @@
                 }
                 else {
                     $success_msg = 'Registro realizado correctamente';
-                    $error_msg = 'No se pudo enviar el correo de confirmación para la dirección que ingresaste.';
+                    $error_msg = 'No se pudo enviar el correo de confirmación para la dirección que ingresaste. Es posible que se haya ingresado erróneamente.';
                 }
             }
             else {
                 unlink($target_file);
-                $error_msg = 'No se pudo realizar el registro de tu solicitud';
+                $error_msg = 'No se pudo realizar el registro de tu candidatura.';
             }
 
         }
         if ($error_msg) $keep = true;
     }
 
-    function validateForm($nombre, $correo, $telefono, $estado, $municipio) {
+    function validateForm($nombre, $correo, $telefono, $estado, $municipio, $tipo, $categoria) {
         global $error_msg, $allowTypes, $max_file_size, $target_dir;
+
+        $possible_tipo = array("Persona física", "Personas físicas", "Grupo voluntario");
+        $possible_categoria = array("Prevención", "Ayuda");
 
         if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
             $error_msg = 'El correo electrónico es inválido. Verifíca que esté bien escrito';
@@ -95,6 +104,16 @@
         }
         if ($estado < 1 || $estado > 32){
             $error_msg = 'El estado seleccionado es inválido.';
+            return false;
+        }
+
+        if (!in_array($tipo, $possible_tipo)){
+            $error_msg = "Selecciona un tipo de registro válido";
+            return false;
+        }
+
+        if (!in_array($categoria, $possible_categoria)){
+            $error_msg = "Selecciona una categoría válida";
             return false;
         }
         
@@ -133,7 +152,7 @@
         else if (strpos($blob, 'PK') !== false) {
             // Is ZIP
         } else {
-            $error_msg = 'El archivo subido no es válido';
+            $error_msg = 'El archivo subido no es un archivo ZIP o RAR válido';
             return false;
         }
         return true;
@@ -657,26 +676,41 @@
                     <div class="row">
                         <h6 class="center">Ingresa los siguientes campos</h6>
                     </div>
-                    <div class="row">
+                    <div class="row" id="div-tipos">
                         
-                        <p> Selecciona tu tipo de registro:
-                        <br>
+                        <p> Selecciona tu tipo de registro: </p>
+                        <p>
                             <label>
-                                <input name="group1" type="radio" />
+                                <input name="tipo" type="radio" value="Persona física">
                                 <span>Una persona física.</span>
                             </label>
                         </p>
                         <p>
                             <label>
-                                <input name="group1" type="radio" />
+                                <input name="tipo" type="radio" value="Personas físicas">
                                 <span>Un grupo de personas físicas.</span>
                             </label>
                         </p>
                         <p>
                             <label>
-                                <input name="group1" type="radio" />
+                                <input name="tipo" type="radio" value="Grupo voluntario">
                                 <span>Grupo voluntario</span>
                             </label>
+                        </p>
+                    </div>
+                    <div class="row" id="div-categorias">
+                        <p>Selecciona una categoría por la cual estás participando:</p>
+                        <p>
+                        <label>
+                            <input name="categoria" type="radio" value="Prevención">
+                            <span>Prevención</span>
+                        </label>
+                        </p>
+                        <p>
+                        <label>
+                            <input name="categoria" type="radio" value="Ayuda">
+                            <span>Ayuda</span>
+                        </label>
                         </p>
                     </div>
                     <div class="row">

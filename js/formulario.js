@@ -14,6 +14,10 @@ function readArchivo() {
 }
 
 function validateForm(){
+    if ($('input[name=tipo]:checked').val() == null || $('input[name=tipo]:checked').val() == "") {
+        goToId('div-tipo'); return false;}
+    if ($('input[name=categoria]:checked').val() == null || $('input[name=categoria]:checked').val() == "") {
+        goToId('div-categorias'); return false;}
     if ($('#nombre').val().trim() === "" ){
         goToId('nombre'); return false; }
     if ($('#telefono').val().trim() === "" ){
@@ -47,7 +51,8 @@ function verificaInicio() {
     else {
         if ($('#municipio-select').val() == null || $('#municipio-select').val() === "" ){ return; }
     }
-    
+    if ($('input[name=tipo]:checked').val() == null || $('input[name=tipo]:checked').val() == "") {return;}
+    if ($('input[name=categoria]:checked').val() == null || $('input[name=categoria]:checked').val() == "") {return;}
     $('#btn-submit').removeClass('disabled').addClass('pulse');
 }
 
@@ -56,7 +61,7 @@ $(document).ready(function() {
     $('.fixed-action-btn').floatingActionButton();
     $('input[data-length]').characterCounter();
     
-    $('input[type=text], input[type=number], input[type=email]').on('input change paste', function(e){
+    $('input[type=text], input[type=number], input[type=email], input[type=radio]').on('input change paste', function(e){
         verificaInicio();
     });
 
