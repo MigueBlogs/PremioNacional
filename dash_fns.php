@@ -39,8 +39,7 @@ function getUsuarios() {
 
         $paramsArray = Array();
 
-        $queryStr = "SELECT R.NOMBRE, R.CORREO, R.TELEFONO, R.ARCHIVO, M.NOMBRE as MUNICIPIO, E.CORTO as ESTADO, R.FECHA FROM MUNICIPIO M, REGISTRO R, ESTADO E where M.ID_MUNICIPIO = R.MUNICIPIO and E.ID_ESTADO =R.ESTADO order by R.FECHA desc";
-        //entre I2 y group tenía: WHERE INSTITUCION='F'
+        $queryStr = "SELECT R.ID, R.NOMBRE, R.CORREO, R.TELEFONO, R.ARCHIVO, M.NOMBRE as MUNICIPIO, E.CORTO as ESTADO, R.FECHA, R.TIPO, R.CATEGORIA FROM MUNICIPIO M, REGISTRO R, ESTADO E where M.ID_MUNICIPIO = R.MUNICIPIO and E.ID_ESTADO =R.ESTADO order by R.FECHA desc";
         $query = oci_parse($conn, $queryStr);
 
         foreach ($paramsArray as $key => $value) {
@@ -52,6 +51,7 @@ function getUsuarios() {
 
         while ( ($row = oci_fetch_assoc($query)) != false) {
             $result = Array();
+            $result["id"] = $row["ID"];
             $result["nombre"] = $row["NOMBRE"];
             $result["correo"] = $row["CORREO"];
             $result["telefono"] = $row["TELEFONO"];
@@ -59,6 +59,8 @@ function getUsuarios() {
             $result["municipio"] = $row["MUNICIPIO"];
             $result["estado"] = $row["ESTADO"];
             $result["fecha"] = $row["FECHA"];
+            $result["tipo"] = $row["TIPO"];
+            $result["categoria"] = $row["CATEGORIA"];
             $ar[] = $result;
         }
 
