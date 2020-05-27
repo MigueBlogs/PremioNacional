@@ -20,7 +20,7 @@ function validateForm(){
         goToId('div-categorias'); return false;}
     if ($('#nombre').val().trim() === "" ){
         goToId('nombre'); return false; }
-    if ($('#telefono').val().trim() === "" ){
+    if ($('#telefono').val().trim().length > 0 && $('#telefono').val().trim().length != 10){
         goToId('telefono'); return false; }
     if ($('#correo').val().trim() === "" ){
         goToId('correo'); return false; }
@@ -43,7 +43,7 @@ function verificaInicio() {
     $('#btn-submit').addClass('disabled').removeClass('pulse');
 
     if ($('#nombre').val().trim() === "" ){ return; }
-    if ($('#telefono').val().trim() === "" ){ return; }
+    if ($('#telefono').val().trim().length > 0 && $('#telefono').val().trim().length != 10){ return; }
     if ($('#correo').val().trim() === "" ){ return; }
     let archivos = $('#archivo');
     if (parseInt(archivos.get(0).files.length) != 1){ return; }
@@ -63,6 +63,25 @@ $(document).ready(function() {
     
     $('input[type=text], input[type=number], input[type=email], input[type=radio]').on('input change paste', function(e){
         verificaInicio();
+    });
+    $('#telefono').on('input change paste keydown keyup', function(){
+        let temp = $(this).val().replace(/\D/, '');
+        $(this).val(temp);
+        $(this).text(temp);
+        let len = $(this).val().length;
+
+        if (len > 0 && len != 10) {
+            $(this).removeClass("valid").addClass("invalid");
+        }
+        else if (len == 10) {
+            $(this).removeClass("invalid").addClass("valid");
+        }
+        else {
+            $(this).removeClass("valid").removeClass("invalid");
+        }
+        temp = $(this).val().replace(/\D/, '');
+        $(this).val(temp);
+        $(this).text(temp);
     });
 
     $('#archivo').on('change', function() {

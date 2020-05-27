@@ -45,6 +45,9 @@
         $nombre = substr(trim($_POST['nombre']), 0, 512);
         $correo =  mb_strtolower(substr(trim($_POST['correo']), 0, 128));
         $telefono = isset($_POST["telefono"]) ? substr(trim($_POST['telefono']), 0, 10) : null;
+        if ($telefono) {
+            $telefono = preg_replace("/[^0-9]/", "", $telefono);
+        }
         $estado = intval($_POST['estado']);
         $municipio = $_POST['municipio'];  // debe ser char para respetar 0 al inicio
         $tipo = trim($_POST['tipo']);
@@ -747,9 +750,9 @@
                     <div class="row">
                         <div class="input-field">
                             <i class="material-icons prefix">phone</i>
-                            <input placeholder="Ingresa número telefónico" name="telefono" id="telefono" type="text" class="validate" data-length="10" maxlength="10" <?php if ($keep || isset($_POST['telefono'])) echo 'value="'.$_POST['telefono'].'"'; ?>>
+                            <input placeholder="Ingresa número telefónico" name="telefono" id="telefono" type="text" data-length="10" maxlength="10" <?php if ($keep || isset($_POST['telefono'])) echo 'value="'.$_POST['telefono'].'"'; ?>>
                             <label for="telefono">Ingresa un número de contacto. (10 dígitos)</label>
-                            <span class="helper-text" data-error="Completa este campo" data-success="Correcto"></span>
+                            <span class="helper-text" data-error="Debe ser un número de 10 dígitos" data-success="Correcto"></span>
                     </div>
                     <div class="row">
                         <strong>Ingresa un correo para poder dar un seguimiento y tener un medio de comunicación donde se enviará información relevante. Asegúrate de escribirlo corréctamente.</strong><br>
