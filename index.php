@@ -602,7 +602,8 @@
                     <div class="collapsible-body">
                         <span>
                         Los archivos mencionados en la convocatoria deben ser subidos a esta plataforma como un archivo .zip o .rar, 
-                        este debe de pesar menos de 10 MegaBytes y debe estar conformado por las siguientes carpetas con su respectiva nomenclatura en cada nombre del documento que se muestra en rojo:
+                        este debe de pesar menos de 10 Megabytes y debe estar conformado por las siguientes carpetas con su respectiva 
+                        nomenclatura en cada nombre del documento que se muestra en rojo:
                         </span>
                         <ul style="padding-left:inherit;">
                             <li style="list-style-type: circle;">Cartas.</li>
@@ -625,19 +626,19 @@
                                 </ul>
                             <li style="list-style-type: circle;">Materiales extras.</li>
                                 <ul style="padding-left:inherit;">
-                                    <li style="list-style-type: square;">Materiales bibliográficos, audiovisuales, gráficos u otros (en caso de que quepan dentro de los límites permitidos del ZIP o RAR). <span class="nomenclatura">ejemplo: video_de_muestra_INICIALES.wmv</span></li>
+                                    <li style="list-style-type: square;">Materiales bibliográficos, audiovisuales, gráficos u otros* (en caso de que quepan dentro de los límites permitidos del ZIP o RAR). <span class="nomenclatura">ejemplo: video_de_muestra_INICIALES.wmv</span></li>
                                     <li style="list-style-type: square;">Análisis costo beneficio (solo para trabajos relacionados con herramientas tecnológicas). <span class="nomenclatura">costo_beneficio_INICIALES.pdf</span></li>
                                     <li style="list-style-type: square;">Archivo de texto (Word o PDF) con el listado de direcciónes electrónicas URL hacia los documentos multimedia. <span class="nomenclatura">enlaces_multimedia_INICIALES.pdf</span></li>
-                                    <i>Para mas detalles de este apartado consulta la sección de "¿Cómo enviar mi evidencia audiovisual?".</i>
                                     <br>
-                                    <span class="nomenclatura">* Las INICIALES corresponden al nombre completo del representante ya sea persona física o moral que postula para este concurso.</span>
+                                    <span class="nomenclatura">Nota: Las INICIALES corresponden al nombre completo comenzando por APELLIDO PATERNO, MATERNO Y NOMBRE(S) de quién se postula, ya sea persona física, el o la representante de un grupo de personas físicas o el representante del Grupo voluntario para este concurso.</span>
+                                    <br><i>*En caso de que los archivos sean demasiado grándes y ya comprimidos ocupen más de 10 MB en el RAR o ZIP se deben enviar unicamente las ligas hacia estos documentos, para más detalles consulta la sección de "¿Cómo enviar mi evidencia audiovisual?".</i> 
                                 </ul>
                         </ul>
                     </div>
                 </li>
                 <li>
                     <div class="collapsible-header mainIcons"><i class="material-icons">check</i>¿Cómo sabré que mi candidatura fue recibida?</div>
-                    <div class="collapsible-body"><span>Al completar el siguiente formulario y darle clic al botón de "SUBIR DATOS" te mandará a una pantalla de confirmación de que tu información y tus archivos han sido enviados. Espera en tu bandeja de entrada un email de confirmación para verificar que hemos recibido la candidatura. Recuerda revisar tu bandeja de SPAM así como de CORREO NO DESEADO según sea el caso. Si no has recibido respuesta de confirmación intenta nuevamente subir tu candidatura en un lapso de 3 horas. En forma reiterada de pedimos verifiques tu mail de contacto para evitar conflictos de envío de confirmación, ante esto te recomendamos usar correos de dominio Gmail, Hotmail, Yahoo!, etc.</span></div>
+                    <div class="collapsible-body"><span>Al completar el siguiente formulario y darle clic al botón de "SUBIR DATOS" te mandará a una pantalla de confirmación de que tu información y tus archivos han sido enviados. Espera en tu bandeja de entrada un email de confirmación para verificar que hemos recibido la candidatura. Recuerda revisar tu bandeja de SPAM así como de CORREO NO DESEADO según sea el caso. Si no has recibido respuesta de confirmación intenta nuevamente subir tu candidatura en un lapso de 3 horas. En forma reiterada te pedimos verifiques tu mail de contacto para evitar conflictos de envío de confirmación, ante esto te recomendamos usar correos de dominio Gmail, Hotmail, Yahoo!, etc.</span></div>
                 </li>
                 <li>
                     <div id="lastOne" class="collapsible-header mainIcons"><i class="material-icons">videocam</i>¿Cómo enviar mi evidencia audiovisual?</div>
