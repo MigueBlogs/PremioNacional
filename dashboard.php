@@ -75,31 +75,77 @@
                 <br>
                 <?php $Arr_Candidaturas = getCandidaturas(); ?>
                 <p> Candidaturas registradas: <strong class="dato"><?=count($Arr_Candidaturas)?></strong></p>
-                <p> Tabla de candidaturas:</p>
+                <p> Tabla de candidaturas en la categoría de <strong>Prevención</strong>:</p>
                     <table id="vistageneral-tabla" class="responsive-table striped highlight">
-                        <tr id="headersTable">
-                            <th>Nombre</th>
-                            <th style="text-align: center !important;">Correo</th>
-                            <th style="text-align: center !important;">Teléfono</th>
-                            <th style="text-align: center !important;">Archivo</th>
-                            <th style="text-align: center !important;">Municipio</th>
-                            <th style="text-align: center !important;">Estado</th>
-                            <th style="text-align: center !important;">Fecha reg.</th>
-                        </tr>
+                        <thead>
+                            <tr id="headersTable">
+                                <th># candidatura</th>
+                                <th>Nombre</th>
+                                <th class="center">Correo</th>
+                                <th class="center">Teléfono</th>
+                                <th class="center">Archivo</th>
+                                <th class="center">Municipio</th>
+                                <th class="center">Estado</th>
+                                <th class="center">Fecha reg.</th>
+                                <th class="center">Tipo de candidatura</th>
+                            </tr>
+                        </thead>
+                        <tbody>
                         <?php
-                        foreach( $Arr_Candidaturas as $Arr_Candidatura){
-                            echo '<tr><td style="text-align: left !important;">'.
-                            $Arr_Candidatura["nombre"].'</td><td  style="text-align: center !important;">
-                            <a href="mailto:'.$Arr_Candidatura["correo"].'">'.$Arr_Candidatura["correo"].'</a></td><td  style="text-align: center !important;">'.
-                            $Arr_Candidatura["telefono"].'</td><td  style="text-align: center !important;">
-                            <a style="color:#9D2449;" href='.$Arr_Candidatura["archivo"]->load().'><i class="material-icons">insert_drive_file</i></a></td><td  style="text-align: center !important;">'.
-                            $Arr_Candidatura["municipio"].'</td><td class="dato " style="text-align: center !important;">'.
-                            $Arr_Candidatura["estado"].'</td><td class="dato " style="text-align: center !important;">'.
-                            $Arr_Candidatura["fecha"].'</tr>';
-                        };
+                        foreach( $Arr_Candidaturas as $candidatura){
+                            if ($candidatura["categoria"] == "Prevención") { ?>
+                            <tr>
+                                <td><?=$candidatura["id"]?></td>
+                                <td class="left-align"><?=$candidatura["nombre"]?></td>
+                                <td class="center"><a href="mailto:<?=$candidatura["correo"]?>"><?=$candidatura["correo"]?></a></td>
+                                <td class="center"><?=$candidatura["telefono"]?></td>
+                                <td class="center"><a style="color:#9D2449;" href=<?=$candidatura["archivo"]->load()?>><i class="material-icons">insert_drive_file</i></a></td>
+                                <td class="center"><?=$candidatura["municipio"]?></td>
+                                <td class="dato center"><?=$candidatura["estado"]?></td>
+                                <td class="dato center"><?=$candidatura["fecha"]?></td>
+                                <td class="center"><?=$candidatura["tipo"]?></td>
+                            </tr>
+                            <?php }
+                        }
                         ?>
+                        </tbody>
                     </table>
                 <br>
+                <p> Tabla de candidaturas en la categoría de <strong>Ayuda</strong>:</p>
+                    <table id="vistageneral-tabla2" class="responsive-table striped highlight">
+                        <thead>
+                            <tr id="headersTable2">
+                                <th class="center"># candidatura</th>
+                                <th>Nombre</th>
+                                <th class="center">Correo</th>
+                                <th class="center">Teléfono</th>
+                                <th class="center">Archivo</th>
+                                <th class="center">Municipio</th>
+                                <th class="center">Estado</th>
+                                <th class="center">Fecha reg.</th>
+                                <th class="center">Tipo de candidatura</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                        foreach( $Arr_Candidaturas as $Arr_Candidatura){
+                            if ($Arr_Candidatura["categoria"] == "Ayuda") { ?>
+                                <tr>
+                                <td><?=$Arr_Candidatura["id"]?></td>
+                                <td class="left-align"><?=$Arr_Candidatura["nombre"]?></td>
+                                <td class="center"><a href="mailto:<?=$Arr_Candidatura["correo"]?>"><?=$Arr_Candidatura["correo"]?></a></td>
+                                <td class="center"><?=$Arr_Candidatura["telefono"]?></td>
+                                <td class="center"><a style="color:#9D2449;" href=<?=$Arr_Candidatura["archivo"]->load()?>><i class="material-icons">insert_drive_file</i></a></td>
+                                <td class="center"><?=$Arr_Candidatura["municipio"]?></td>
+                                <td class="dato center"><?=$Arr_Candidatura["estado"]?></td>
+                                <td class="dato center"><?=$Arr_Candidatura["fecha"]?></td>
+                                <td class="center"><?=$Arr_Candidatura["tipo"]?></td>
+                            </tr>
+                            <?php }
+                        }
+                        ?>
+                        </tbody>
+                    </table>
                 <p> Estados participantes: </p>
                     <div id="barrasConstancia" style="height: 400px;" class="slideAnimation">
                         <div id="barsvg" class="adjustSize"> </div>

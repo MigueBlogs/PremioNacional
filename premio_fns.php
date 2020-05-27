@@ -19,8 +19,8 @@
 
         $conn = dbConnect(user, pass, server);
 
-        $queryStr = "INSERT INTO REGISTRO (NOMBRE, CORREO, TELEFONO, ARCHIVO, ESTADO, MUNICIPIO) 
-        VALUES (:nombre,LOWER(:correo),:telefono,:archivo,:estado,:municipio)";
+        $queryStr = "INSERT INTO REGISTRO (NOMBRE, CORREO, TELEFONO, ARCHIVO, ESTADO, MUNICIPIO, TIPO, CATEGORIA) 
+        VALUES (:nombre,LOWER(:correo),:telefono,:archivo,:estado,:municipio,:tipo,:categoria)";
 
         $paramsArray = $datos;
 
