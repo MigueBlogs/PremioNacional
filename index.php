@@ -74,8 +74,8 @@
                 ":categoria"=>$categoria
             ];
             if (registrar($datos)) {
-                $tmp = getUltimoRegistro($correo);
-                if (enviarCorreoConfirmacion($correo, $nombre)){
+                $tmp = getUltimoRegistro($correo); //se utiliza para obtener ultimo registro en la BD y envia correo de confirmación
+                if (enviarCorreoConfirmacion($correo,$tmp['ID'],$nombre,$tipo,$categoria)){
                     $success_msg = 'Registro realizado correctamente. Se ha enviado exitosamente un correo confirmando tu registro';
                 }
                 else {
@@ -165,7 +165,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
     <title>Premio Nacional 2020</title>
-    
+    <?php
+    // function console_log( $data ){
+    //     echo '<script>';
+    //     echo 'console.log('. json_encode( $data ) .');';
+    //     echo '</script>';
+    // };
+    ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Materialize -->
         <!-- Compiled and minified CSS -->

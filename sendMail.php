@@ -7,7 +7,7 @@ use PHPMailer\PHPMailer\Exception;
 //Load Composer's autoloader
 require './vendor/autoload.php';
 
-function enviarCorreoConfirmacion($correo, $nombre) {
+function enviarCorreoConfirmacion($correo,$id,$nombre,$tipo,$categoria) {
     $mail = new PHPMailer(true);                            // Passing `true` enables exceptions
     try {
         //Server settings
@@ -24,6 +24,9 @@ function enviarCorreoConfirmacion($correo, $nombre) {
 
         $message = file_get_contents('mail_templates/mail_confirmation.php'); 
         $message = str_replace(':registrationName', $nombre, $message);
+        $message = str_replace(':registrationType', $tipo, $message);
+        $message = str_replace(':registrationCat', $categoria, $message);
+        $message = str_replace(':registrationID', $id, $message);
 
         //Content
         $mail->isHTML(true);                                  // Set email format to HTML
