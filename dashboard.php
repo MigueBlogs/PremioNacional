@@ -88,6 +88,7 @@
                                 <th class="center">Estado</th>
                                 <th class="center">Fecha reg.</th>
                                 <th class="center">Tipo de candidatura</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -104,6 +105,7 @@
                                 <td class="dato center"><?=$candidatura["estado"]?></td>
                                 <td class="dato center"><?=$candidatura["fecha"]?></td>
                                 <td class="center"><?=$candidatura["tipo"]?></td>
+                                <td><button class="btn guinda tooltipped borrar" data-position="top" data-tooltip="Borrar registro" id="btn-borrar-<?=$candidatura["id"]?>"><i class="material-icons">delete</i></button></td>
                             </tr>
                             <?php }
                         }
@@ -124,6 +126,7 @@
                                 <th class="center">Estado</th>
                                 <th class="center">Fecha reg.</th>
                                 <th class="center">Tipo de candidatura</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -140,12 +143,26 @@
                                 <td class="dato center"><?=$Arr_Candidatura["estado"]?></td>
                                 <td class="dato center"><?=$Arr_Candidatura["fecha"]?></td>
                                 <td class="center"><?=$Arr_Candidatura["tipo"]?></td>
+                                <td><button class="btn guinda tooltipped borrar" data-position="top" data-tooltip="Borrar registro" id="btn-borrar-<?=$candidatura["id"]?>"><i class="material-icons">delete</i></button></td>
                             </tr>
                             <?php }
                         }
                         ?>
                         </tbody>
                     </table>
+                    <div id="modal-borrar" class="modal">
+                        <div class="modal-content">
+                            <h4>Confirmar</h4>
+                            <p>¿Estás seguro de eliminar el registro <strong id="borrar-registro-id"></strong> de
+                            <strong id="borrar-registro-nombre"></strong> (<strong id="borrar-registro-correo"></strong>)?
+                            </p>
+                            <p class="red-text valign-wrapper"><i class="material-icons">warning</i>Esta acción no se puede revertir ni tampoco será posible recuperar los datos previamente guardados.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="borrar-registro-aceptar" class="btn modal-close guinda">Borrar</button>
+                            <button data-target="modal-borrar" class="btn modal-close verde-oscuro">Cancelar</button>
+                        </div>
+                    </div>
                 <p> Estados participantes: </p>
                     <div id="barrasConstancia" style="height: 400px;" class="slideAnimation">
                         <div id="barsvg" class="adjustSize"> </div>

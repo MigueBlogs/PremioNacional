@@ -1,6 +1,82 @@
 <?php
-require_once("db_fns.php");
-function getUsuarios() {
+    require_once("db_fns.php");
+
+    if (isset($_POST["id"]) &&
+        isset($_POST["nombre"]) &&
+        isset($_POST["correo"]) &&
+        isset($_POST["seguro_borrar"]))
+    {
+        if ($_POST["seguro_borrar"] != "sí") { die();}
+
+        $archivo = getArchivo($_POST["id"], $_POST["correo"]);
+        $success = borrarRegistro($_POST["id"], $_POST["nombre"], $_POST["correo"]);
+        if ($success && $archivo) {
+            unlink("/var/www/html/uploads/premionacional2020/".$archivo);
+        }
+        echo json_encode(array("status"=>$success));
+    }
+
+    function getArchivo($id, $correo){
+        require_once("db_global.php");
+
+        $conn = dbConnect(user, pass, server);
+
+        $paramsArray = Array(
+            ":id"=> $id,
+            ":correo"=>$correo
+        );
+
+        $queryStr = "SELECT ARCHIVO FROM REGISTRO WHERE ID = :id AND LOWER(CORREO) = LOWER(:correo)";
+
+        $query = oci_parse($conn, $queryStr);
+
+        foreach ($paramsArray as $key => $value) {
+            oci_bind_by_name($query, $key, $paramsArray[$key]);
+        }
+
+        oci_execute($query);
+        $archivo =null;
+
+        while ( ($row = oci_fetch_assoc($query)) != false) {
+            $archivo = $row["ARCHIVO"]->load();
+            $archivo = end(explode("/", $archivo));
+            break;
+        }
+
+        dbClose($conn, $query);
+        return $archivo;
+    }
+
+    function borrarRegistro($id, $nombre, $correo) {
+        require_once("db_global.php");
+
+        $conn = dbConnect(user, pass, server);
+
+        $paramsArray = Array(
+            ":id"=> $id,
+            ":nombre"=>$nombre,
+            ":correo"=>$correo
+        );
+
+        $queryStr = "DELETE FROM REGISTRO WHERE ID = :id AND LOWER(NOMBRE) = LOWER(:nombre) AND LOWER(CORREO) = LOWER(:correo)";
+
+        $query = oci_parse($conn, $queryStr);
+
+        foreach ($paramsArray as $key => $value) {
+            oci_bind_by_name($query, $key, $paramsArray[$key]);
+        }
+
+        if (oci_execute($query)) {
+            dbClose($conn, $query);
+            return true;
+        }
+        else {
+            dbClose($conn, $query);
+            return false;
+        }
+    }
+
+    function getUsuarios() {
         require_once("db_global.php");
 
         $conn = dbConnect(user, pass, server);
