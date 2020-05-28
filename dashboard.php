@@ -176,7 +176,7 @@
                 <p> Tabla de candidaturas en la categoría de <strong>Prevención</strong>:</p>
                     <table id="vistageneral-tabla" class="responsive-table striped highlight">
                         <thead>
-                            <tr id="headersTable">
+                            <tr class="headersTable">
                                 <th class="center">#</th>
                                 <th class="center">Nombre</th>
                                 <th class="center">Correo</th>
@@ -211,12 +211,12 @@
                         ?>
                         </tbody>
                     </table>
-                    <div class="hide-on-med-and-up">Desliza hacia la derecha para ver las candidaturas</div>
+                    <div id="des1" class="hide-on-med-and-up">Desliza hacia la derecha para ver las candidaturas</div>
                 <br>
                 <p> Tabla de candidaturas en la categoría de <strong>Ayuda</strong>:</p>
                     <table id="vistageneral-tabla2" class="responsive-table striped highlight">
                         <thead>
-                            <tr id="headersTable2">
+                            <tr class="headersTable">
                                 <th class="center">#</th>
                                 <th class="center">Nombre</th>
                                 <th class="center">Correo</th>
@@ -252,7 +252,7 @@
                         </tbody>
                     </table>
                     
-                    <div class="hide-on-med-and-up">Desliza hacia la derecha para ver las candidaturas</div>
+                    <div id="des2" class="hide-on-med-and-up">Desliza hacia la derecha para ver las candidaturas</div>
                     <!-- MODALS -->
                     <div id="modal-borrar" class="modal">
                         <div class="modal-content">
@@ -335,7 +335,7 @@
                 <h3 class="titleMex"> Vista de último acceso a la sesión </h3>
                     <div class="container">
                         <table id="vistaAccesos-tabla">
-                            <tr id="headersTable">
+                            <tr class="headersTable">
                                 <th>Usuario</th>
                                 <th style="text-align: center !important;">Acceso</th>
                             </tr>

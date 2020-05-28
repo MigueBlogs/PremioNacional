@@ -84,7 +84,7 @@ ol li{
     .niceTitle{
         font-size: medium;
     }
-    #headersTable{
+    .headersTable{
         font-size: 12px;
         font-weight: bold !important;
     }
