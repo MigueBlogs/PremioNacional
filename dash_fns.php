@@ -209,7 +209,6 @@
         }
 
         dbClose($conn, $query);
-        echo json_encode($ar);
         return $ar;
     }
 

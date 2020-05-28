@@ -94,6 +94,7 @@
         }
         return true;
     }
+    $Arr_Candidaturas = getCandidaturas();
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -170,7 +171,7 @@
                 </div>
                 <h6></h6>
                 <br>
-                <?php $Arr_Candidaturas = getCandidaturas(); ?>
+                
                 <p> Candidaturas registradas en total: <strong class="dato"><?=count($Arr_Candidaturas)?></strong></p>
                 <p> Tabla de candidaturas en la categoría de <strong>Prevención</strong>:</p>
                     <table id="vistageneral-tabla" class="responsive-table striped highlight">
