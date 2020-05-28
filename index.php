@@ -36,7 +36,7 @@
         isset($_POST["tipo"]) &&
         isset($_POST["categoria"]))
     {
-        sendForm();    
+        SendForm();    
     }
 
     function SendForm() {
@@ -77,6 +77,7 @@
                 $tmp = getUltimoRegistro($correo); //se utiliza para obtener ultimo registro en la BD y envia correo de confirmación
                 if (enviarCorreoConfirmacion($correo,$tmp['ID'],$nombre,$tipo,$categoria)){
                     $success_msg = 'Registro realizado correctamente. Se ha enviado exitosamente un correo confirmando tu registro';
+                    //unset($_POST);
                 }
                 else {
                     $success_msg = 'Registro realizado correctamente';
@@ -856,7 +857,7 @@
                     </div>
                 </div>
                 
-            </form>
+        </form>
 
     </div>
     

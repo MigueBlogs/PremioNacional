@@ -37,7 +37,7 @@
         <p>Estimado <strong><span>:registrationName</span></strong>: </p>
         <p>En la Coordinación Nacional de Protección Civil hemos registrado tu candidatura, la cuál será revisada conforme a las bases establecidas en la convocatoria.
         <br>Por lo que te pedimos estés al tanto de tu correo electrónico, pues será la vía de comunicación para cualquier aclaración.
-        <br>De la misma manera sigue nuestras redes sociales de <a href="https://www.facebook.com/CNPCmx/">Facebook</a> y <a href="https://twitter.com/CNPC_mx">Twitter</a> para futuros anuncios del concurso</p>
+        <br>De la misma manera sigue nuestras redes sociales de <a href="https://www.facebook.com/CNPCmx/">Facebook</a> y <a href="https://twitter.com/CNPC_mx">Twitter</a> para futuros anuncios del evento.</p>
     </div>
     <div class="divider"></div>
     <div class="section">

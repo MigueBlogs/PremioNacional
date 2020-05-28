@@ -38,6 +38,15 @@ table.highlight > tbody > tr:hover {
     background-color: #0C231E !important;
 }
 
+.edit{
+    position: relative;
+    left: -25px;
+    background-color:#c09c65;
+}
+.edit:hover{
+    background-color:#0C231E;
+}
+
 .input-field .prefix.active{
     color: #285C4D !important;
 }
@@ -84,6 +93,9 @@ ol li{
     }
     .comun{
         display: none;
+    }
+    .edit{
+        position: unset;
     }
   }
 

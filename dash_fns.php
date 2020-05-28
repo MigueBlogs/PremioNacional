@@ -47,6 +47,74 @@
         return $archivo;
     }
 
+    function getArchivoByID($id){
+        require_once("db_global.php");
+
+        $conn = dbConnect(user, pass, server);
+
+        $paramsArray = Array(
+            ":id"=> $id
+        );
+
+        $queryStr = "SELECT ARCHIVO FROM REGISTRO WHERE ID = :id ";
+
+        $query = oci_parse($conn, $queryStr);
+
+        foreach ($paramsArray as $key => $value) {
+            oci_bind_by_name($query, $key, $paramsArray[$key]);
+        }
+
+        oci_execute($query);
+        $archivo =null;
+
+        while ( ($row = oci_fetch_assoc($query)) != false) {
+            $archivo = $row["ARCHIVO"]->load();
+            $archivo = end(explode("/", $archivo));
+            break;
+        }
+        
+        if($archivo==''){
+            return false;
+        }
+
+        dbClose($conn, $query);
+        return $archivo;
+    }
+
+    function editarArchivo($datos) {
+
+        $oldFile = getArchivoByID($datos[':id']);
+        if($oldFile==''){
+            return false;
+        }
+        unlink("/var/www/html/uploads/premionacional2020/".$oldFile);
+        require_once("db_global.php");
+
+        $conn = dbConnect(user, pass, server);
+
+        $queryStr = "UPDATE REGISTRO SET ARCHIVO=(:archivo) WHERE ID=(:id)";
+
+        $paramsArray = $datos;
+
+        $query = oci_parse($conn, $queryStr);
+
+        foreach ($paramsArray as $key => $value) {
+            oci_bind_by_name($query, $key, $paramsArray[$key]);
+        }
+        if (oci_execute($query, OCI_NO_AUTO_COMMIT)){
+            oci_commit($conn);
+            return true;
+        }
+        else{
+            $error_msg = 'Hubo un problema al actualizar archivos. Verifica que el formato o el peso del archivo sea correcto.';
+            error_log('Fallo el update de archivos:');
+            error_log(oci_error($query)['message']);
+            oci_rollback($conn);
+            return false;
+        }
+
+    }
+
     function borrarRegistro($id, $nombre, $correo) {
         require_once("db_global.php");
 
