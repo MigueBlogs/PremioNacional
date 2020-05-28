@@ -39,8 +39,6 @@ table.highlight > tbody > tr:hover {
 }
 
 .edit{
-    position: relative;
-    left: -25px;
     background-color:#c09c65;
 }
 .edit:hover{
@@ -93,9 +91,6 @@ ol li{
     }
     .comun{
         display: none;
-    }
-    .edit{
-        position: unset;
     }
   }
 

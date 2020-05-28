@@ -193,18 +193,18 @@
                         <?php
                         foreach( $Arr_Candidaturas as $candidatura){
                             if ($candidatura["categoria"] == "Prevención") { ?>
-                            <tr>
+                            <tr class="headersTable">
                                 <td class="center">D<?=$candidatura["id"]?></td>
                                 <td class="center"><?=$candidatura["nombre"]?></td>
                                 <td class="center"><a href="mailto:<?=$candidatura["correo"]?>"><?=$candidatura["correo"]?></a></td>
                                 <td class="center"><?=$candidatura["telefono"]?></td>
-                                <td class="center"><a style="color:#9D2449;" href=<?=$candidatura["archivo"]->load()?>><i class="material-icons">insert_drive_file</i></a></td>
+                                <td class="center" style="padding: 10px 0;"><a style="color:#9D2449;" href=<?=$candidatura["archivo"]->load()?>><i class="material-icons">insert_drive_file</i></a></td>
                                 <td class="center"><?=$candidatura["municipio"]?></td>
                                 <td class="center"><?=$candidatura["estado"]?></td>
                                 <td class="center"><?=$candidatura["fecha"]?></td>
                                 <td class="center"><?=$candidatura["tipo"]?></td>
-                                <td><button class="btn guinda tooltipped borrar" data-position="top" data-tooltip="Borrar registro" id="btn-borrar-<?=$candidatura["id"]?>"><i class="material-icons">delete</i></button></td>
-                                <td><button class="btn edit tooltipped editar" data-position="top" data-tooltip="Editar archivos" id="btn-editar-<?=$candidatura["id"]?>"><i class="material-icons">edit</i></button></td>
+                                <td><button class="btn guinda tooltipped borrar" data-position="top" data-tooltip="Borrar registro" id="btn-borrar-<?=$candidatura["id"]?>"><i class="material-icons">delete</i></button>
+                                <button class="btn edit tooltipped editar" data-position="top" data-tooltip="Editar archivos" id="btn-editar-<?=$candidatura["id"]?>"><i class="material-icons">edit</i></button></td>
                             </tr>
                             <?php }
                         }
@@ -233,18 +233,18 @@
                         <?php
                         foreach( $Arr_Candidaturas as $Arr_Candidatura){
                             if ($Arr_Candidatura["categoria"] == "Ayuda") { ?>
-                                <tr>
+                                <tr class="headersTable">
                                 <td class="center">D<?=$Arr_Candidatura["id"]?></td>
                                 <td class="center"><?=$Arr_Candidatura["nombre"]?></td>
                                 <td class="center"><a href="mailto:<?=$Arr_Candidatura["correo"]?>"><?=$Arr_Candidatura["correo"]?></a></td>
                                 <td class="center"><?=$Arr_Candidatura["telefono"]?></td>
-                                <td class="center"><a style="color:#9D2449;" href=<?=$Arr_Candidatura["archivo"]->load()?>><i class="material-icons">insert_drive_file</i></a></td>
+                                <td class="center" style="padding: 10px 0;"><a style="color:#9D2449;" href=<?=$Arr_Candidatura["archivo"]->load()?>><i class="material-icons">insert_drive_file</i></a></td>
                                 <td class="center"><?=$Arr_Candidatura["municipio"]?></td>
                                 <td class="center"><?=$Arr_Candidatura["estado"]?></td>
                                 <td class="center"><?=$Arr_Candidatura["fecha"]?></td>
                                 <td class="center"><?=$Arr_Candidatura["tipo"]?></td>
-                                <td><button class="btn guinda tooltipped borrar" data-position="top" data-tooltip="Borrar registro" id="btn-borrar-<?=$candidatura["id"]?>"><i class="material-icons">delete</i></button></td>
-                                <td><button class="btn edit tooltipped editar" data-position="top" data-tooltip="Editar archivos" id="btn-editar-<?=$candidatura["id"]?>"><i class="material-icons">edit</i></button></td>
+                                <td><button class="btn guinda tooltipped borrar" data-position="top" data-tooltip="Borrar registro" id="btn-borrar-<?=$candidatura["id"]?>"><i class="material-icons">delete</i></button>
+                                <button class="btn edit tooltipped editar" data-position="top" data-tooltip="Editar archivos" id="btn-editar-<?=$candidatura["id"]?>"><i class="material-icons">edit</i></button></td>
                             </tr>
                             <?php }
                         }
