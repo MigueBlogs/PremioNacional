@@ -43,7 +43,7 @@
     <div class="section">
         <p>DATOS DEL REGISTRO:</p>
         <ul>
-            <li><strong><h4>Tu número de candidatura es: <span>:registrationID</span></h4></strong></li>
+            <li><strong><h4>Tu número de candidatura es: <span>D:registrationID</span></h4></strong></li>
             <li><strong><h4>Tu típo de registro es: <span>:registrationType</span></h4></strong></li>
             <li><strong><h4>La categoría de tu registro es: <span>:registrationCat</span></h4></strong></li>
         </ul>

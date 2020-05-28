@@ -1,6 +1,7 @@
 let registro_id, registro_nombre, registro_correo, registro_tr;
 
 $(function() {
+  M.updateTextFields();
   $('.dropdown-trigger').dropdown({
     hover:false,
     inDuration:300,
@@ -77,10 +78,10 @@ $(function() {
     registro_tr = $(this).parent().parent();
     let tds = $(this).parent().siblings();
     
-    registro_id = tds["0"].textContent;
+    registro_id = tds["0"].textContent.replace(/\D/, '');
     registro_nombre = tds["1"].textContent;
     registro_correo = tds["2"].textContent;
-    $('#borrar-registro-id').text('#'+registro_id);
+    $('#borrar-registro-id').text('#D'+registro_id);
     $('#borrar-registro-nombre').text(registro_nombre);
     $('#borrar-registro-correo').text(registro_correo);
     $('#modal-borrar').modal('open');
