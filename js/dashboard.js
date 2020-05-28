@@ -92,7 +92,7 @@ $(function() {
     registro_tr = $(this).parent().parent();
     let tds = $(this).parent().siblings();
     
-    registro_id = tds["0"].textContent;
+    registro_id = tds["0"].textContent.replace(/\D/, '');
     registro_nombre = tds["1"].textContent;
     registro_correo = tds["2"].textContent;
     $('#editar-registro-id').text('#'+registro_id);
