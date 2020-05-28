@@ -96,7 +96,7 @@
                         foreach( $Arr_Candidaturas as $candidatura){
                             if ($candidatura["categoria"] == "Prevención") { ?>
                             <tr>
-                                <td class="center"><?=$candidatura["id"]?></td>
+                                <td class="center">D<?=$candidatura["id"]?></td>
                                 <td class="center"><?=$candidatura["nombre"]?></td>
                                 <td class="center"><a href="mailto:<?=$candidatura["correo"]?>"><?=$candidatura["correo"]?></a></td>
                                 <td class="center"><?=$candidatura["telefono"]?></td>
@@ -112,6 +112,7 @@
                         ?>
                         </tbody>
                     </table>
+                    <div class="hide-on-med-and-up">Desliza hacia la derecha para ver las candidaturas</div>
                 <br>
                 <p> Tabla de candidaturas en la categoría de <strong>Ayuda</strong>:</p>
                     <table id="vistageneral-tabla2" class="responsive-table striped highlight">
@@ -134,7 +135,7 @@
                         foreach( $Arr_Candidaturas as $Arr_Candidatura){
                             if ($Arr_Candidatura["categoria"] == "Ayuda") { ?>
                                 <tr>
-                                <td class="center"><?=$Arr_Candidatura["id"]?></td>
+                                <td class="center">D<?=$Arr_Candidatura["id"]?></td>
                                 <td class="center"><?=$Arr_Candidatura["nombre"]?></td>
                                 <td class="center"><a href="mailto:<?=$Arr_Candidatura["correo"]?>"><?=$Arr_Candidatura["correo"]?></a></td>
                                 <td class="center"><?=$Arr_Candidatura["telefono"]?></td>
@@ -150,6 +151,7 @@
                         ?>
                         </tbody>
                     </table>
+                    <div class="hide-on-med-and-up">Desliza hacia la derecha para ver las candidaturas</div>
                     <div id="modal-borrar" class="modal">
                         <div class="modal-content">
                             <h4>Confirmar</h4>
