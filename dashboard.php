@@ -291,11 +291,11 @@
                                     </div>
                                 <p class="red-text valign-wrapper"><i class="material-icons">warning</i>Recuerda que al subir el nuevo ZIP o RAR se reemplazará el archivo anterior. No será posible recuperar archivos anteriores.</p>
                             </div>
-                            <div class="modal-footer">
-                                <button type="submit" id="btn-update-file" class="btn modal-close disabled guinda">Subir documentos</button>
-                                <button data-target="modal-editar" class="btn modal-close verde-oscuro">Cancelar</button>
-                            </div>
                         </form>
+                        <div class="modal-footer">
+                            <button type="submit" form="submit-form" id="btn-update-file" class="btn modal-close disabled guinda">Subir documentos</button>
+                            <button data-target="modal-editar" class="btn modal-close verde-oscuro">Cancelar</button>
+                        </div>
                     </div>
                     <div id="wait-modal" class="modal">
                         <div class="modal-content center">
