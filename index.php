@@ -1,13 +1,13 @@
 <?php
     $today = time();
-    $date_start = strtotime('2020-05-29 05:00:00.0');  // UTC for 29 May, 00:00 GMT-5 (Mexico City)
+    $date_start = strtotime('2020-05-29 12:00:00.0');  // UTC for 29 May, 07:00 GMT-5 (Mexico City)
     $date_end = strtotime('2020-07-03 23:00:00.0');  // UTC for 03 Jul, 18:00 GMT-5 (Mexico City)
     $available = $today - $date_start >= 0 ? true : false;
     $expired = $today - $date_end >= 0 ? true: false;
-    // if ($available == false || $expired) {
-    //     header("Location: http://www.preparados.gob.mx/");
-    //     die();
-    // }
+    if ($available == false || $expired) {
+        header("Location: http://www.preparados.gob.mx/");
+        die();
+    }
     // Verifica si el navegador es Internet Explorer y lo bloquea por razones de compatibilidad
     if (preg_match("/MSIE /",getenv("HTTP_USER_AGENT")) || preg_match("/Trident\//",getenv("HTTP_USER_AGENT"))) { ?>
         <div id="div-ie-error" style="background-color: lightcoral; text-align: center;">

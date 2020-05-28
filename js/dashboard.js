@@ -156,7 +156,6 @@ $(function() {
   if ($('#vistageneral-tabla2 > tbody > tr').length == 0) {
     $('#vistageneral-tabla2').hide();
     $('#des2').hide();
-    $('#').show();
   }else{
     $('#help').hide();
   }
