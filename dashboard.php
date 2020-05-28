@@ -174,6 +174,7 @@
                 
                 <p> Candidaturas registradas en total: <strong class="dato"><?=count($Arr_Candidaturas)?></strong></p>
                 <p> Tabla de candidaturas en la categoría de <strong>Prevención</strong>:</p>
+                <h5 id="prev" class="niceTitle">Aún no existen registros en la categoría de prevención</h5>
                     <table id="vistageneral-tabla" class="responsive-table striped highlight">
                         <thead>
                             <tr class="headersTable">
@@ -214,6 +215,7 @@
                     <div id="des1" class="hide-on-med-and-up">Desliza hacia la derecha para ver las candidaturas</div>
                 <br>
                 <p> Tabla de candidaturas en la categoría de <strong>Ayuda</strong>:</p>
+                <h5 id="help" class="niceTitle">Aún no existen registros en la categoría de ayuda</h5>
                     <table id="vistageneral-tabla2" class="responsive-table striped highlight">
                         <thead>
                             <tr class="headersTable">
