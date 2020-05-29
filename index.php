@@ -165,6 +165,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145898219-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-145898219-1');
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <link rel="shortcut icon" href="http://www.atlasnacionalderiesgos.gob.mx/Imagenes/Logos/cenapred_icon.ico"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
@@ -244,13 +254,13 @@
                     <div class="collapsible-header mainIcons"><i class="material-icons">lightbulb_outline</i>Lee las siguientes instrucciones para realizar el registro de tu candidatura</div>
                     <div class="collapsible-body"><span>Bienvenido al portal de registro de Candidaturas para el Premio Nacional de Protección Civil,
                      para iniciar deberás leer completamente las instrucciones siguientes y a continuación hacer clic sobre el botón de 
-                     “INICIAR REGISTRO”, a continuación deberás seleccionar el tipo de registro (<b>obligatorio</b>) el cuál debe ser 
-                     <b>una</b> de tres opciones distintas: Persona física, un grupo de personas físicas o Grupo voluntario. A continuación 
+                     “INICIAR REGISTRO”, después deberás seleccionar el tipo de registro (<b>obligatorio</b>) el cuál debe ser 
+                     <b>una</b> de tres opciones distintas: Persona física, un grupo de personas físicas o Grupo voluntario. Enseguida 
                      debes seleccionar la categoría de tu postulación, esta puede ser “Prevención” o “Ayuda”, en caso de que sean ambas opciones
                       deberás de registrar tus datos dos veces, es decir: un registro con el rubro seleccionado de “Prevención” y otro registro nuevo 
-                      con el rubro seleccionado en “Ayuda”, todo esto con los mismos datos y mismos archivos. Posteriormente podrás ingresar tus datos
+                      con el rubro seleccionado en “Ayuda”, todo esto con los datos correspondientes. Posteriormente podrás ingresar tus datos
                        de contacto como: Nombre completo (<b>obligatorio</b>), correo electrónico (<b>obligatorio</b>) y un número telefónico de contacto
-                        (opcional), dicho contacto deberá ser responsable del proyecto en caso de persona física. Si el registro es por parte de un Grupo 
+                        (opcional), dicho contacto deberá ser titular responsable del proyecto en caso de persona física. Si el registro es por parte de un Grupo 
                         Voluntario se deberá de colocar el nombre de un solo representante, esto con el fin de mantener contacto y tener referencia de la 
                         persona que ha postulado la candidatura.</span></div>
                 </li>
