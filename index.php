@@ -219,9 +219,9 @@
         </div>
         <h1 class="flow-text center">Premio Nacional de Protección Civil 2020</h1>
         <hr>
-        <div class="fixed-action-btn" style="position: fixed; bottom: 5em;">
+        <!-- <div class="fixed-action-btn" style="position: fixed; bottom: 5em;">
             <a target="_blank" href="http://www.preparados.gob.mx/blog" class="btn-floating btn blue"><i class="material-icons">help</i></a>
-        </div>
+        </div> -->
 
         <?php if (isset($success_msg) && $success_msg) { ?>
             <div id="div-success" class="valign-wrapper center green lighten-2">
