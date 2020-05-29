@@ -1,6 +1,6 @@
 <?php
     $today = time();
-    $date_start = strtotime('2020-05-29 12:00:00.0');  // UTC for 29 May, 07:00 GMT-5 (Mexico City)
+    $date_start = strtotime('2020-05-29 13:00:00.0');  // UTC for 29 May, 08:00 GMT-5 (Mexico City)
     $date_end = strtotime('2020-07-03 23:00:00.0');  // UTC for 03 Jul, 18:00 GMT-5 (Mexico City)
     $available = $today - $date_start >= 0 ? true : false;
     $expired = $today - $date_end >= 0 ? true: false;
