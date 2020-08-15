@@ -5,7 +5,7 @@
     $available = $today - $date_start >= 0 ? true : false;
     $expired = $today - $date_end >= 0 ? true: false;
     if ($available == false || $expired) {
-        header("Location: http://www.preparados.cenapred.unam.mx/gracias.php");
+        header("Location: http://www.preparados.cenapred.unam.mx/PremioNacional2020/gracias.php");
         die();
     }
     // Verifica si el navegador es Internet Explorer y lo bloquea por razones de compatibilidad
