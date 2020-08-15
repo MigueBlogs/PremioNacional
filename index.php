@@ -1,11 +1,11 @@
 <?php
     $today = time();
     $date_start = strtotime('2020-05-29 13:00:00.0');  // UTC for 29 May, 08:00 GMT-5 (Mexico City)
-    $date_end = strtotime('2020-07-03 23:00:00.0');  // UTC for 03 Jul, 18:00 GMT-5 (Mexico City)
+    $date_end = strtotime('2020-08-14 23:00:00.0');  // UTC for 14 Aug, 18:00 GMT-5 (Mexico City)
     $available = $today - $date_start >= 0 ? true : false;
     $expired = $today - $date_end >= 0 ? true: false;
     if ($available == false || $expired) {
-        header("Location: http://www.preparados.gob.mx/");
+        header("Location: http://www.preparados.cenapred.unam.mx/gracias.php");
         die();
     }
     // Verifica si el navegador es Internet Explorer y lo bloquea por razones de compatibilidad
@@ -59,7 +59,7 @@
 
             $tmp_uid = uniqid();
             $target_file = $target_dir . $tmp_uid . "." . $imageFileType;
-            $url_file = "http://www.preparados.gob.mx/uploads/premionacional2020/". $tmp_uid . "." . $imageFileType;
+            $url_file = "http://www.preparados.cenapred.unam.mx/uploads/premionacional2020/". $tmp_uid . "." . $imageFileType;
             if (!move_uploaded_file($_FILES["archivo"]["tmp_name"], $target_file)){
                 $error_msg = 'No se pudo subir tu archivo al servidor';
                 $keep = true;
@@ -230,7 +230,7 @@
         <h1 class="flow-text center">Premio Nacional de Protección Civil 2020</h1>
         <hr>
         <!-- <div class="fixed-action-btn" style="position: fixed; bottom: 5em;">
-            <a target="_blank" href="http://www.preparados.gob.mx/blog" class="btn-floating btn blue"><i class="material-icons">help</i></a>
+            <a target="_blank" href="http://www.preparados.cenapred.unam.mx/blog" class="btn-floating btn blue"><i class="material-icons">help</i></a>
         </div> -->
 
         <?php if (isset($success_msg) && $success_msg) { ?>
@@ -372,7 +372,7 @@
                             de forma física en el domicilio ubicado en Avenida José Vasconcelos número 221,
                             Piso 7, Colonia San Miguel Chapultepec, Alcaldía Miguel Hidalgo, Ciudad de
                             México, Código Postal 11850, en un horario de 09:00 a 18:00 horas, de lunes a
-                            viernes, o bien en línea en la página: </span><a href="http://www.preparados.gob.mx/PremioNacional2020">preparados.gob.mx/PremioNacional2020</a>,
+                            viernes, o bien en línea en la página: </span><a href="http://www.preparados.cenapred.unam.mx/PremioNacional2020">www.preparados.cenapred.unam.mx/PremioNacional2020</a>,
                             <span style='font-size:10.0pt;line-height:115%;
                             '>a partir de
                             la publicación de la presente convocatoria<span > 

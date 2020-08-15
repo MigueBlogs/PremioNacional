@@ -30,7 +30,7 @@ $(function() {
                             $("#message").text("");
                         }, 5000);
                     } else if(status == 1) {
-                        //window.location.href = "http://www.preparados.gob.mx/macrosimulacro/cortes-info.php"; //For Deploy
+                        //window.location.href = "http://www.preparados.cenapred.unam.mx/macrosimulacro/cortes-info.php"; //For Deploy
                         window.location.href = "./dashboard.php";
                     }
 

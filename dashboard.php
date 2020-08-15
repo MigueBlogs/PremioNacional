@@ -27,7 +27,7 @@
             $imageFileType = strtolower(pathinfo($target_dir . basename($_FILES['archivo']['name']), PATHINFO_EXTENSION));
             $tmp_uid = uniqid();
             $target_file = $target_dir . $tmp_uid . "." . $imageFileType;
-            $url_file = "http://www.preparados.gob.mx/uploads/premionacional2020/". $tmp_uid . "." . $imageFileType;
+            $url_file = "http://www.preparados.cenapred.unam.mx/uploads/premionacional2020/". $tmp_uid . "." . $imageFileType;
             //$url_file = "js/". $tmp_uid . "." . $imageFileType; //only for develop
             if (!move_uploaded_file($_FILES["archivo"]["tmp_name"], $target_file)){
                 $error_msg = 'No se pudo subir tu archivo al servidor';
