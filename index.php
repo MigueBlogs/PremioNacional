@@ -1,7 +1,7 @@
 <?php
     $today = time();
     $date_start = strtotime('2020-05-29 13:00:00.0');  // UTC for 29 May, 08:00 GMT-5 (Mexico City)
-    $date_end = strtotime('2020-07-03 23:00:00.0');  // UTC for 03 Jul, 18:00 GMT-5 (Mexico City)
+    $date_end = strtotime('2020-08-14 23:00:00.0');  // UTC for 03 Jul, 18:00 GMT-5 (Mexico City)
     $available = $today - $date_start >= 0 ? true : false;
     $expired = $today - $date_end >= 0 ? true: false;
     if ($available == false || $expired) {
@@ -376,7 +376,8 @@
                             <span style='font-size:10.0pt;line-height:115%;
                             '>a partir de
                             la publicación de la presente convocatoria<span > 
-                            </span>y hasta las 18:00 horas del día 03 de julio de 2020.</span></p>
+                            <!-- </span>y hasta las 18:00 horas del día 03 de julio de 2020.</span></p> -->
+                            </span>y hasta las 18:00 horas del día 14 de agosto de 2020.</span></p> 
                             <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
                             justify;text-indent:.2pt'><span style='font-size:10.0pt;line-height:115%;
                             '><o:p>&nbsp;</o:p></span></p>
