@@ -165,7 +165,7 @@ $(document).ready(function(){
     $('#btn-continuar').on('click',function(){
         
         if($('#btn-continuar').hasClass("disabled")){
-            alert("Lee todas las instrucciones para iniciar la incripción.");
+            alert("Lee todas las instrucciones para iniciar la inscripción.");
         }else{
             $("#instrucciones").hide('fast');
             $("#submit-form").show('fast');

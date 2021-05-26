@@ -1,11 +1,11 @@
 <?php
     $today = time();
-    $date_start = strtotime('2020-05-29 13:00:00.0');  // UTC for 29 May, 08:00 GMT-5 (Mexico City)
-    $date_end = strtotime('2020-08-14 23:00:00.0');  // UTC for 03 Jul, 18:00 GMT-5 (Mexico City)
+    $date_start = strtotime('2021-05-01 13:00:00.0');  // UTC for 01 May, 08:00 GMT-5 (México City)
+    $date_end = strtotime('2021-06-30 23:00:00.0');  // UTC for 30 Aug, 18:00 GMT-5 (México City)
     $available = $today - $date_start >= 0 ? true : false;
     $expired = $today - $date_end >= 0 ? true: false;
     if ($available == false || $expired) {
-        header("Location: http://www.preparados.cenapred.unam.mx/PremioNacional2020/gracias.php");
+        header("Location: ./gracias.php");
         die();
     }
     // Verifica si el navegador es Internet Explorer y lo bloquea por razones de compatibilidad
@@ -25,7 +25,7 @@
     $keep = false;
     $allowTypes = array('zip','rar');
     $max_file_size = 10485760; // 10MB
-    $target_dir = "/var/www/html/uploads/premionacional2020/";
+    
     require_once("premio_fns.php");
     if (
         isset($_POST["nombre"]) && 
@@ -59,11 +59,11 @@
 
             $tmp_uid = uniqid();
             $target_file = $target_dir . $tmp_uid . "." . $imageFileType;
-            $url_file = "http://www.preparados.cenapred.unam.mx/uploads/premionacional2020/". $tmp_uid . "." . $imageFileType;
+            $url_file = "http://www.preparados.cenapred.unam.mx/uploads/premionacional2021/". $tmp_uid . "." . $imageFileType;
             if (!move_uploaded_file($_FILES["archivo"]["tmp_name"], $target_file)){
                 $error_msg = 'No se pudo subir tu archivo al servidor';
                 $keep = true;
-                return;
+                return false;
             }
             
             $datos = [
@@ -79,17 +79,26 @@
             if (registrar($datos)) {
                 $tmp = getUltimoRegistro($correo); //se utiliza para obtener ultimo registro en la BD y envia correo de confirmación
                 if (enviarCorreoConfirmacion($correo,$tmp['ID'],$nombre,$tipo,$categoria)){
-                    $success_msg = 'Registro realizado correctamente. Se ha enviado exitosamente un correo confirmando tu registro';
+                    session_start();
+                    $_SESSION["completed"] = true;
+                    $_SESSION["confirmacion"] = true;
+                    $_SESSION["correo"] = $correo;
+                    $_SESSION["id_registro"] = $tmp['ID'];
                     //unset($_POST);
                 }
                 else {
-                    $success_msg = 'Registro realizado correctamente';
-                    $error_msg = 'No se pudo enviar el correo de confirmación para la dirección que ingresaste. Es posible que se haya ingresado erróneamente.';
+                    session_start();
+                    $_SESSION["completed"] = true;
+                    $_SESSION["confirmacion"] = false;
+                    $_SESSION["correo"] = $correo;
+                    $_SESSION["id_registro"] = $tmp['ID'];
                 }
+                header('Location: ./confirmacion.php');
+                die();
             }
             else {
                 unlink($target_file);
-                $error_msg = 'No se pudo realizar el registro de tu candidatura.';
+                $error_msg = 'No se pudo realizar el registro de tu candidatura. Verifica tus datos.';
             }
 
         }
@@ -178,14 +187,8 @@
     <link rel="shortcut icon" href="http://www.atlasnacionalderiesgos.gob.mx/Imagenes/Logos/cenapred_icon.ico"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
-    <title>Premio Nacional 2020</title>
-    <?php
-    // function console_log( $data ){
-    //     echo '<script>';
-    //     echo 'console.log('. json_encode( $data ) .');';
-    //     echo '</script>';
-    // };
-    ?>
+    <title>Premio Nacional 2021</title>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Materialize -->
         <!-- Compiled and minified CSS -->
@@ -198,7 +201,7 @@
     <link rel="stylesheet" href="./CSS/main.css">
 
     <noscript>
-        <div id="div-js-error" class="valign-wrapper center" style="background-color: lightcoral;">
+        <div id="div-js-error" class="valign-wrapper center red white-text">
             <i class="material-icons alerted" style="margin-left: 1em;">error_outline</i>
             <p style="width: 100%;">JavaScript está deshabilitado, esta página necesita tener activado JavaScript para que funcione correctamente.</p>
             <button id="btn-error-close" class="btn-small" type="button" style="margin-right: 1em;"><i class="material-icons">close</i></button>
@@ -227,7 +230,7 @@
         <div class="center">
             <img class="cnpc" src="http://www.atlasnacionalderiesgos.gob.mx/Imagenes/Logos/SSyPC_CNPC_h.png" alt="Gobierno de México">
         </div>
-        <h1 class="flow-text center">Premio Nacional de Protección Civil 2020</h1>
+        <h1 class="flow-text center">Premio Nacional de Protección Civil 2021</h1>
         <hr>
         <!-- <div class="fixed-action-btn" style="position: fixed; bottom: 5em;">
             <a target="_blank" href="http://www.preparados.cenapred.unam.mx/blog" class="btn-floating btn blue"><i class="material-icons">help</i></a>
@@ -242,10 +245,10 @@
         <?php } ?>
 
         <?php if (isset($error_msg) && $error_msg) { ?>
-            <div id="div-error" class="valign-wrapper center red lighten-1">
-                <i class="material-icons alerted" style="margin-left: 1em;">error_outline</i>
-                <p style="width: 100%;"><?=$error_msg?></p>
-                <button id="btn-error-close" class="btn" type="button" style="margin: 0.4rem;"><i class="material-icons">close</i></button>
+            <div id="div-error" class="card-panel valign-wrapper center red lighten-1 white-text">
+                <i class="material-icons alerted">error_outline</i>
+                <p class="flow-text" style="width: 100%;margin: 0 auto;"><?=$error_msg?></p>
+                <button id="btn-error-close" class="btn green white-text" type="button"><i class="material-icons">close</i></button>
             </div>
         <?php } ?>
         <div id="instrucciones">
@@ -278,7 +281,7 @@
                             <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
                             ><span style='text-transform: uppercase;font-size:10.0pt;line-height:
                             115%;'>Primera.</span></b><span style='font-size:10.0pt;line-height:115%;
-                            '> El Premio Nacional de Protección Civil 2020, será conferido y
+                            '> El Premio Nacional de Protección Civil 2021, será conferido y
                             entregado a aquellas personas físicas o grupos voluntarios, mexicanos o
                             mexicanas que representen un ejemplo para la comunidad, por su esfuerzo en
                             acciones o medidas de autoprotección y autopreparación para enfrentar los
@@ -307,7 +310,7 @@
                             ><span style='text-transform: uppercase;font-size:10.0pt;line-height:
                             115%;'>Tercera.</span></b><span style='font-size:10.0pt;line-height:115%;
                             '> Podrán ser beneficiarias del Premio Nacional de Protección Civil
-                            2020, personas físicas o grupos voluntarios, mexicanos o mexicanas, que se
+                            2021, personas físicas o grupos voluntarios, mexicanos o mexicanas, que se
                             hayan significado en los campos mencionados en la base segunda de esta
                             Convocatoria.</span></p>
 
@@ -328,7 +331,7 @@
                             la vida, integridad y salud de la población, así como sus bienes; la
                             infraestructura, la planta productiva y el medio ambiente que fortalezca el
                             Sistema Nacional de Protección Civil y que acrediten el merecimiento del Premio
-                            Nacional de Protección Civil 2020, deberán ser expresión de acciones realizadas
+                            Nacional de Protección Civil 2021, deberán ser expresión de acciones realizadas
                             durante el período comprendido del 01 de enero de 2019 hasta la fecha en que se
                             publique la presente Convocatoria y que hayan significado un impacto a la
                             Protección Civil Nacional, así mismo, las personas o grupos voluntarios hayan
@@ -341,11 +344,11 @@
                             Premios, Estímulos y Recompensas Civiles, el premio para cada uno de los dos
                             campos consistirá en un diploma firmado por el Presidente de los Estados Unidos
                             Mexicanos, por las y los miembros del Consejo de Premiación del Premio Nacional
-                            de Protección Civil 2020 y por las y los integrantes del Jurado.</span></p>
+                            de Protección Civil 2021 y por las y los integrantes del Jurado.</span></p>
 
                             <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><span
                             style='font-size:10.0pt;line-height:115%;'>El Premio Nacional de Protección
-                            Civil 2020 podrá otorgarse en un mismo campo a dos o más personas físicas o
+                            Civil 2021 podrá otorgarse en un mismo campo a dos o más personas físicas o
                             grupos voluntarios, mexicanos o mexicanas, en el caso de las personas físicas
                             en grupo, solo se entregará un diploma.</span></p>
 
@@ -366,18 +369,18 @@
                             > </span><span style='font-size:10.0pt;line-height:115%;font-family:
                             Montserrat;'>La
                             presentación de candidaturas, se efectuará ante el Consejo de Premiación del
-                            Premio Nacional de Protección Civil 2020, por conducto de la Coordinación
+                            Premio Nacional de Protección Civil 2021, por conducto de la Coordinación
                             Nacional de Protección Civil de la Secretaría de Seguridad y Protección
                             Ciudadana, en su carácter de Secretaría Técnica del referido Órgano Colegiado,
                             de forma física en el domicilio ubicado en Avenida José Vasconcelos número 221,
                             Piso 7, Colonia San Miguel Chapultepec, Alcaldía Miguel Hidalgo, Ciudad de
                             México, Código Postal 11850, en un horario de 09:00 a 18:00 horas, de lunes a
-                            viernes, o bien en línea en la página: </span><a href="http://www.preparados.cenapred.unam.mx/PremioNacional2020">www.preparados.cenapred.unam.mx/PremioNacional2020</a>,
+                            viernes, o bien en línea en la página: </span><a href="http://www.preparados.cenapred.unam.mx/PremioNacional2021">www.preparados.cenapred.unam.mx/PremioNacional2021</a>,
                             <span style='font-size:10.0pt;line-height:115%;
                             '>a partir de
                             la publicación de la presente convocatoria<span > 
-                            <!-- </span>y hasta las 18:00 horas del día 03 de julio de 2020.</span></p> -->
-                            </span>y hasta las 18:00 horas del día 14 de agosto de 2020.</span></p> 
+                            <!-- </span>y hasta las 18:00 horas del día 03 de julio de 2021.</span></p> -->
+                            </span>y hasta las 18:00 horas del día 14 de agosto de 2021.</span></p> 
                             <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
                             justify;text-indent:.2pt'><span style='font-size:10.0pt;line-height:115%;
                             '><o:p>&nbsp;</o:p></span></p>
@@ -393,7 +396,7 @@
                             115%;'>Novena.</span></b><span style='font-size:10.0pt;line-height:115%;
                             '> La Coordinación Nacional de Protección Civil de la Secretaría de
                             Seguridad y Protección Ciudadana, en su carácter de Secretaría Técnica del
-                            Consejo de Premiación del Premio Nacional de Protección Civil 2020, verificará
+                            Consejo de Premiación del Premio Nacional de Protección Civil 2021, verificará
                             que las candidaturas satisfagan los términos de la presente convocatoria y sus
                             bases para poder notificar al o la participante vía correo electrónico su
                             aceptación o rechazo, dentro de los quince días hábiles posteriores a la fecha
@@ -403,7 +406,7 @@
                             ><span style='text-transform: uppercase;font-size:10.0pt;line-height:
                             115%;'>Décima.</span></b><span style='font-size:10.0pt;line-height:115%;
                             '> La información que sea presentada con motivo de las candidaturas
-                            propuestas para el otorgamiento del Premio Nacional de Protección Civil 2020,
+                            propuestas para el otorgamiento del Premio Nacional de Protección Civil 2021,
                             estará sujeta a lo dispuesto por la Ley General de Protección de Datos
                             Personales en Posesión de Sujetos Obligados; así mismo si desea conocer el
                             aviso de privacidad, se encuentra disponible en la página de la Secretaría de
@@ -413,7 +416,7 @@
                             ><span style='text-transform: uppercase;font-size:10.0pt;line-height:
                             115%;'>Décima Primera.</span></b><span style='font-size:10.0pt;line-height:
                             115%;'> El Consejo de Premiación del Premio Nacional de Protección Civil
-                            2020, integrará, a propuesta de las personas que tengan la calidad de miembros,
+                            2021, integrará, a propuesta de las personas que tengan la calidad de miembros,
                             un Jurado compuesto por el número de integrantes que determinen en su primera
                             sesión, el cual no deberá ser menor a diez integrantes, quienes se sujetarán a
                             lo dispuesto por los artículos 16 a 18 y 20 a 23 de la Ley de Premios,
@@ -425,8 +428,8 @@
                             115%;'> El Jurado dictaminará sobre los expedientes de las candidaturas,
                             que le turne el Consejo de Premiación, dictámenes que serán entregados a la
                             Secretaría Técnica del Consejo de Premiación del Premio Nacional de Protección
-                            Civil 2020, a más tardar el 14<b > </b>de
-                            agosto 2020<b >, </b>los cuales deberán
+                            Civil 2021, a más tardar el 14<b > </b>de
+                            agosto 2021<b >, </b>los cuales deberán
                             contar con la mayoría de votos de los integrantes del jurado respectivo,<span
                             >  </span>a fin de someterlos a consideración del
                             Presidente de los Estados Unidos Mexicanos. </span></p>
@@ -443,7 +446,7 @@
                             115%;'>Décima Cuarta.</span></b><span style='font-size:10.0pt;line-height:
                             115%;'> Los casos no previstos en la presente convocatoria, serán
                             resueltos en definitiva por el Consejo de Premiación del Premio Nacional de
-                            Protección Civil 2020, de acuerdo a las disposiciones de la Ley de Premios,
+                            Protección Civil 2021, de acuerdo a las disposiciones de la Ley de Premios,
                             Estímulos y Recompensas Civiles.</span></p>
 
                             <p class=MsoNormal style='margin-right:-2.05pt;text-align:justify;text-indent:
@@ -451,7 +454,7 @@
                             line-height:115%;
                             '>Décima Quinta.</span></b><span
                             style='font-size:10.0pt;line-height:115%;'> Los y las participantes que no
-                            resultaron ganadores del Premio Nacional de Protección Civil 2020, podrán
+                            resultaron ganadores del Premio Nacional de Protección Civil 2021, podrán
                             solicitar mediante escrito, ante la Secretaría Técnica del Consejo de
                             Premiación, la devolución de la documentación con la cual fueron postulados y/o
                             postuladas como candidatos y/o candidatas a dicho Premio, en un periodo no
@@ -465,7 +468,7 @@
                             '>Décima Sexta.</span></b><span
                             style='font-size:10.0pt;line-height:115%;'> Solo serán consideradas las
                             candidaturas que se entreguen directamente en la Secretaría Técnica del Consejo
-                            de Premiación del Premio Nacional de Protección Civil 2020, o a través de la
+                            de Premiación del Premio Nacional de Protección Civil 2021, o a través de la
                             página del premio señalada en la Base Octava de la presente convocatoria, y que
                             cumplan con los términos de la presente convocatoria y sus bases. </span></p>
 
@@ -481,7 +484,7 @@
                             '>Décima Séptima</span></b><span
                             style='font-size:10.0pt;line-height:115%;'>. De acuerdo a lo establecido en el
                             artículo 105 de la Ley de Premios, Estímulos y Recompensas Civiles el Premio
-                            será entregado el 19 de septiembre del año 2020.<span
+                            será entregado el 19 de septiembre del año 2021.<span
                             >  </span></span></p>
 
                             <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><span
@@ -572,7 +575,7 @@
 
                             <p class=MsoNormal align=right style='text-align:right'><b><span style='font-size:10.0pt;line-height:115%;
                             '>Ciudad de
-                            México, a 29 de mayo de 2020.</span></b><b ><span
+                            México, a 29 de mayo de 2021.</span></b><b ><span
                             style='font-size:12.0pt;line-height:115%;'></span></b></p>
                         </span>
                     </div>
@@ -608,7 +611,7 @@
                                     las acciones con el Sistema Nacional de Protección Civil.</span></li>
                                 <li><span style='font-size:10.0pt;line-height:115%;'>Escrito de protesta de aceptación por parte del candidato o la
                                     candidata para participar y, en su caso, recibir el Premio Nacional de
-                                    Protección Civil 2020, firmada en original.
+                                    Protección Civil 2021, firmada en original.
                                     <br>
                                     En caso de un grupo de personas físicas, anexar relación de sus integrantes y documento en el que se haya
                                     designado a su representante. </span></li>
@@ -631,12 +634,12 @@
                                 <li><span style='font-size:10.0pt;line-height:115%;'>Copia o duplicado de materiales bibliográficos, audiovisuales,
                                     gráficos u otros que demuestren los motivos por los cuales se considera que el
                                     candidato o la candidata puede merecer el Premio Nacional de Protección Civil
-                                    2020. </span></li>
+                                    2021. </span></li>
                                 <li><span style='font-size:10.0pt;line-height:115%;'>Los trabajos relacionados con herramientas tecnológicas e
                                     innovación deberán presentar resultados que sustenten su viabilidad y un
                                     análisis costo beneficio.</span></li>
                                 <li><span style='font-size:10.0pt;line-height:115%;'>Escrito donde acepta conocer el Aviso de Privacidad del Premio
-                                    Nacional de Protección Civil 2020 y estar conforme con el tratamiento que se le
+                                    Nacional de Protección Civil 2021 y estar conforme con el tratamiento que se le
                                     dará a sus datos.</span></li>
                             </ol>
                             <br>
@@ -709,7 +712,7 @@
             </div>
         </div>
         <form method="post" id="submit-form" style="display:none;" enctype="multipart/form-data">
-                <h5 class="center titleMex">Registro de candidaturas para el Premio Nacional de Protección Civil 2020</h5>
+                <h5 class="center titleMex">Registro de candidaturas para el Premio Nacional de Protección Civil 2021</h5>
                 <div id="primera-parte" class="row">
                     <div class="row">
                         <h6 class="center">Ingresa los siguientes campos</h6>
@@ -839,8 +842,8 @@
                         <p>Si estás seguro de que la información ingresada es correcta, presiona el botón de Aceptar</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn modal-close guinda">Aceptar</button>
-                        <button type="button" data-target="modal" class="btn modal-close verde-oscuro">Cancelar</button>
+                        <button type="submit" class="btn modal-close dorado white-text">Aceptar</button>
+                        <button type="button" data-target="modal" class="btn modal-close guinda white-text">Cancelar</button>
                     </div>
                 </div>
                 <div id="error-modal" class="modal">
@@ -849,7 +852,7 @@
                         <p>Verifica tus datos</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" data-target="modal" class="btn modal-close">Entendido</button>
+                        <button type="button" data-target="modal" class="btn modal-close dorado white-text">Entendido</button>
                     </div>
                 </div>
                 <div id="wait-modal" class="modal">
@@ -876,5 +879,13 @@
     </div>
     
     <script type="text/javascript" src="js/formulario.js"></script>
+    <?php if (isset($error_msg) && $error_msg) { ?>
+        <script>
+            $(function(){
+                $("#instrucciones").hide('fast');
+                $("#submit-form").show('fast');
+            })
+        </script>
+    <?php } ?>
 </body>
 </html>

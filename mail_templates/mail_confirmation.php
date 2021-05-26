@@ -31,7 +31,7 @@
 <div class="container">
     <h1 class="dorado center">¡Tu candidatura ha sido registrada!</h1>
     <hr>
-    <h5>Premio Nacional 2020</h5>
+    <h5>Premio Nacional 2021</h5>
 
     <div class="section">
         <p>Estimado <strong><span>:registrationName</span></strong>: </p>

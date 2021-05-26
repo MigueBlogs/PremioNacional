@@ -6,7 +6,8 @@
     $success_msg = "";
     $allowTypes = array('zip','rar');
     $max_file_size = 10485760; // 10MB
-    $target_dir = "/var/www/html/uploads/premionacional2020/";
+    $target_dir = "/var/www/html/uploads/premionacional2021/";
+    // $target_dir = "D:/xampp/htdocs/uploads/premionacional2021/";
 
     if(isset($_POST["idEstado"])) {
         echo json_encode(getMunicipios($_POST["idEstado"]));

@@ -13,7 +13,7 @@
     }
     $allowTypes = array('zip','rar');
     $max_file_size = 10485760; // 10MB
-    $target_dir = "/var/www/html/uploads/premionacional2020/";
+    $target_dir = "/var/www/html/uploads/premionacional2021/";
     //$target_dir = "js/"; //only for develop
     
 
@@ -27,7 +27,7 @@
             $imageFileType = strtolower(pathinfo($target_dir . basename($_FILES['archivo']['name']), PATHINFO_EXTENSION));
             $tmp_uid = uniqid();
             $target_file = $target_dir . $tmp_uid . "." . $imageFileType;
-            $url_file = "http://www.preparados.cenapred.unam.mx/uploads/premionacional2020/". $tmp_uid . "." . $imageFileType;
+            $url_file = "http://www.preparados.cenapred.unam.mx/uploads/premionacional2021/". $tmp_uid . "." . $imageFileType;
             //$url_file = "js/". $tmp_uid . "." . $imageFileType; //only for develop
             if (!move_uploaded_file($_FILES["archivo"]["tmp_name"], $target_file)){
                 $error_msg = 'No se pudo subir tu archivo al servidor';
@@ -129,13 +129,13 @@
         <i class="small material-icons" style="vertical-align: middle;">perm_identity</i>Bienvenido: <?php echo($_SESSION['name']); echo(' '.$_SESSION['lastname'])?>
         </h6>
         <!-- Dropdown Button 1 -->
-        <a class='dropdown-trigger btn' data-target='dropdown1'> ≡ Menú de Opciones</a>
+        <a class='dropdown-trigger btn guinda white-text' data-target='dropdown1'><i class="material-icons left">menu</i>Menú de Opciones</a>
         <!-- Dropdown Structure 1 -->
         <ul id='dropdown1' class='dropdown-content'>
-            <li><a id="VGen">Vista General de Candidaturas</a></li>
-            <li><a id="VAccesos"><i class="material-icons prefix">vpn_key</i>Tablero de accesos</a></li>
+            <li><a class="dorado-text" id="VGen">Vista General de Candidaturas</a></li>
+            <li><a class="dorado-text" id="VAccesos"><i class="material-icons prefix">vpn_key</i>Tablero de accesos</a></li>
             <li class="divider" tabindex="-1"></li>
-            <li><a href="./logout.php"><i class="material-icons">power_settings_new</i>Cerrar sesión</a></li>
+            <li><a class="guinda white-text" href="./logout.php"><i class="material-icons">power_settings_new</i>Cerrar sesión</a></li>
         </ul>
         <br>
         <br>
@@ -166,7 +166,7 @@
                 <h6 class="right"> Ciudad de México, a <span class="fecha"></span></h6>
                 <br>
                 <div class="center">
-                <h4 class="niceTitle">Premio Nacional de Protección Civil 2020<h4>
+                <h4 class="niceTitle">Premio Nacional de Protección Civil 2021<h4>
                 <h5 class="niceTitle">Tablas de Candidaturas:<h5>
                 </div>
                 <h6></h6>
@@ -199,7 +199,7 @@
                                 <td class="center"><?=$candidatura["nombre"]?></td>
                                 <td class="center"><a href="mailto:<?=$candidatura["correo"]?>"><?=$candidatura["correo"]?></a></td>
                                 <td class="center"><?=$candidatura["telefono"]?></td>
-                                <td class="center" style="padding: 10px 0;"><a style="color:#9D2449;" href=<?=$candidatura["archivo"]->load()?>><i class="material-icons">insert_drive_file</i></a></td>
+                                <td class="center" style="padding: 10px 0;"><a target="_blank" style="color:#9D2449;" href=<?=$candidatura["archivo"]->load()?>><i class="material-icons">insert_drive_file</i></a></td>
                                 <td class="center"><?=$candidatura["municipio"]?></td>
                                 <td class="center"><?=$candidatura["estado"]?></td>
                                 <td class="center"><?=$candidatura["fecha"]?></td>

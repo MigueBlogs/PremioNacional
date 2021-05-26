@@ -11,7 +11,7 @@
         $archivo = getArchivo($_POST["id"], $_POST["correo"]);
         $success = borrarRegistro($_POST["id"], $_POST["nombre"], $_POST["correo"]);
         if ($success && $archivo) {
-            unlink("/var/www/html/uploads/premionacional2020/".$archivo);
+            unlink("/var/www/html/uploads/premionacional2021/".$archivo);
         }
         echo json_encode(array("status"=>$success));
     }
@@ -87,7 +87,7 @@
         if($oldFile==''){
             return false;
         }
-        unlink("/var/www/html/uploads/premionacional2020/".$oldFile);
+        unlink("/var/www/html/uploads/premionacional2021/".$oldFile);
         require_once("db_global.php");
 
         $conn = dbConnect(user, pass, server);

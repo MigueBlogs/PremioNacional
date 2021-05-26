@@ -5,7 +5,7 @@
 <link rel="shortcut icon" href="http://www.atlasnacionalderiesgos.gob.mx/Imagenes/Logos/cenapred_icon.ico"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
-    <title>Premio Nacional 2020</title>
+    <title>Premio Nacional 2021</title>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Materialize -->
@@ -31,7 +31,7 @@
         <div class="center">
             <img class="cnpc" src="http://www.atlasnacionalderiesgos.gob.mx/Imagenes/Logos/SSyPC_CNPC_h.png" alt="Gobierno de México">
         </div>
-        <h1 class="flow-text center">Premio Nacional de Protección Civil 2020</h1>
+        <h1 class="flow-text center">Premio Nacional de Protección Civil 2021</h1>
         <hr>
         <h5>¡Gracias por participar!</h5>
         <p>El tiempo para registrar tu candidatura ha finalizado. 
@@ -46,7 +46,7 @@
             <a target="_blank" href="http://www.youtube.com/coordinacionnacionaldeproteccioncivil"><img alt="yt" src="img/youtube.png" width="50px" height="50px"></a>
         </div>
         <p>
-            <a class="btn-small" href="http://www.preparados.cenapred.unam.mx" target="_blank">Volver a www.preparados.cenapred.unam.mx</a>
+            <a class="btn guinda white-text" href="http://www.preparados.gob.mx" target="_blank">Volver a www.preparados.gob.mx</a>
         </p>
     </div>
 </body>

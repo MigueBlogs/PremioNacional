@@ -19,18 +19,20 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- Iconos -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="./CSS/main.css">
     
 </head>
 <body>
     <div class="container">
         <div class="center">
-            <img style="max-width: 80%; height: auto;" src="http://www.atlasnacionalderiesgos.gob.mx/Imagenes/Logos/SSyPC_CNPC_h.png" alt="gob">
+            <img class="cnpc" src="http://www.atlasnacionalderiesgos.gob.mx/Imagenes/Logos/SSyPC_CNPC_h.png" alt="gob">
         </div>
-        <h3 class="center">Sistema de candidaturas para el Premio Nacional de Protección Civil 2020</h3>
+        <h3 class="center">Sistema de candidaturas para el Premio Nacional de Protección Civil 2021</h3>
         <div class="container">
             <form method="POST">
                 <div class="center">
-                    <h2>Inicio de sesión</h2>
+                    <h2 class="guinda-text">Inicio de sesión</h2>
                     <blockquote>
                         <h5 id="message"></h5>
                     </blockquote>
@@ -57,7 +59,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="center btn waves-effect waves-light" id="enviar" type="submit" name="action">Entrar
+                <button class="center btn waves-effect waves-light dorado white-text" id="enviar" type="submit" name="action">Entrar
                     <i class="material-icons right">person</i>
                 </button>
             </form>
