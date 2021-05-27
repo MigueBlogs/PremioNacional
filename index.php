@@ -210,18 +210,31 @@
     <style>
         p.MsoNormal, li.MsoNormal, div.MsoNormal
         {
-        margin-top:0cm;
-        margin-right:0cm;
-        margin-bottom:10.0pt;
-        margin-left:0cm;
+        margin-top:0;
+        margin-right:0;
+        margin-bottom:10pt;
+        margin-left:0;
         line-height:115%;
-        
-        font-size:11.0pt;
-        /* font-family:"Calibri",sans-serif; */
+        font-size:10pt;
+        }
+
+        .bases {
+            line-height:115%;
+            font-size:10pt;
+        }
+
+        .b {
+            font-weight: bold;
         }
 
         tr {
             border-bottom: unset;
+        }
+        .justify {
+            text-align: justify;
+        }
+        .uppercase {
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -255,328 +268,389 @@
             <ul class="collapsible popout">
                 <li class="active">
                     <div class="collapsible-header mainIcons"><i class="material-icons">lightbulb_outline</i>Lee las siguientes instrucciones para realizar el registro de tu candidatura</div>
-                    <div class="collapsible-body"><span>Bienvenido al portal de registro de Candidaturas para el Premio Nacional de Protección Civil,
-                     para iniciar deberás leer completamente las instrucciones siguientes y a continuación hacer clic sobre el botón de 
-                     “INICIAR REGISTRO”, después deberás seleccionar el tipo de registro (<b>obligatorio</b>) el cuál debe ser 
-                     <b>una</b> de tres opciones distintas: Persona física, un grupo de personas físicas o Grupo voluntario. Enseguida 
-                     debes seleccionar la categoría de tu postulación, esta puede ser “Prevención” o “Ayuda”, en caso de que sean ambas opciones
-                      deberás de registrar tus datos dos veces, es decir: un registro con el rubro seleccionado de “Prevención” y otro registro nuevo 
-                      con el rubro seleccionado en “Ayuda”, todo esto con los datos correspondientes. Posteriormente podrás ingresar tus datos
-                       de contacto como: Nombre completo (<b>obligatorio</b>), correo electrónico (<b>obligatorio</b>) y un número telefónico de contacto
-                        (opcional), dicho contacto deberá ser titular responsable del proyecto en caso de persona física. Si el registro es por parte de un Grupo 
-                        Voluntario se deberá de colocar el nombre de un solo representante, esto con el fin de mantener contacto y tener referencia de la 
-                        persona que ha postulado la candidatura.</span></div>
+                    <div class="collapsible-body"><span>Bienvenido al portal de registro de Candidaturas para el Premio Nacional de Protección Civil, 
+                    para iniciar deberás leer completamente las instrucciones siguientes y a continuación hacer clic sobre el botón de 
+                    “INICIAR REGISTRO”, después deberás seleccionar el tipo de registro (<b>obligatorio</b>) el cuál debe ser 
+                    <b>una</b> de tres opciones distintas: Persona física, un grupo de personas físicas o Grupo voluntario. Enseguida 
+                    debes seleccionar la categoría de tu postulación, esta puede ser “Prevención” o “Ayuda”, en caso de que sean ambas opciones 
+                    deberás de registrar tus datos dos veces, es decir: un registro con el rubro seleccionado de “Prevención” y otro registro nuevo 
+                    con el rubro seleccionado en “Ayuda”, todo esto con los datos correspondientes. Posteriormente podrás ingresar tus datos 
+                    de contacto como: Nombre completo (<b>obligatorio</b>), correo electrónico (<b>obligatorio</b>) y un número telefónico de contacto 
+                    (opcional), dicho contacto deberá ser titular responsable del proyecto en caso de persona física. Si el registro es por parte de un Grupo 
+                    Voluntario se deberá de colocar el nombre de un solo representante, esto con el fin de mantener contacto y tener referencia de la 
+                    persona que ha postulado la candidatura.</span></div>
                 </li>
                 <li>
                     <div class="collapsible-header mainIcons"><i class="material-icons">subject</i>Bases para participar</div>
                     <div class="collapsible-body">
                         <span>
-                            <p class=MsoNormal align=center style='margin-right:-4.65pt;text-align:center;
-                            text-indent:.2pt'><b ><span
-                            >BASES</span></b></p>
-                            <p class=MsoNormal align=center style='margin-right:-4.65pt;text-align:center;
-                            text-indent:.2pt'><b ><span
-                            ><o:p>&nbsp;</o:p></span></b></p>
+                            <p class="MsoNormal justify">
+                            <span class="bases">
+                            Con fundamento en los artículos 1, 2, 3, 5, 6 fracción XII, 7 fracción IV, 8, 11, 13, 14, 15, 18, 19, 24, 26 y 101, 102, 103, 104 y 105 
+                            de la Ley de Premios, Estímulos y Recompensas Civiles; así como el Decreto por el que se reforman, adicionan y derogan diversas disposiciones 
+                            de la Ley Orgánica de la Administración Pública Federal, transitorio Octavo y Décimo Cuarto, por conducto de la Secretaría de Seguridad y 
+                            Protección Ciudadana a través del Consejo de Premiación correspondiente al Premio Nacional de Protección Civil 2021, el Gobierno de México, 
+                            en el marco de la transformación que el país está desarrollando  y con el objetivo de reconocer la acción solidaria y participativa que 
+                            caracteriza al pueblo de México:
+                            </span>
+                            </p>
+                            <p class="MsoNormal center b">
+                            CONVOCA
+                            </p>
+                            <p class="MsoNormal justify">
+                            <span class="bases">
+                            A las personas físicas (individualmente o en grupo) o personas morales; así como a los grupos voluntarios constituidos conforme a la Ley 
+                            General de Protección Civil, mexicanos o mexicanas, a quien o quienes estimen con merecimientos suficientes para recibir el “Premio Nacional 
+                            de Protección Civil 2021”, de acuerdo con las siguientes:
+                            </span>
+                            </p>
+                            <div class="row">
+                                <p class="MsoNormal center b">
+                                    BASES
+                                </p>
+                            </div>
 
-                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            ><span style='text-transform: uppercase;font-size:10.0pt;line-height:
-                            115%;'>Primera.</span></b><span style='font-size:10.0pt;line-height:115%;
-                            '> El Premio Nacional de Protección Civil 2021, será conferido y
-                            entregado a aquellas personas físicas o grupos voluntarios, mexicanos o
-                            mexicanas que representen un ejemplo para la comunidad, por su esfuerzo en
-                            acciones o medidas de autoprotección y autopreparación para enfrentar los
-                            fenómenos naturales o de origen humano que pongan a la población en situación
-                            de riesgo o de peligro, así como cuando se destaquen por su labor ejemplar en
-                            la ayuda a la población ante la eventualidad de un desastre.</span><span
-                            ></span></p>
-                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            ><span style='text-transform: uppercase;font-size:10.0pt;line-height:
-                            115%;'>Segunda.</span></b><span style='font-size:10.0pt;line-height:115%;
-                            '> En los términos del artículo 103 de la Ley de Premios, Estímulos y
-                            Recompensas Civiles, los dos campos de este premio, en los que se puede
-                            participar individual o colectivamente, son los siguientes:</span></p>
+                            <p class="MsoNormal justify">
+                            <span class="bases uppercase b">
+                            Primera.</span>
+                            <span class="bases">
+                            El Premio Nacional de Protección Civil 2021, será conferido y entregado 
+                            a aquellas personas físicas (individualmente o en grupo), personas morales 
+                            o grupos voluntarios, mexicanos o mexicanas que representen un ejemplo para 
+                            la comunidad, por su esfuerzo en acciones o medidas de autoprotección y 
+                            autopreparación para enfrentar los las amenazas naturales o de origen humano 
+                            que pongan a la población en situación de riesgo o de peligro, así como cuando 
+                            se destaquen por su labor ejemplar en la ayuda a la población ante la eventualidad 
+                            de una situación de emergencia o de desastre.</span><span></span>
+                            </p>
+                            <p class="MsoNormal justify">
+                            <span class="bases uppercase b">
+                            Segunda.</span>
+                            <span class="bases">
+                            En los términos del artículo 103 de la Ley de Premios, Estímulos y Recompensas 
+                            Civiles, los dos campos de este premio, en los que se puede participar como persona 
+                            física (individualmente o en grupo), personas morales o grupos voluntarios, son los 
+                            siguientes:</span></p>
 
-                            <p class=MsoNormal style='margin-left:.2pt;text-align:justify'><span
-                            style='font-size:10.0pt;line-height:115%;'>I.- La Prevención, por las medidas
-                            que se consideren de relevancia en materia de gestión integral de riesgos de
-                            desastres, y</span></p>
+                            <p class="MsoNormal justify">
+                            <span class="bases">
+                            I.- La Prevención, por las medidas que se consideren de relevancia para evitar o reducir 
+                            el riesgo o impacto de los desastres; así como en materia de cultura de la protección civil, y</span></p>
 
-                            <p class=MsoNormal style='text-align:justify;'><span
-                            style='font-size:10.0pt;line-height:115%;'>II.- La Ayuda, por las acciones que
-                            se hayan llevado a cabo en las tareas de auxilio a la población en caso de
-                            desastre.</span></p>
+                            <p class="MsoNormal justify">
+                            <span class="bases">
+                            II.- La Ayuda, por las acciones que se hayan llevado a cabo en las tareas de auxilio a 
+                            la población en caso de situaciones de emergencia o de desastre.</span></p>
 
-                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            ><span style='text-transform: uppercase;font-size:10.0pt;line-height:
-                            115%;'>Tercera.</span></b><span style='font-size:10.0pt;line-height:115%;
-                            '> Podrán ser beneficiarias del Premio Nacional de Protección Civil
-                            2021, personas físicas o grupos voluntarios, mexicanos o mexicanas, que se
-                            hayan significado en los campos mencionados en la base segunda de esta
-                            Convocatoria.</span></p>
+                            <p class="MsoNormal justify">
+                            <span class="bases uppercase b">
+                            Tercera.</span>
+                            <span class="bases">
+                            Podrán ser beneficiarias del Premio Nacional de Protección Civil 2021, 
+                            personas físicas (individualmente o en grupo), personas morales o grupos voluntarios, 
+                            mexicanos o mexicanas, que se hayan distinguido en los campos mencionados en la base 
+                            segunda de esta Convocatoria.</span></p>
 
-                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            ><span style='text-transform: uppercase;font-size:10.0pt;line-height:
-                            115%;'>Cuarta. </span></b><span style='font-size:10.0pt;line-height:115%;
-                            '>Conforme a los artículos 4° y 92 de la Ley de Premios, Estímulos y
-                            Recompensas Civiles, no podrán participar las personas que tengan la calidad de
-                            servidores públicos seleccionados de entre aquéllos que prestan sus servicios
-                            en las dependencias y entidades cuyas relaciones laborales se rigen por el
-                            apartado &quot;B&quot; del artículo 123 de la Constitución Política de los
-                            Estados Unidos Mexicanos.</span></p>
+                            <p class="MsoNormal justify">
+                            <span class="bases uppercase b">
+                            Cuarta.</span>
+                            <span class="bases">
+                            Conforme a los artículos 4° y 92 de la Ley de Premios, Estímulos y Recompensas Civiles, 
+                            no podrán participar las personas que tengan la calidad de servidores públicos seleccionados 
+                            de entre aquéllos que prestan sus servicios en las dependencias y entidades cuyas 
+                            relaciones laborales se rigen por el apartado “B” del artículo 123 de la Constitución 
+                            Política de los Estados Unidos Mexicanos.</span></p>
 
-                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            ><span style='text-transform: uppercase;font-size:10.0pt;line-height:
-                            115%;'>Quinta.</span></b><span style='font-size:10.0pt;line-height:115%;
-                            '> Las producciones, estudios, programas o acciones para salvaguardar
-                            la vida, integridad y salud de la población, así como sus bienes; la
-                            infraestructura, la planta productiva y el medio ambiente que fortalezca el
-                            Sistema Nacional de Protección Civil y que acrediten el merecimiento del Premio
-                            Nacional de Protección Civil 2021, deberán ser expresión de acciones realizadas
-                            durante el período comprendido del 01 de enero de 2019 hasta la fecha en que se
-                            publique la presente Convocatoria y que hayan significado un impacto a la
-                            Protección Civil Nacional, así mismo, las personas o grupos voluntarios hayan
-                            sido premiados en pasadas ediciones del Premio Nacional de Protección Civil, no
-                            podrán ser postulados nuevamente.</span></p>
+                            <p class="MsoNormal justify">
+                            <span class="bases uppercase b">
+                            Quinta.</span>
+                            <span class="bases">
+                            Las acciones o medidas, producciones, estudios o programas para salvaguardar la vida, 
+                            integridad y salud de la población, así como sus bienes; la infraestructura, la planta 
+                            productiva y el medio ambiente que fortalezca el Sistema Nacional de Protección Civil y 
+                            que acrediten el merecimiento del Premio Nacional de Protección Civil 2021, deberán ser 
+                            expresión de acciones o medidas realizadas durante el período comprendido del 19 de 
+                            septiembre de 2020,  hasta el 30 de junio de 2021 y que hayan significado un impacto a la 
+                            Protección Civil Nacional. Asimismo, las personas físicas (individualmente o en grupo), 
+                            personas morales o grupos voluntarios que hayan sido premiados en pasadas ediciones del 
+                            Premio Nacional de Protección Civil, no podrán ser postulados.</span></p>
 
-                            <p class=MsoNormal style='text-align:justify'><b ><span style='text-transform: uppercase;font-size:10.0pt;line-height:115%;'>Sexta.</span></b><span> </span>
-                            <span style='font-size:10.0pt;line-height:115%;'>Conforme
-                            lo establecido en los artículos 7, fracción IV, 8, 11, y 104 de la Ley de
-                            Premios, Estímulos y Recompensas Civiles, el premio para cada uno de los dos
-                            campos consistirá en un diploma firmado por el Presidente de los Estados Unidos
-                            Mexicanos, por las y los miembros del Consejo de Premiación del Premio Nacional
-                            de Protección Civil 2021 y por las y los integrantes del Jurado.</span></p>
+                            <p class="MsoNormal justify">
+                            <span class="bases uppercase b">
+                            Sexta.</span>
+                            <span class="bases">
+                            Conforme lo establecido en los artículos 
+                            7, fracción IV, 8, 11, y 104 de la Ley de Premios, Estímulos y Recompensas Civiles, el 
+                            premio para cada uno de los dos campos consistirá en una medalla y un diploma firmado 
+                            por el Presidente de los Estados Unidos Mexicanos, por las personas que integran el 
+                            Consejo de Premiación del Premio Nacional de Protección Civil 2021 y por las personas 
+                            integrantes del Jurado.</span></p>
 
-                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><span
-                            style='font-size:10.0pt;line-height:115%;'>El Premio Nacional de Protección
-                            Civil 2021 podrá otorgarse en un mismo campo a dos o más personas físicas o
-                            grupos voluntarios, mexicanos o mexicanas, en el caso de las personas físicas
-                            en grupo, solo se entregará un diploma.</span></p>
+                            <p class="MsoNormal justify">
+                            <span class="bases">
+                            El Premio Nacional de Protección Civil 2021 
+                            podrá otorgarse en un mismo campo a dos o más personas físicas 
+                            (individualmente o en grupo) o personas morales o grupos voluntarios, mexicanos o 
+                            mexicanas, en el caso de las personas físicas en grupo o grupos voluntarios, solo se 
+                            entregará un diploma y una medalla.</span></p>
 
-                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            ><span style='text-transform: uppercase;font-size:10.0pt;line-height:
-                            115%;'>Séptima</span></b><b ><span
-                            >.</span></b><span > </span><span style='font-size:
-                            10.0pt;line-height:115%;
-                            '>Para la entrega del Premio, en caso de que la
-                            candidatura ganadora incluya a un grupo de personas físicas, que cuente con más
-                            de cuatro integrantes, se deberá nombrar un o una representante común para
-                            recibir el premio. Para el caso de los grupos voluntarios, el premio se otorgará
-                            por medio de su representante legal.</span></p>
+                            <p class="MsoNormal justify">
+                            <span class="bases uppercase b">
+                            Séptima.</span>
+                            <span class="bases">
+                            Para la entrega del Premio, en caso de que la candidatura ganadora incluya a un grupo 
+                            de personas físicas, se deberá nombrar a una persona representante en común para recibir 
+                            el premio.
+                            Para el caso de los grupos voluntarios, el premio se otorgará por medio de su representante legal.</span></p>
 
-                            <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-                            justify;text-indent:.2pt'><b ><span
-                            style='text-transform: uppercase;font-size:10.0pt;line-height:115%;'>Octava.</span></b><span
-                            > </span><span style='font-size:10.0pt;line-height:115%;font-family:
-                            Montserrat;'>La
-                            presentación de candidaturas, se efectuará ante el Consejo de Premiación del
-                            Premio Nacional de Protección Civil 2021, por conducto de la Coordinación
-                            Nacional de Protección Civil de la Secretaría de Seguridad y Protección
-                            Ciudadana, en su carácter de Secretaría Técnica del referido Órgano Colegiado,
-                            de forma física en el domicilio ubicado en Avenida José Vasconcelos número 221,
-                            Piso 7, Colonia San Miguel Chapultepec, Alcaldía Miguel Hidalgo, Ciudad de
-                            México, Código Postal 11850, en un horario de 09:00 a 18:00 horas, de lunes a
-                            viernes, o bien en línea en la página: </span><a href="http://www.preparados.cenapred.unam.mx/PremioNacional2021">www.preparados.cenapred.unam.mx/PremioNacional2021</a>,
-                            <span style='font-size:10.0pt;line-height:115%;
-                            '>a partir de
-                            la publicación de la presente convocatoria<span > 
-                            <!-- </span>y hasta las 18:00 horas del día 03 de julio de 2021.</span></p> -->
-                            </span>y hasta las 18:00 horas del día 14 de agosto de 2021.</span></p> 
-                            <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
-                            justify;text-indent:.2pt'><span style='font-size:10.0pt;line-height:115%;
-                            '><o:p>&nbsp;</o:p></span></p>
-
-                            <p class=MsoNormal style='text-align:justify'><span style='color:#c09c65;font-size:10.0pt;
-                            line-height:115%;
-                            '>La presentación de las candidaturas, para ser
-                            puesta a consideración del Consejo de Premiación, deberá estar acompañada de
-                            los documentos que lo avalen. Consulta la sección de <b>documentación necesaria</b> para más detalles.</span></p>
+                            <p class="MsoNormal justify">
+                            <span class="bases uppercase b">
+                            Octava.</span>
+                            <span class="bases">
+                            La presentación de candidaturas, se efectuará ante el Consejo de Premiación 
+                            del Premio Nacional de Protección Civil 2021, por conducto de la Coordinación Nacional de 
+                            Protección Civil de la Secretaría de Seguridad y Protección Ciudadana, en su carácter de 
+                            Secretaría Técnica del referido Órgano Colegiado, por lo que la propuesta deberá 
+                            dirigirse a la Titular de la Coordinación Nacional de Protección Civil, y a efecto de 
+                            contribuir con las medidas sanitarias debido a  la emergencia generada por el virus 
+                            SARS-COV2, la recepción de manera física será a través de medio magnético en el domicilio 
+                            ubicado en Avenida Fuerza Aérea Mexicana No. 235, Col. Federal, C.P. 15700, Alcaldía 
+                            Venustiano Carranza, Ciudad de México, en un horario de 09:00 a 15:00 horas, de lunes a 
+                            viernes, o bien en línea en la página: 
+                            <a href="http://www.preparados.gob.mx/PremioNacional2021" style="word-wrap: break-word;">www.preparados.gob.mx/PremioNacional2021</a>, 
+                            a partir de la publicación de la presente convocatoria y hasta las <strong>18:00 horas del día 30 de junio 
+                            de 2021</strong>.</span></p> 
                             
-                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            ><span style='text-transform: uppercase;font-size:10.0pt;line-height:
-                            115%;'>Novena.</span></b><span style='font-size:10.0pt;line-height:115%;
-                            '> La Coordinación Nacional de Protección Civil de la Secretaría de
-                            Seguridad y Protección Ciudadana, en su carácter de Secretaría Técnica del
-                            Consejo de Premiación del Premio Nacional de Protección Civil 2021, verificará
-                            que las candidaturas satisfagan los términos de la presente convocatoria y sus
-                            bases para poder notificar al o la participante vía correo electrónico su
-                            aceptación o rechazo, dentro de los quince días hábiles posteriores a la fecha
-                            establecida como límite para la recepción de candidaturas.</span></p>
 
-                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            ><span style='text-transform: uppercase;font-size:10.0pt;line-height:
-                            115%;'>Décima.</span></b><span style='font-size:10.0pt;line-height:115%;
-                            '> La información que sea presentada con motivo de las candidaturas
-                            propuestas para el otorgamiento del Premio Nacional de Protección Civil 2021,
-                            estará sujeta a lo dispuesto por la Ley General de Protección de Datos
-                            Personales en Posesión de Sujetos Obligados; así mismo si desea conocer el
-                            aviso de privacidad, se encuentra disponible en la página de la Secretaría de
-                            Seguridad y Protección Ciudadana.</span></p>
+                            <p class="MsoNormal justify"><span class="bases">
+                            La presentación de las candidaturas, deberá estar acompañada de los documentos que lo 
+                            avalen y contener lo siguiente:</span></p>
 
-                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            ><span style='text-transform: uppercase;font-size:10.0pt;line-height:
-                            115%;'>Décima Primera.</span></b><span style='font-size:10.0pt;line-height:
-                            115%;'> El Consejo de Premiación del Premio Nacional de Protección Civil
-                            2021, integrará, a propuesta de las personas que tengan la calidad de miembros,
-                            un Jurado compuesto por el número de integrantes que determinen en su primera
-                            sesión, el cual no deberá ser menor a diez integrantes, quienes se sujetarán a
-                            lo dispuesto por los artículos 16 a 18 y 20 a 23 de la Ley de Premios,
-                            Estímulos y Recompensas Civiles. </span></p>
+                            <ol class="bases justify" style="padding-left: 2em;margin-bottom:10pt;">
+                                <li>
+                                    <b>Carta de propuesta digitalizada</b>, la cual deberá ser emitida por un tercero, debidamente firmada dirigida al Consejo de Premiación, 
+                                    la cual deberá contener el nombre completo del candidato o la candidata, el campo en que participa, domicilio para recibir notificaciones; 
+                                    así como datos de contacto, tanto del o la proponente como del candidato o de la candidata, en la que argumente y exponga los motivos por 
+                                    los cuales se considera que la candidatura es merecedora del premio.
+                                    Además, el documento deberá contener el siguiente apartado:
+                                    <ul>
+                                        <li style="list-style: upper-latin;">
+                                            Descripción de acciones y medidas a premiar, debidamente justificadas, las cuales deben fomentar la acción preventiva en la Gestión 
+                                            Integral de Riesgos para disminuir los efectos de fenómenos naturales perturbadores, los producidos por el cambio climático o por la 
+                                            acción del hombre; así como el fortalecimiento de la cultura de la protección civil y la colaboración con las comunidades para disminuir 
+                                            riesgos y resistir el impacto de los desastres; o en su caso la implementación de protocolos o tecnologías que permitan reducir los 
+                                            efectos de los fenómenos perturbadores.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <b>Carta de auto propuesta digitalizada</b>, debidamente firmada dirigida al Consejo de Premiación, la cual deberá contener el nombre completo, 
+                                    señalar el campo en que participa y señalar domicilio para recibir notificaciones y datos de contacto, en la que argumente y exponga los motivos 
+                                    por los cuales se considera que la candidatura es merecedora del premio.
+                                    Además, el documento deberá contener el siguiente apartado: 
+                                    <ul>
+                                        <li style="list-style: upper-latin;">
+                                            Descripción de acciones y medidas a premiar, debidamente justificadas, las cuales deben fomentar la acción preventiva en la Gestión 
+                                            Integral de Riesgos para disminuir los efectos de fenómenos naturales perturbadores, los producidos por el cambio climático o por la 
+                                            acción del hombre; así como el fortalecimiento de la cultura de la protección civil y la colaboración con las comunidades para disminuir 
+                                            riesgos y resistir el impacto de los desastres; o en su caso la implementación de protocolos o tecnologías que permitan reducir los efectos 
+                                            de los fenómenos perturbadores.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <b>Escrito de protesta de aceptación</b> por parte del candidato o la candidata para participar y, en su caso, recibir el Premio Nacional de 
+                                    Protección Civil 2021, debidamente firmada.
+                                    En caso de un grupo de personas físicas, anexar relación de sus integrantes y documento en el que se haya designado a su representante. 
+                                </li>
+                                <li>
+                                    <b>Copia del documento oficial con el que demuestre su nacionalidad mexicana</b>:
+                                    <ul>
+                                        <li style="list-style: upper-latin;">
+                                            Para personas físicas individualmente o en grupo acta de nacimiento de cada participante digitalizada. 
+                                        </li>
+                                        <li style="list-style: upper-latin;">
+                                            Para personas morales, acta constitutiva, debidamente protocolizada ante Notario Público y en caso de modificación, deberá anexar la 
+                                            protocolización del acta de Asamblea General, digitalizadas a fin de acreditar su legal existencia.
+                                        </li>
+                                        <li style="list-style: upper-latin;">
+                                            Para grupos voluntarios, acreditación ante autoridad competente digitalizada.
+                                        </li>
+                                    </ul>        
+                                </li>
+                                <li>
+                                    Evidencia documental y gráficos que demuestren los motivos por los cuales se considera que el candidato o la candidata puede merecer el Premio 
+                                    Nacional de Protección Civil 2021, en formato digital jpg.
+                                </li>
+                                <li>
+                                    Los trabajos relacionados con herramientas tecnológicas e innovación deberán presentar resultados que sustenten su viabilidad y un análisis costo beneficio.
+                                </li>
+                                <li>
+                                    Escrito donde acepta conocer el <b>Aviso de Privacidad</b> del Premio Nacional de Protección Civil 2021 y estar conforme con el tratamiento 
+                                    que se les dará a sus datos.
+                                </li>
+                            </ol>
+                            
+                            <p class="MsoNormal justify">
+                            <span class="bases uppercase b">
+                            Novena.</span>
+                            <span class="bases">
+                            En el momento del registro en la página creada por la Coordinación Nacional de 
+                            Protección Civil de la Secretaría de Seguridad y Protección Ciudadana, en su carácter de 
+                            Secretaría Técnica del Consejo de Premiación del Premio Nacional de Protección Civil 2021, 
+                            otorgará folio de registro del ingreso de la candidatura, si faltara algún documento 
+                            enlistado en la cláusula que antecede, no se podrá llevar a cabo el registro; esto a fin 
+                            de evitar duplicidad en dichos registros; si la entrega es de manera física (formato 
+                            digital) a través de los datos de contacto se hará del conocimiento del candidato o la 
+                            candidata, a fin de que complemente la documentación faltante y sea entregada en un 
+                            término <b>no mayor a tres días hábiles.</b></span></p>
 
-                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            ><span style='text-transform: uppercase;font-size:10.0pt;line-height:
-                            115%;'>Décima Segunda.</span></b><span style='font-size:10.0pt;line-height:
-                            115%;'> El Jurado dictaminará sobre los expedientes de las candidaturas,
-                            que le turne el Consejo de Premiación, dictámenes que serán entregados a la
-                            Secretaría Técnica del Consejo de Premiación del Premio Nacional de Protección
-                            Civil 2021, a más tardar el 14<b > </b>de
-                            agosto 2021<b >, </b>los cuales deberán
-                            contar con la mayoría de votos de los integrantes del jurado respectivo,<span
-                            >  </span>a fin de someterlos a consideración del
-                            Presidente de los Estados Unidos Mexicanos. </span></p>
+                            <p class="MsoNormal justify">
+                            <span class="bases uppercase b">
+                            Décima.</span>
+                            <span class="bases">
+                            La información que sea presentada con motivo de las candidaturas propuestas para el 
+                            otorgamiento del Premio Nacional de Protección Civil 2021, estará sujeta a lo dispuesto 
+                            por la Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados; 
+                            así mismo si desea conocer el aviso de privacidad, se encuentra disponible en la página 
+                            de la Secretaría de Seguridad y Protección Ciudadana.</span></p>
 
-                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            ><span style='text-transform: uppercase;font-size:10.0pt;line-height:
-                            115%;'>Décima Tercera.</span></b><span style='font-size:10.0pt;line-height:
-                            115%;'> El Consejo de Premiación podrá declarar, la vacancia del premio,
-                            en cualquiera de sus dos campos, si no sobreviene el reconocimiento que se
-                            estatuye, con base en el dictamen del Jurado debidamente fundado y motivado. </span></p>
+                            <p class="MsoNormal justify">
+                            <span class="bases uppercase b">
+                            Décima Primera.</span>
+                            <span class="bases">
+                            El Consejo de Premiación del Premio Nacional de Protección Civil 2021, integrará, 
+                            a propuesta de las personas que tengan la calidad de miembros, un Jurado compuesto por 
+                            el número de integrantes que determinen en su primera sesión, el cual no deberá ser 
+                            menor a diez integrantes, quienes se sujetarán a lo dispuesto por los artículos 16 a 18 
+                            y 20 a 23 de la Ley de Premios, Estímulos y Recompensas Civiles.</span></p>
 
-                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><b
-                            ><span style='text-transform: uppercase;font-size:10.0pt;line-height:
-                            115%;'>Décima Cuarta.</span></b><span style='font-size:10.0pt;line-height:
-                            115%;'> Los casos no previstos en la presente convocatoria, serán
-                            resueltos en definitiva por el Consejo de Premiación del Premio Nacional de
-                            Protección Civil 2021, de acuerdo a las disposiciones de la Ley de Premios,
-                            Estímulos y Recompensas Civiles.</span></p>
+                            <p class="MsoNormal justify">
+                            <span class="bases uppercase b">
+                            Décima Segunda.</span>
+                            <span class="bases">
+                            El Jurado dictaminará sobre los expedientes de las candidaturas, que le turne el 
+                            Consejo de Premiación, dictámenes que serán entregados a la Secretaría Técnica del 
+                            Consejo de Premiación del Premio Nacional de Protección Civil 2021, a más tardar 
+                            el <b>10 de agosto de 2021</b>, los cuales deberán contar con la mayoría de los votos 
+                            de los integrantes del jurado respectivo, a fin de someterlos a consideración del 
+                            Presidente de los Estados Unidos Mexicanos.</span></p>
 
-                            <p class=MsoNormal style='margin-right:-2.05pt;text-align:justify;text-indent:
-                            .2pt'><b ><span style='text-transform: uppercase;font-size:10.0pt;
-                            line-height:115%;
-                            '>Décima Quinta.</span></b><span
-                            style='font-size:10.0pt;line-height:115%;'> Los y las participantes que no
-                            resultaron ganadores del Premio Nacional de Protección Civil 2021, podrán
-                            solicitar mediante escrito, ante la Secretaría Técnica del Consejo de
-                            Premiación, la devolución de la documentación con la cual fueron postulados y/o
-                            postuladas como candidatos y/o candidatas a dicho Premio, en un periodo no
-                            mayor a dos meses a partir de la publicación del acuerdo presidencial en el que
-                            se señalan a los ganadores. En caso de no requerir la devolución en el plazo
-                            señalado, se entiende por autorizada su destrucción.</span></p>
+                            <p class="MsoNormal justify">
+                            <span class="bases uppercase b">
+                            Décima Tercera.</span>
+                            <span class="bases">
+                            El Consejo de Premiación podrá declarar, la vacancia del premio, en cualquiera 
+                            de sus dos campos, si no sobreviene el reconocimiento que se estatuye, con base en el 
+                            dictamen del Jurado debidamente fundado y motivado.</span></p>
 
-                            <p class=MsoNormal style='margin-right:-2.05pt;text-align:justify;text-indent:
-                            .2pt'><b ><span style='text-transform: uppercase;font-size:10.0pt;
-                            line-height:115%;
-                            '>Décima Sexta.</span></b><span
-                            style='font-size:10.0pt;line-height:115%;'> Solo serán consideradas las
-                            candidaturas que se entreguen directamente en la Secretaría Técnica del Consejo
-                            de Premiación del Premio Nacional de Protección Civil 2021, o a través de la
-                            página del premio señalada en la Base Octava de la presente convocatoria, y que
-                            cumplan con los términos de la presente convocatoria y sus bases. </span></p>
+                            <p class="MsoNormal justify">
+                            <span class="bases uppercase b">
+                            Décima Cuarta.</span>
+                            <span class="bases">
+                            Los casos no previstos en la presente convocatoria serán resueltos en definitiva 
+                            por el Consejo de Premiación del Premio Nacional de Protección Civil 2021, de acuerdo 
+                            con las disposiciones de la Ley de Premios, Estímulos y Recompensas Civiles.</span></p>
 
-                            <p class=MsoNormal style='margin-right:-2.05pt;text-align:justify;text-indent:
-                            .2pt'><span style='font-size:10.0pt;line-height:115%;
-                            '>No se
-                            recibirán postulaciones por correo electrónico, de ser el caso serán
-                            rechazadas.</span></p>
+                            <p class="MsoNormal justify">
+                            <span class="bases uppercase b">
+                            Décima Quinta.</span>
+                            <span class="bases">
+                            Solo serán consideradas las candidaturas que se entreguen directamente en la 
+                            Secretaría Técnica del Consejo de Premiación del Premio Nacional de Protección Civil 2021, 
+                            o a través de la página del premio señalada en la Base Octava de la presente convocatoria 
+                            o de manera física en formato digital y que cumplan con los términos de la 
+                            presente convocatoria y sus bases.</span></p>
 
-                            <p class=MsoNormal style='margin-right:-4.65pt;text-align:justify;text-indent:
-                            .2pt'><b ><span style='text-transform: uppercase;font-size:10.0pt;
-                            line-height:115%;
-                            '>Décima Séptima</span></b><span
-                            style='font-size:10.0pt;line-height:115%;'>. De acuerdo a lo establecido en el
-                            artículo 105 de la Ley de Premios, Estímulos y Recompensas Civiles el Premio
-                            será entregado el 19 de septiembre del año 2021.<span
-                            >  </span></span></p>
+                            <p class="MsoNormal justify">
+                            <span class="bases">
+                            No se recibirán postulaciones por correo electrónico, de ser el caso serán rechazadas.</span></p>
 
-                            <p class=MsoNormal style='text-align:justify;text-indent:.2pt'><span
-                            style='font-size:10.0pt;line-height:115%;'>El Consejo de Premiación:</span></p>
+                            <p class="MsoNormal justify">
+                            <span class="bases uppercase b">
+                            Décima Sexta.</span>
+                            <span class="bases">
+                            De acuerdo con lo establecido en el artículo 105 de la Ley de Premios, Estímulos y Recompensas Civiles, 
+                            el Premio será entregado el <b>19 de septiembre del año 2021</b>.</span></p>
 
-                            <table class=a border=0 cellspacing=0 cellpadding=0 width=0 style='border-collapse:
-                            collapse;'>
+                            <p class="MsoNormal justify">
+                            <span class="bases">El Consejo de Premiación:</span></p>
+
+                            <table cellspacing=0 cellpadding=0 width=0 style='border-collapse:collapse;'>
                                 <tr>
-                                <td width=518 valign=top style='width:388.15pt;padding:0cm .5pt 0cm .5pt'>
-                                <p class=MsoNormal style='margin-right:-5.4pt;text-align:justify'><b
-                                ><span style='font-size:10.0pt;line-height:
-                                115%;'>Titular de la Secretaría de Seguridad y Protección Ciudadana
-                                (Presidente)</span></b></p>
-                                </td>
+                                    <td style='padding:0 0.5pt'>
+                                        <p class="MsoNormal justify">
+                                        <span class="bases b">
+                                        Titular de la Secretaría de Seguridad y Protección Ciudadana (Presidenta)</span></p>
+                                    </td>
                                 </tr>
-                                <tr >
-                                <td width=518 valign=top style='width:388.15pt;padding:0cm .5pt 0cm .5pt'>
-                                <p class=MsoNormal style='text-align:justify'><b '><span style='font-size:10.0pt;line-height:115%;
-                                '>Titular
-                                de la Secretaría de la Defensa Nacional</span></b></p>
-                                </td>
+                                <tr>
+                                    <td style='padding:0 0.5pt'>
+                                        <p class="MsoNormal justify">
+                                        <span class="bases b">
+                                        Titular de la Secretaría de la Defensa Nacional</span></p>
+                                    </td>
                                 </tr>
-                                <tr >
-                                <td width=518 valign=top style='width:388.15pt;padding:0cm .5pt 0cm .5pt'>
-                                <p class=MsoNormal style='margin-right:-4.65pt;text-align:justify'><b
-                                ><span style='font-size:10.0pt;line-height:
-                                115%;'>Titular de la Secretaría de Marina</span></b></p>
-                                </td>
+                                <tr>
+                                    <td style='padding:0 0.5pt'>
+                                        <p class="MsoNormal justify">
+                                        <span class="bases b">
+                                        Titular de la Secretaría de Marina</span></p>
+                                    </td>
                                 </tr>
-                                <tr >
-                                <td width=518 valign=top style='width:388.15pt;padding:0cm .5pt 0cm .5pt'>
-                                <p class=MsoNormal style='text-align:justify'><b '><span style='font-size:10.0pt;line-height:115%;
-                                '>Presidenta
-                                de la Mesa Directiva de la H. Cámara de Diputados</span></b></p>
-                                </td>
+                                <tr>
+                                    <td style='padding:0 0.5pt'>
+                                        <p class="MsoNormal justify">
+                                        <span class="bases b">
+                                        Presidenta de la Mesa Directiva de la H. Cámara de Diputados</span></p>
+                                    </td>
                                 </tr>
-                                <tr >
-                                <td width=518 valign=top style='width:388.15pt;padding:0cm .5pt 0cm .5pt'>
-                                <p class=MsoNormal style='text-align:justify'><b '><span style='font-size:10.0pt;line-height:115%;
-                                '>Presidenta
-                                de la Mesa Directiva de la H. Cámara de Senadores</span></b></p>
-                                </td>
+                                <tr>
+                                    <td style='padding:0 0.5pt'>
+                                        <p class="MsoNormal justify">
+                                        <span class="bases b">
+                                        Presidente de la Mesa Directiva de la H. Cámara de Senadores</span></p>
+                                    </td>
                                 </tr>
-                                <tr >
-                                <td width=518 valign=top style='width:388.15pt;padding:0cm .5pt 0cm .5pt'>
-                                <p class=MsoNormal style='margin-right:1.65pt;text-align:justify'><b
-                                ><span style='font-size:10.0pt;line-height:
-                                115%;'>Titular de la Coordinación Nacional de Protección Civil
-                                (Secretario Técnico)</span></b></p>
-                                </td>
+                                <tr>
+                                    <td style='padding:0 0.5pt'>
+                                        <p class="MsoNormal justify">
+                                        <span class="bases b">
+                                        Titular de la Coordinación Nacional de Protección Civil (Secretaria Técnica)</span></p>
+                                    </td>
                                 </tr>
-                                <tr >
-                                <td width=518 valign=top style='width:388.15pt;padding:0cm .5pt 0cm .5pt'>
-                                <p class=MsoNormal style='margin-right:1.65pt;text-align:justify'><b
-                                ><span style='font-size:10.0pt;line-height:
-                                115%;'>Titular de la Dirección General del Centro Nacional de Prevención
-                                de Desastres</span></b></p>
-                                </td>
+                                <tr>
+                                    <td style='padding:0 0.5pt'>
+                                        <p class="MsoNormal justify">
+                                        <span class="bases b">
+                                        Titular de la Dirección General del Centro Nacional de Prevención de Desastres</span></p>
+                                    </td>
                                 </tr>
-                                <tr >
-                                <td width=518 valign=top style='width:388.15pt;padding:0cm .5pt 0cm .5pt'>
-                                <p class=MsoNormal style='margin-right:1.65pt;text-align:justify'><b
-                                ><span style='font-size:10.0pt;line-height:
-                                115%;'>Rector de la Universidad Nacional Autónoma de México</span></b></p>
-                                </td>
+                                <tr>
+                                    <td style='padding:0 0.5pt'>
+                                        <p class="MsoNormal justify">
+                                        <span class="bases b">
+                                        Rector de la Universidad Nacional Autónoma de México</span></p>
+                                    </td>
                                 </tr>
-                                <tr style='height:15.6pt'>
-                                <td width=518 valign=top style='width:388.15pt;padding:0cm .5pt 0cm .5pt;
-                                height:15.6pt'>
-                                <p class=MsoNormal style='margin-right:1.65pt;text-align:justify'><b
-                                ><span style='font-size:10.0pt;line-height:
-                                115%;'>Titular de la Dirección General del Instituto Politécnico
-                                Nacional</span></b></p>
-                                </td>
+                                <tr>
+                                    <td style='padding:0 0.5pt'>
+                                        <p class="MsoNormal justify">
+                                        <span class="bases b">
+                                        Titular de la Dirección General del Instituto Politécnico Nacional</span></p>
+                                    </td>
                                 </tr>
-                                <tr >
-                                <td width=518 valign=top style='width:388.15pt;padding:0cm .5pt 0cm .5pt'>
-                                <p class=MsoNormal style='text-align:justify'><b><span style='font-size:10.0pt;line-height:115%;
-                                '>Presidente
-                                Nacional de la Cruz Roja Mexicana</span></b></p>
-                                <p class=MsoNormal style='text-align:justify'><b><span style='font-size:10.0pt;line-height:115%;
-                                '><o:p>&nbsp;</o:p></span></b></p>
-                                <p class=MsoNormal style='text-align:justify'><b><span style='font-size:10.0pt;line-height:115%;
-                                '><o:p>&nbsp;</o:p></span></b></p>
-                                </td>
+                                <tr>
+                                    <td style='padding:0 0.5pt'>
+                                        <p class="MsoNormal justify">
+                                        <span class="bases b">
+                                        Presidente Nacional de la Cruz Roja Mexicana</span></p>
+                                    </td>
                                 </tr>
                             </table>
-
-                            <p class=MsoNormal align=right style='text-align:right'><b><span style='font-size:10.0pt;line-height:115%;
-                            '>Ciudad de
-                            México, a 29 de mayo de 2021.</span></b><b ><span
-                            style='font-size:12.0pt;line-height:115%;'></span></b></p>
+                            <div class="row"></div>
+                            <p class="MsoNormal right"><span class="bases b">
+                            Ciudad de México, a 31 de mayo de 2021.</span></p>
                         </span>
                     </div>
                 </li>
@@ -585,7 +659,7 @@
                     <div class="collapsible-body">
                         <span>
                             <ol>
-                                <li><span style='font-size:10.0pt;line-height:115%;'>Carta de propuesta, la cual deberá ser emitida por un tercero,
+                                <li><span class="bases">Carta de propuesta, la cual deberá ser emitida por un tercero,
                                     debidamente firmada en original dirigida al Consejo de Premiación, la cual
                                     deberá contener el nombre completo del candidato o la candidata, señalar el
                                     campo en que participa y señalar domicilio para recibir notificaciones y datos
@@ -598,7 +672,7 @@
                                     los siguientes apartados: 1) Antecedentes; 2) Descripción de acciones y medidas
                                     a premiar; 3) Justificación y relevancia; 4) Alineación de las acciones con el
                                     Sistema Nacional de Protección Civil.</span></li>
-                                <li><span style='font-size:10.0pt;line-height:115%;'>Carta de auto propuesta, firmada en original dirigida al Consejo de
+                                <li><span class="bases">Carta de auto propuesta, firmada en original dirigida al Consejo de
                                     Premiación, la cual deberá contener el nombre completo, señalar el campo en que
                                     participa y señalar domicilio para recibir notificaciones y datos de contacto,
                                     en la que argumente y exponga los motivos por los cuales se considera que la
@@ -609,41 +683,40 @@
                                     deberá contener los siguientes apartados: 1) Antecedentes; 2) Descripción de
                                     acciones y medidas a premiar; 3) Justificación y relevancia; 4) Alineación de
                                     las acciones con el Sistema Nacional de Protección Civil.</span></li>
-                                <li><span style='font-size:10.0pt;line-height:115%;'>Escrito de protesta de aceptación por parte del candidato o la
+                                <li><span class="bases">Escrito de protesta de aceptación por parte del candidato o la
                                     candidata para participar y, en su caso, recibir el Premio Nacional de
                                     Protección Civil 2021, firmada en original.
                                     <br>
                                     En caso de un grupo de personas físicas, anexar relación de sus integrantes y documento en el que se haya
                                     designado a su representante. </span></li>
-                                <li><span style='font-size:10.0pt;line-height:115%;'>Currículum Vitae actualizado del o de los candidato(s) propuesto(s)
+                                <li><span class="bases">Currículum Vitae actualizado del o de los candidato(s) propuesto(s)
                                     y/o de la o de las candidata(s) propuesta(s), incluyendo nombre, dirección
                                     completa, teléfono(s) y correo electrónico.</span></li>
-                                <li><span style='font-size:10.0pt;line-height:115%;'>Copia del documento oficial con el que demuestre su nacionalidad
+                                <li><span class="bases">Copia del documento oficial con el que demuestre su nacionalidad
                                     mexicana:</span>
                                     <ul style="padding-left: 40px;">
-                                        <li style="list-style: upper-latin;"><span style='font-size:10.0pt;line-height:115%;;color:black'>Para personas físicas
+                                        <li style="list-style: upper-latin;"><span class="bases">Para personas físicas
                                             mexicanas, individualmente o en grupo, copia del acta de nacimiento de cada
                                             participante. </span></li>
-                                        <li style="list-style: upper-latin;"><span
-                                            style='font-size:10.0pt;line-height:115%;;color:black'>Para personas morales,
+                                        <li style="list-style: upper-latin;"><span class="bases">Para personas morales,
                                             copia del acta constitutiva, debidamente protocolizada ante Notario Público y
                                             en caso de modificación, deberá presentar la protocolización del acta de
                                             Asamblea General, a fin de acreditar su legal existencia. </span></li>
                                     </ul>
                                 </li>
-                                <li><span style='font-size:10.0pt;line-height:115%;'>Copia o duplicado de materiales bibliográficos, audiovisuales,
+                                <li><span class="bases">Copia o duplicado de materiales bibliográficos, audiovisuales,
                                     gráficos u otros que demuestren los motivos por los cuales se considera que el
                                     candidato o la candidata puede merecer el Premio Nacional de Protección Civil
                                     2021. </span></li>
-                                <li><span style='font-size:10.0pt;line-height:115%;'>Los trabajos relacionados con herramientas tecnológicas e
+                                <li><span class="bases">Los trabajos relacionados con herramientas tecnológicas e
                                     innovación deberán presentar resultados que sustenten su viabilidad y un
                                     análisis costo beneficio.</span></li>
-                                <li><span style='font-size:10.0pt;line-height:115%;'>Escrito donde acepta conocer el Aviso de Privacidad del Premio
+                                <li><span class="bases">Escrito donde acepta conocer el Aviso de Privacidad del Premio
                                     Nacional de Protección Civil 2021 y estar conforme con el tratamiento que se le
                                     dará a sus datos.</span></li>
                             </ol>
                             <br>
-                            <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:justify'><span style='font-size:10.0pt;line-height:115%;'>En caso de
+                            <p class="MsoNormal justify" style='margin-bottom:0cm;margin-bottom:.0001pt;'><span class="bases">En caso de
                                     faltar cualquier documento anteriormente enlistado, se hará del conocimiento
                                     del candidato, a fin de que complemente la documentación faltante y sea
                                     entregada antes del término señalado el párrafo primero de esta Base.</span></p>
