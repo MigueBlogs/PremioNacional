@@ -219,7 +219,13 @@
 
         $paramsArray = Array();
 
-        $queryStr = "SELECT E.CORTO as ESTADO, COUNT(*) as TOTAL FROM REGISTRO R, ESTADO E where E.ID_ESTADO =R.ESTADO group by R.ESTADO, E.CORTO order by TOTAL desc, E.CORTO asc";
+        $queryStr = "SELECT E.CORTO as ESTADO, COUNT(case when R.categoria = 'Prevención' then 1 end) as TOTAL_PREVENCION,
+            COUNT(case when R.categoria != 'Prevención' then 1 end) as TOTAL_AYUDA
+        FROM REGISTRO R, ESTADO E 
+        where E.ID_ESTADO =R.ESTADO 
+        group by R.ESTADO, E.CORTO 
+        order by ESTADO asc";
+
         $query = oci_parse($conn, $queryStr);
 
         foreach ($paramsArray as $key => $value) {
@@ -232,7 +238,8 @@
         while ( ($row = oci_fetch_assoc($query)) != false) {
             $result = Array();
             $result["estado"] = $row["ESTADO"];
-            $result["total"] = $row["TOTAL"];
+            $result["total_prevencion"] = $row["TOTAL_PREVENCION"];
+            $result["total_ayuda"] = $row["TOTAL_AYUDA"];
             $ar[] = $result;
         }
 

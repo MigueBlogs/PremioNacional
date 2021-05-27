@@ -115,6 +115,7 @@
     <script src="//d3js.org/d3.v3.min.js"></script>
     <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
     <script src="https://d3js.org/topojson.v1.min.js"></script>
+    
     <!-- Iconos -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--CSS -->
@@ -328,9 +329,12 @@
                         </div>
                     </div>
                 <p> Estados participantes: </p>
-                    <div id="barrasConstancia" style="height: 400px;" class="slideAnimation">
+                    <!-- <div id="barrasConstancia" style="height: 400px;" class="slideAnimation">
                         <div id="barsvg" class="adjustSize"> </div>
                         <div id="barSvgTop" class="adjustSize"> </div>
+                    </div> -->
+                    <div class="center">
+                        <canvas id="barras-estado"></canvas>
                     </div>
             </div>
             <div id="VistaAccesos" class="vista">
@@ -363,9 +367,11 @@
     </div>
     <script src="./js/dashboard.js"></script>
     <script>
-        var porcentajeEstados = <?php echo json_encode(getEstadosCandidaturas()); ?>
+        var porcentajeEstados = <?php echo json_encode(getEstadosCandidaturas());?>;
     </script>
-    <script src="./js/grafica.js"></script>
-    
+    <!-- <script src="./js/grafica.js"></script> -->
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/chart.js"></script>
 </body>
 </html>
