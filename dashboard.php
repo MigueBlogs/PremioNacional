@@ -334,6 +334,7 @@
                         <div id="barSvgTop" class="adjustSize"> </div>
                     </div> -->
                     <div class="center">
+                        <p class="flow-text" style="display: none;">Sin datos de candidaturas registradas</p>
                         <canvas id="barras-estado"></canvas>
                     </div>
             </div>

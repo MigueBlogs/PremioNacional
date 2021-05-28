@@ -70,8 +70,13 @@ $(function(){
             }
         },
     };
-    var myChart = new Chart(
-        document.getElementById('barras-estado'),
-        config
-    );
+    if (porcentajeEstados.length == 0) {
+        $('#barras-estado').siblings('p').show();
+    }
+    else {
+        var myChart = new Chart(
+            document.getElementById('barras-estado'),
+            config
+        );
+    }
 })

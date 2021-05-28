@@ -183,7 +183,10 @@
 
         $paramsArray = Array();
 
-        $queryStr = "SELECT R.ID, R.NOMBRE, R.CORREO, R.TELEFONO, R.ARCHIVO, M.NOMBRE as MUNICIPIO, E.CORTO as ESTADO, R.FECHA, R.TIPO, R.CATEGORIA FROM MUNICIPIO M, REGISTRO R, ESTADO E where M.ID_MUNICIPIO = R.MUNICIPIO and E.ID_ESTADO =R.ESTADO order by R.FECHA desc";
+        $queryStr = "SELECT R.ID, R.NOMBRE, R.CORREO, R.TELEFONO, R.ARCHIVO, M.NOMBRE as MUNICIPIO, E.CORTO as ESTADO, TO_CHAR(R.FECHA,'dd/mm/yyyy') FECHA, R.TIPO, R.CATEGORIA 
+        FROM MUNICIPIO M, REGISTRO R, ESTADO E 
+        where M.ID_MUNICIPIO = R.MUNICIPIO and E.ID_ESTADO = R.ESTADO 
+        order by R.FECHA desc";
         $query = oci_parse($conn, $queryStr);
 
         foreach ($paramsArray as $key => $value) {
