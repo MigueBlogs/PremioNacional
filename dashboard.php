@@ -307,13 +307,15 @@
                             <p>Esto podría tardar unos segundos, dependiendo del tamaño de tu archivo y la velocidad de tu conexión.</p>
                             <div class="preloader-wrapper big active">
                                 <div class="spinner-layer spinner-blue-only">
-                                <div class="circle-clipper left">
-                                    <div class="circle"></div>
-                                </div><div class="gap-patch">
-                                    <div class="circle"></div>
-                                </div><div class="circle-clipper right">
-                                    <div class="circle"></div>
-                                </div>
+                                    <div class="circle-clipper left">
+                                        <div class="circle"></div>
+                                    </div>
+                                    <div class="gap-patch">
+                                        <div class="circle"></div>
+                                    </div>
+                                    <div class="circle-clipper right">
+                                        <div class="circle"></div>
+                                    </div>
                                 </div>
                             </div>
                             <div id="error-modal" class="modal">
@@ -328,7 +330,7 @@
                             <p>Por favor no cierres ni actualices la página hasta que se haya completado este proceso.</p>
                         </div>
                     </div>
-                <p> Estados participantes: </p>
+                <p> Gráfica de Estados participantes: </p>
                     <!-- <div id="barrasConstancia" style="height: 400px;" class="slideAnimation">
                         <div id="barsvg" class="adjustSize"> </div>
                         <div id="barSvgTop" class="adjustSize"> </div>

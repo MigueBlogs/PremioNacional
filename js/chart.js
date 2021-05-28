@@ -71,7 +71,7 @@ $(function(){
         },
     };
     if (porcentajeEstados.length == 0) {
-        $('#barras-estado').siblings('p').show();
+        $('#barras-estado').hide().siblings('p').show();
     }
     else {
         var myChart = new Chart(
