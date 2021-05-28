@@ -1,7 +1,7 @@
 <?php
     $today = time();
-    $date_start = strtotime('2021-05-01 13:00:00.0');  // UTC for 01 May, 08:00 GMT-5 (México City)
-    $date_end = strtotime('2021-06-30 23:00:00.0');  // UTC for 30 Aug, 18:00 GMT-5 (México City)
+    $date_start = strtotime('2021-05-31 13:00:00.0');  // UTC for 31 May, 08:00 GMT-5 (México City)
+    $date_end = strtotime('2021-06-30 23:00:00.0');  // UTC for 30 June, 18:00 GMT-5 (México City)
     $available = $today - $date_start >= 0 ? true : false;
     $expired = $today - $date_end >= 0 ? true: false;
     if ($available == false || $expired) {
@@ -424,72 +424,7 @@
 
                             <p class="MsoNormal justify"><span class="bases">
                             La presentación de las candidaturas, deberá estar acompañada de los documentos que lo 
-                            avalen y contener lo siguiente:</span></p>
-
-                            <ol class="bases justify" style="padding-left: 2em;margin-bottom:10pt;">
-                                <li>
-                                    <b>Carta de propuesta digitalizada</b>, la cual deberá ser emitida por un tercero, debidamente firmada dirigida al Consejo de Premiación, 
-                                    la cual deberá contener el nombre completo del candidato o la candidata, el campo en que participa, domicilio para recibir notificaciones; 
-                                    así como datos de contacto, tanto del o la proponente como del candidato o de la candidata, en la que argumente y exponga los motivos por 
-                                    los cuales se considera que la candidatura es merecedora del premio.
-                                    Además, el documento deberá contener el siguiente apartado:
-                                    <ul>
-                                        <li style="list-style: upper-latin;">
-                                            Descripción de acciones y medidas a premiar, debidamente justificadas, las cuales deben fomentar la acción preventiva en la Gestión 
-                                            Integral de Riesgos para disminuir los efectos de fenómenos naturales perturbadores, los producidos por el cambio climático o por la 
-                                            acción del hombre; así como el fortalecimiento de la cultura de la protección civil y la colaboración con las comunidades para disminuir 
-                                            riesgos y resistir el impacto de los desastres; o en su caso la implementación de protocolos o tecnologías que permitan reducir los 
-                                            efectos de los fenómenos perturbadores.
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <b>Carta de auto propuesta digitalizada</b>, debidamente firmada dirigida al Consejo de Premiación, la cual deberá contener el nombre completo, 
-                                    señalar el campo en que participa y señalar domicilio para recibir notificaciones y datos de contacto, en la que argumente y exponga los motivos 
-                                    por los cuales se considera que la candidatura es merecedora del premio.
-                                    Además, el documento deberá contener el siguiente apartado: 
-                                    <ul>
-                                        <li style="list-style: upper-latin;">
-                                            Descripción de acciones y medidas a premiar, debidamente justificadas, las cuales deben fomentar la acción preventiva en la Gestión 
-                                            Integral de Riesgos para disminuir los efectos de fenómenos naturales perturbadores, los producidos por el cambio climático o por la 
-                                            acción del hombre; así como el fortalecimiento de la cultura de la protección civil y la colaboración con las comunidades para disminuir 
-                                            riesgos y resistir el impacto de los desastres; o en su caso la implementación de protocolos o tecnologías que permitan reducir los efectos 
-                                            de los fenómenos perturbadores.
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <b>Escrito de protesta de aceptación</b> por parte del candidato o la candidata para participar y, en su caso, recibir el Premio Nacional de 
-                                    Protección Civil 2021, debidamente firmada.
-                                    En caso de un grupo de personas físicas, anexar relación de sus integrantes y documento en el que se haya designado a su representante. 
-                                </li>
-                                <li>
-                                    <b>Copia del documento oficial con el que demuestre su nacionalidad mexicana</b>:
-                                    <ul>
-                                        <li style="list-style: upper-latin;">
-                                            Para personas físicas individualmente o en grupo acta de nacimiento de cada participante digitalizada. 
-                                        </li>
-                                        <li style="list-style: upper-latin;">
-                                            Para personas morales, acta constitutiva, debidamente protocolizada ante Notario Público y en caso de modificación, deberá anexar la 
-                                            protocolización del acta de Asamblea General, digitalizadas a fin de acreditar su legal existencia.
-                                        </li>
-                                        <li style="list-style: upper-latin;">
-                                            Para grupos voluntarios, acreditación ante autoridad competente digitalizada.
-                                        </li>
-                                    </ul>        
-                                </li>
-                                <li>
-                                    Evidencia documental y gráficos que demuestren los motivos por los cuales se considera que el candidato o la candidata puede merecer el Premio 
-                                    Nacional de Protección Civil 2021, en formato digital jpg.
-                                </li>
-                                <li>
-                                    Los trabajos relacionados con herramientas tecnológicas e innovación deberán presentar resultados que sustenten su viabilidad y un análisis costo beneficio.
-                                </li>
-                                <li>
-                                    Escrito donde acepta conocer el <b>Aviso de Privacidad</b> del Premio Nacional de Protección Civil 2021 y estar conforme con el tratamiento 
-                                    que se les dará a sus datos.
-                                </li>
-                            </ol>
+                            avalen y contener lo indicado en la sección <b>Documentación necesaria</b>.</span></p>
                             
                             <p class="MsoNormal justify">
                             <span class="bases uppercase b">
@@ -658,68 +593,75 @@
                     <div class="collapsible-header mainIcons"><i class="material-icons">attach_file</i>Documentación necesaria</div>
                     <div class="collapsible-body">
                         <span>
-                            <ol>
-                                <li><span class="bases">Carta de propuesta, la cual deberá ser emitida por un tercero,
-                                    debidamente firmada en original dirigida al Consejo de Premiación, la cual
-                                    deberá contener el nombre completo del candidato o la candidata, señalar el
-                                    campo en que participa y señalar domicilio para recibir notificaciones y datos
-                                    de contacto, tanto del o la proponente como del candidato o la candidata, en la
-                                    que argumente y exponga los motivos por los cuales se considera que la
-                                    candidatura es merecedora del premio,
-                                    presentado con las siguientes características: Letra Arial 12, doble espacio,
-                                    tamaño carta, sin sangría y margen justificado, márgenes laterales de 3 centímetros,
-                                    y superior e inferior de 2.5 centímetros. Además el documento deberá contener
-                                    los siguientes apartados: 1) Antecedentes; 2) Descripción de acciones y medidas
-                                    a premiar; 3) Justificación y relevancia; 4) Alineación de las acciones con el
-                                    Sistema Nacional de Protección Civil.</span></li>
-                                <li><span class="bases">Carta de auto propuesta, firmada en original dirigida al Consejo de
-                                    Premiación, la cual deberá contener el nombre completo, señalar el campo en que
-                                    participa y señalar domicilio para recibir notificaciones y datos de contacto,
-                                    en la que argumente y exponga los motivos por los cuales se considera que la
-                                    candidatura es<span >  </span>merecedora del premio,
-                                    presentado con las siguientes características: : Letra Arial 12, doble espacio,
-                                    tamaño carta, sin sangría y margen justificado, márgenes laterales de 3
-                                    centímetros, y superior e inferior de 2.5 centímetros. Además el documento
-                                    deberá contener los siguientes apartados: 1) Antecedentes; 2) Descripción de
-                                    acciones y medidas a premiar; 3) Justificación y relevancia; 4) Alineación de
-                                    las acciones con el Sistema Nacional de Protección Civil.</span></li>
-                                <li><span class="bases">Escrito de protesta de aceptación por parte del candidato o la
-                                    candidata para participar y, en su caso, recibir el Premio Nacional de
-                                    Protección Civil 2021, firmada en original.
-                                    <br>
-                                    En caso de un grupo de personas físicas, anexar relación de sus integrantes y documento en el que se haya
-                                    designado a su representante. </span></li>
-                                <li><span class="bases">Currículum Vitae actualizado del o de los candidato(s) propuesto(s)
-                                    y/o de la o de las candidata(s) propuesta(s), incluyendo nombre, dirección
-                                    completa, teléfono(s) y correo electrónico.</span></li>
-                                <li><span class="bases">Copia del documento oficial con el que demuestre su nacionalidad
-                                    mexicana:</span>
-                                    <ul style="padding-left: 40px;">
-                                        <li style="list-style: upper-latin;"><span class="bases">Para personas físicas
-                                            mexicanas, individualmente o en grupo, copia del acta de nacimiento de cada
-                                            participante. </span></li>
-                                        <li style="list-style: upper-latin;"><span class="bases">Para personas morales,
-                                            copia del acta constitutiva, debidamente protocolizada ante Notario Público y
-                                            en caso de modificación, deberá presentar la protocolización del acta de
-                                            Asamblea General, a fin de acreditar su legal existencia. </span></li>
+                            <ol class="justify" style="padding-left: 2em;">
+                                <li>
+                                    <b>Carta de propuesta digitalizada</b>, la cual deberá ser emitida por un tercero, debidamente firmada dirigida al Consejo de Premiación, 
+                                    la cual deberá contener el nombre completo del candidato o la candidata, el campo en que participa, domicilio para recibir notificaciones; 
+                                    así como datos de contacto, tanto del o la proponente como del candidato o de la candidata, en la que argumente y exponga los motivos por 
+                                    los cuales se considera que la candidatura es merecedora del premio.
+                                    Además, el documento deberá contener el siguiente apartado:
+                                    <ul>
+                                        <li style="list-style: upper-latin;">
+                                            Descripción de acciones y medidas a premiar, debidamente justificadas, las cuales deben fomentar la acción preventiva en la Gestión 
+                                            Integral de Riesgos para disminuir los efectos de fenómenos naturales perturbadores, los producidos por el cambio climático o por la 
+                                            acción del hombre; así como el fortalecimiento de la cultura de la protección civil y la colaboración con las comunidades para disminuir 
+                                            riesgos y resistir el impacto de los desastres; o en su caso la implementación de protocolos o tecnologías que permitan reducir los 
+                                            efectos de los fenómenos perturbadores.
+                                        </li>
                                     </ul>
                                 </li>
-                                <li><span class="bases">Copia o duplicado de materiales bibliográficos, audiovisuales,
-                                    gráficos u otros que demuestren los motivos por los cuales se considera que el
-                                    candidato o la candidata puede merecer el Premio Nacional de Protección Civil
-                                    2021. </span></li>
-                                <li><span class="bases">Los trabajos relacionados con herramientas tecnológicas e
-                                    innovación deberán presentar resultados que sustenten su viabilidad y un
-                                    análisis costo beneficio.</span></li>
-                                <li><span class="bases">Escrito donde acepta conocer el Aviso de Privacidad del Premio
-                                    Nacional de Protección Civil 2021 y estar conforme con el tratamiento que se le
-                                    dará a sus datos.</span></li>
+                                <li>
+                                    <b>Carta de auto propuesta digitalizada</b>, debidamente firmada dirigida al Consejo de Premiación, la cual deberá contener el nombre completo, 
+                                    señalar el campo en que participa y señalar domicilio para recibir notificaciones y datos de contacto, en la que argumente y exponga los motivos 
+                                    por los cuales se considera que la candidatura es merecedora del premio.
+                                    Además, el documento deberá contener el siguiente apartado: 
+                                    <ul>
+                                        <li style="list-style: upper-latin;">
+                                            Descripción de acciones y medidas a premiar, debidamente justificadas, las cuales deben fomentar la acción preventiva en la Gestión 
+                                            Integral de Riesgos para disminuir los efectos de fenómenos naturales perturbadores, los producidos por el cambio climático o por la 
+                                            acción del hombre; así como el fortalecimiento de la cultura de la protección civil y la colaboración con las comunidades para disminuir 
+                                            riesgos y resistir el impacto de los desastres; o en su caso la implementación de protocolos o tecnologías que permitan reducir los efectos 
+                                            de los fenómenos perturbadores.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <b>Escrito de protesta de aceptación</b> por parte del candidato o la candidata para participar y, en su caso, recibir el Premio Nacional de 
+                                    Protección Civil 2021, debidamente firmada.
+                                    En caso de un grupo de personas físicas, anexar relación de sus integrantes y documento en el que se haya designado a su representante. 
+                                </li>
+                                <li>
+                                    <b>Copia del documento oficial con el que demuestre su nacionalidad mexicana</b>:
+                                    <ul>
+                                        <li style="list-style: upper-latin;">
+                                            Para personas físicas individualmente o en grupo acta de nacimiento de cada participante digitalizada. 
+                                        </li>
+                                        <li style="list-style: upper-latin;">
+                                            Para personas morales, acta constitutiva, debidamente protocolizada ante Notario Público y en caso de modificación, deberá anexar la 
+                                            protocolización del acta de Asamblea General, digitalizadas a fin de acreditar su legal existencia.
+                                        </li>
+                                        <li style="list-style: upper-latin;">
+                                            Para grupos voluntarios, acreditación ante autoridad competente digitalizada.
+                                        </li>
+                                    </ul>        
+                                </li>
+                                <li>
+                                    Evidencia documental y gráficos que demuestren los motivos por los cuales se considera que el candidato o la candidata puede merecer el Premio 
+                                    Nacional de Protección Civil 2021, en formato digital jpg.
+                                </li>
+                                <li>
+                                    Los trabajos relacionados con herramientas tecnológicas e innovación deberán presentar resultados que sustenten su viabilidad y un análisis costo beneficio.
+                                </li>
+                                <li>
+                                    Escrito donde acepta conocer el <b>Aviso de Privacidad</b> del Premio Nacional de Protección Civil 2021 y estar conforme con el tratamiento 
+                                    que se les dará a sus datos.
+                                </li>
                             </ol>
                             <br>
                             <p class="MsoNormal justify" style='margin-bottom:0cm;margin-bottom:.0001pt;'><span class="bases">En caso de
                                     faltar cualquier documento anteriormente enlistado, se hará del conocimiento
                                     del candidato, a fin de que complemente la documentación faltante y sea
-                                    entregada antes del término señalado el párrafo primero de esta Base.</span></p>
+                                    entregada antes del término señalado el párrafo octavo de esta Base.</span></p>
                         </span>
                     </div>
                 </li>
@@ -745,7 +687,6 @@
                                 </ul>
                             <li style="list-style-type: circle;">Documentos oficiales.</li>
                                 <ul style="padding-left:inherit;">
-                                    <li style="list-style-type: square;">Currículum Vitae. <span class="nomenclatura">CV_INICIALES.pdf</span></li>
                                     <li style="list-style-type: square;">Lista de participantes (en caso de grupo de personas físicas). <span class="nomenclatura">lista_participantes_INICIALES.pdf</span></li>
                                     <li style="list-style-type: square;">Acta de nacimiento de cada participante (en caso de grupo de personas físicas). <span class="nomenclatura">acta_nacimiento_INICIALES.pdf</span></li>
                                     <li style="list-style-type: square;">Copia del acta constitutiva (en caso de personas morales). <span class="nomenclatura">acta_constitutiva_INICIALES.pdf</span></li>
@@ -756,7 +697,7 @@
                                     <li style="list-style-type: square;">Análisis costo beneficio (solo para trabajos relacionados con herramientas tecnológicas). <span class="nomenclatura">costo_beneficio_INICIALES.pdf</span></li>
                                     <li style="list-style-type: square;">Archivo de texto (Word o PDF) con el listado de direcciónes electrónicas URL hacia los documentos multimedia. <span class="nomenclatura">enlaces_multimedia_INICIALES.pdf</span></li>
                                     <br>
-                                    <span class="nomenclatura">Nota: Las INICIALES corresponden al nombre completo comenzando por APELLIDO PATERNO, MATERNO Y NOMBRE(S) de quién se postula, ya sea persona física, el o la representante de un grupo de personas físicas o el representante del Grupo voluntario. En cuanto a las iniciales en los documentos personales como CV y Áctas de nacimiento deben ir las iniciales de la persona a la que pertenece el documento.</span>
+                                    <span class="nomenclatura">Nota: Las INICIALES corresponden al nombre completo comenzando por APELLIDO PATERNO, MATERNO Y NOMBRE(S) de quién se postula, ya sea persona física, el o la representante de un grupo de personas físicas o el representante del Grupo voluntario. En cuanto a las iniciales en los documentos personales como Áctas de nacimiento deben ir las iniciales de la persona a la que pertenece el documento.</span>
                                     <br><i>*En caso de que los archivos sean demasiado grándes y ya comprimidos ocupen más de 10 MB en el RAR o ZIP se deben enviar unicamente las ligas hacia estos documentos, para más detalles consulta la sección de "¿Cómo enviar mi evidencia audiovisual?".</i> 
                                 </ul>
                         </ul>
@@ -768,7 +709,7 @@
                      han sido enviados. Espera en tu bandeja de entrada un email de confirmación para verificar que hemos recibido la candidatura. Recuerda revisar tu 
                      bandeja de SPAM así como de CORREO NO DESEADO según sea el caso. Si no has recibido respuesta de confirmación intenta nuevamente subir tu 
                      candidatura en un lapso de 3 horas. En forma reiterada te pedimos verifiques tu mail de contacto para evitar conflictos de envío de confirmación,
-                      ante esto te recomendamos usar correos de dominio Gmail, Hotmail, Yahoo!, etc. Los archivos serán subidos al sistema en el momento de tu registro,
+                      ante esto te recomendamos usar correos de dominio Gmail, Hotmail, etc. Los archivos serán subidos al sistema en el momento de tu registro,
                        sin embargo deben ser revisados minuciosamente por el personal de la Coordinación Nacional de Protección Civil en un plazo no mayor a 15 días
                         hábiles, en caso de existir algún error en tu documentación o si falta algún archivo en tu registro recibirás un correo electrónico con las 
                         respectivas instrucciones para enviarlo nuevamente vía mail.</span></div>
