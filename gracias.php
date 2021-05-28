@@ -1,4 +1,11 @@
-<?php ; ?>
+<?php 
+    $today = time();
+    $date_start = strtotime('2021-05-31 13:00:00.0');  // UTC for 31 May, 08:00 GMT-5 (México City)
+    $date_end = strtotime('2021-06-30 23:00:00.0');  // UTC for 30 June, 18:00 GMT-5 (México City)
+    $available = $today - $date_start >= 0 ? true : false;
+    $expired = $today - $date_end >= 0 ? true: false;
+    
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -33,10 +40,18 @@
         </div>
         <h1 class="flow-text center">Premio Nacional de Protección Civil 2021</h1>
         <hr>
-        <h5>¡Gracias por participar!</h5>
-        <p>El tiempo para registrar tu candidatura ha finalizado. 
-            Si realizaste tu registro correctamente, mantente al pendiente de la publicación de los ganadores en el Diario Oficial de la Federación un día antes de la entrega del Premio.
-        </p>
+        <?php if (!$available) { ?>
+            <h5>¡La inscripción aún no está disponible!</h5>
+            <p>El portal de inscripciones para el Premio Nacional de Protección Civil 2021 aún no está disponible. 
+                Te pedimos estar atento a las redes sociales para la fecha de inicio de la convocatoria.
+            </p>
+
+        <?php } else if ($expired) { ?>
+            <h5>¡Gracias por participar!</h5>
+            <p>El tiempo para registrar tu candidatura ha finalizado. 
+                Si realizaste tu registro correctamente, mantente al pendiente de la publicación de los ganadores en el Diario Oficial de la Federación un día antes de la entrega del Premio.
+            </p>
+        <?php } ?>
         <p>
             Síguenos en nuestras redes sociales:
         </p>
