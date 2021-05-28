@@ -75,7 +75,7 @@
                 </div>
                 <p>Correo ingresado: <strong><?=$_SESSION["correo"]?></strong></p>
             <?php } ?>
-            <h5>Tu número de folio es <?=$_SESSION["id_registro"]?></h5>
+            <h5>Tu número de folio es D<?=$_SESSION["id_registro"]?></h5>
         </div>
 
         <div class="row">
