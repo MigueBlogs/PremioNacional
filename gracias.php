@@ -42,8 +42,8 @@
         <hr>
         <?php if (!$available) { ?>
             <h5>¡La inscripción aún no está disponible!</h5>
-            <p>El portal de inscripciones para el Premio Nacional de Protección Civil 2021 aún no está disponible. 
-                Te pedimos estar atento a las redes sociales para la fecha de inicio de la convocatoria.
+            <p>El portal de inscripciones para el Premio Nacional de Protección Civil 2021 estará disponible el día 31 de Mayo de 2021. 
+                Te pedimos estar atento a las redes sociales para conocer las bases de esta convocatoria.
             </p>
 
         <?php } else if ($expired) { ?>
