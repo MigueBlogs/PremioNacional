@@ -448,7 +448,7 @@
                             otorgamiento del Premio Nacional de Protección Civil 2021, estará sujeta a lo dispuesto 
                             por la Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados; 
                             así mismo si desea conocer el aviso de privacidad, se encuentra disponible en la página 
-                            de la Secretaría de Seguridad y Protección Ciudadana.</span></p>
+                            de la Secretaría de Seguridad y Protección Ciudadana, o en la siguiente página: <a href="https://www.gob.mx/cms/uploads/attachment/file/638705/AV-INT-PRENACPC-DGVINPC.pdf" target="_blank">aviso de privacidad</a>.</span></p>
 
                             <p class="MsoNormal justify">
                             <span class="bases uppercase b">
@@ -653,7 +653,7 @@
                                     Los trabajos relacionados con herramientas tecnológicas e innovación deberán presentar resultados que sustenten su viabilidad y un análisis costo beneficio.
                                 </li>
                                 <li>
-                                    Escrito donde acepta conocer el <b>Aviso de Privacidad</b> del Premio Nacional de Protección Civil 2021 y estar conforme con el tratamiento 
+                                    Escrito donde acepta conocer el <a href="https://www.gob.mx/cms/uploads/attachment/file/638705/AV-INT-PRENACPC-DGVINPC.pdf" target="_blank" ><b>Aviso de Privacidad</b></a> del Premio Nacional de Protección Civil 2021 y estar conforme con el tratamiento 
                                     que se les dará a sus datos.
                                 </li>
                             </ol>
