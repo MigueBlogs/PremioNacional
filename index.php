@@ -265,6 +265,12 @@
             </div>
         <?php } ?>
         <div id="instrucciones">
+            <div class="hide-on-med-and-up">
+                <img src="./img/banner2.jpg" alt="Banner" style="width: 100%;height: auto;">
+            </div>
+            <div class="hide-on-small-only">
+                <img src="./img/banner1.jpg" alt="Banner" style="width: 100%;height: auto;">
+            </div>
             <ul class="collapsible popout">
                 <li class="active">
                     <div class="collapsible-header mainIcons"><i class="material-icons">lightbulb_outline</i>Lee las siguientes instrucciones para realizar el registro de tu candidatura</div>
