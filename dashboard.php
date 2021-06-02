@@ -124,6 +124,7 @@
     
 </head>
 <body>
+    <iframe id="iFrame-nav-gob" src="/nav.html" frameborder="0" style="width: 100%;height: 60px;margin-bottom: -5px;"></iframe>
     <div class="container">
         <!-- User Data -->
         <h6 class="right">
@@ -140,7 +141,7 @@
         </ul>
         <br>
         <br>
-        <div class="center">
+        <div class="center hide">
             <img class="cnpc" src="http://www.atlasnacionalderiesgos.gob.mx/Imagenes/Logos/SSyPC_CNPC_h.png" alt="gob">
         </div>
     
@@ -376,5 +377,6 @@
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./js/chart.js"></script>
+    <script src="/js/nav-gob.js"></script>
 </body>
 </html>

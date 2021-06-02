@@ -34,8 +34,9 @@
     </noscript>
 </head>
 <body>
+    <iframe id="iFrame-nav-gob" src="/nav.html" frameborder="0" style="width: 100%;height: 60px;margin-bottom: -5px;"></iframe>
     <div class="container">
-        <div class="center">
+        <div class="center hide">
             <img class="cnpc" src="http://www.atlasnacionalderiesgos.gob.mx/Imagenes/Logos/SSyPC_CNPC_h.png" alt="Gobierno de México">
         </div>
         <h1 class="flow-text center">Premio Nacional de Protección Civil 2021</h1>
@@ -64,5 +65,6 @@
             <a class="btn guinda white-text" href="http://www.preparados.gob.mx" target="_blank">Volver a www.preparados.gob.mx</a>
         </p>
     </div>
+    <script src="/js/nav-gob.js"></script>
 </body>
 </html>
