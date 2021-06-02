@@ -789,6 +789,7 @@
                             <input placeholder="Ingresa número telefónico" name="telefono" id="telefono" type="text" data-length="10" maxlength="10" <?php if ($keep || isset($_POST['telefono'])) echo 'value="'.$_POST['telefono'].'"'; ?>>
                             <label for="telefono">Ingresa un número de contacto. (10 dígitos)</label>
                             <span class="helper-text" data-error="Debe ser un número de 10 dígitos" data-success="Correcto"></span>
+                        </div>
                     </div>
                     <div class="row">
                         <strong>Ingresa un correo para poder dar un seguimiento y tener un medio de comunicación donde se enviará información relevante. Asegúrate de escribirlo corréctamente.</strong><br>
@@ -898,6 +899,7 @@
         </form>
 
     </div>
+    <iframe id="MyIframe" src="/footer.html" scrolling="no" width="100%" height="425.5px" style="border: 0px;"></iframe>
     
     <script type="text/javascript" src="js/formulario.js"></script>
     <?php if (isset($error_msg) && $error_msg) { ?>
@@ -909,5 +911,6 @@
         </script>
     <?php } ?>
     <script src="/js/nav-gob.js"></script>
+    <script src="/js/footer.js"></script>
 </body>
 </html>
