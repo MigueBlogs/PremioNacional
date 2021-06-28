@@ -278,7 +278,7 @@
                     <div class="collapsible-body"><span>Bienvenido al portal de registro de Candidaturas para el Premio Nacional de Protección Civil, 
                     para iniciar deberás leer completamente las instrucciones siguientes y a continuación hacer clic sobre el botón de 
                     “INICIAR REGISTRO”, después deberás seleccionar el tipo de registro (<b>obligatorio</b>) el cuál debe ser 
-                    <b>una</b> de tres opciones distintas: Persona física, un grupo de personas físicas o Grupo voluntario. Enseguida 
+                    <b>una</b> de tres opciones distintas: Persona física, un grupo de personas físicas, Grupo voluntario o Persona Moral. Enseguida 
                     debes seleccionar la categoría de tu postulación, esta puede ser “Prevención” o “Ayuda”, en caso de que sean ambas opciones 
                     deberás de registrar tus datos dos veces, es decir: un registro con el rubro seleccionado de “Prevención” y otro registro nuevo 
                     con el rubro seleccionado en “Ayuda”, todo esto con los datos correspondientes. Posteriormente podrás ingresar tus datos 
