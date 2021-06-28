@@ -108,7 +108,7 @@
     function validateForm($nombre, $correo, $telefono, $estado, $municipio, $tipo, $categoria) {
         global $error_msg, $allowTypes, $max_file_size, $target_dir;
 
-        $possible_tipo = array("Persona física", "Personas físicas", "Grupo voluntario");
+        $possible_tipo = array("Persona física", "Personas físicas", "Grupo voluntario", "Persona moral");
         $possible_categoria = array("Prevención", "Ayuda");
 
         if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
@@ -757,6 +757,12 @@
                             <label>
                                 <input name="tipo" type="radio" value="Grupo voluntario">
                                 <span>Grupo voluntario</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="tipo" type="radio" value="Persona moral">
+                                <span>Persona moral</span>
                             </label>
                         </p>
                     </div>
