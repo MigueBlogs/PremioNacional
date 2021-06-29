@@ -1,7 +1,7 @@
 <?php
     $today = time();
     $date_start = strtotime('2021-05-31 05:00:00.0');  // UTC for 31 May, 00:00 GMT-5 (México City)
-    $date_end = strtotime('2021-06-30 23:00:00.0');  // UTC for 30 June, 18:00 GMT-5 (México City)
+    $date_end = strtotime('2021-07-31 23:00:00.0');  // UTC for 31 July, 18:00 GMT-5 (México City)
     $available = $today - $date_start >= 0 ? true : false;
     $expired = $today - $date_end >= 0 ? true: false;
     if ($available == false || $expired) {
@@ -377,7 +377,7 @@
                             productiva y el medio ambiente que fortalezca el Sistema Nacional de Protección Civil y 
                             que acrediten el merecimiento del Premio Nacional de Protección Civil 2021, deberán ser 
                             expresión de acciones o medidas realizadas durante el período comprendido del 19 de 
-                            septiembre de 2020,  hasta el 30 de junio de 2021 y que hayan significado un impacto a la 
+                            septiembre de 2020,  hasta el 31 de julio de 2021 y que hayan significado un impacto a la 
                             Protección Civil Nacional. Asimismo, las personas físicas (individualmente o en grupo), 
                             personas morales o grupos voluntarios que hayan sido premiados en pasadas ediciones del 
                             Premio Nacional de Protección Civil, no podrán ser postulados.</span></p>
@@ -425,7 +425,7 @@
                             Venustiano Carranza, Ciudad de México, en un horario de 09:00 a 15:00 horas, de lunes a 
                             viernes, o bien en línea en la página: 
                             <a href="http://www.preparados.gob.mx/PremioNacional2021" style="word-wrap: break-word;">www.preparados.gob.mx/PremioNacional2021</a>, 
-                            a partir de la publicación de la presente convocatoria y hasta las <strong>18:00 horas del día 30 de junio 
+                            a partir de la publicación de la presente convocatoria y hasta las <strong>18:00 horas del día 31 de julio 
                             de 2021</strong>.</span></p> 
                             
 
